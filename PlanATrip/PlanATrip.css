@@ -84,7 +84,7 @@
 
 
 
-.box
+/* .box
 {
     position: relative;
 }
@@ -127,14 +127,14 @@
     height: 100px;
     z-index: 2;
 }
-/* .square:nth-child(3)
+.square:nth-child(3)
 {
     bottom: 50px;
     right: -60px;
     width: 80px;
     height: 80px;
     z-index: 2;
-} */
+}
 .square:nth-child(4)
 {
     bottom: -60px;
@@ -148,7 +148,7 @@
     left: 240px;
     width: 80px;
     height: 80px;
-}
+} */
 
 
 .firstcontainer::before{
@@ -187,6 +187,7 @@
   align-items: center;
   justify-content: center;
   background: url("../PlanATrip/img/mountain.jpg");
+  background-color: #0d141f;
   background-repeat: no-repeat;
   background-size: cover;
 
@@ -554,9 +555,9 @@ transform: rotate(-45deg) translate(-20px, -20px);
       top: 6px;
     }
 
-    .square{
+    /* .square{
       display: none;
-    }
+    } */
 
 }
 

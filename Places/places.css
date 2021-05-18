@@ -15,7 +15,7 @@ h1, h2, h3, h4 {
 }
 
 body {
-    background: url(patrick-fischer-niGsD4QOBTo-unsplash.jpg);
+    background: url("../Places/images/patrick-fischer-niGsD4QOBTo-unsplash.jpg");
     background-size: 100% 100%;
     
     background-repeat: no-repeat;

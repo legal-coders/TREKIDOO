@@ -19,10 +19,9 @@ const no11 = document.querySelector(".no11");
 
 const innerContainer = document.querySelector(".innercontainer");
 const before = window.getComputedStyle(
-	document.querySelector('.innercontainer'),':before'
+  document.querySelector(".innercontainer"),
+  ":before"
 );
-
-
 
 const optionsList = document.querySelectorAll(".option");
 //open and close
@@ -31,75 +30,66 @@ selected.addEventListener("click", () => {
 });
 
 //Add element
-optionsList.forEach(o => {
+optionsList.forEach((o) => {
   o.addEventListener("click", function states() {
     selected.innerHTML = o.querySelector("label").innerHTML;
     optionsContainer.classList.remove("active");
     finalselect = selected.innerHTML;
 
-     // console.log(finalselect)
+    // console.log(finalselect)
 
     // code for showing the wanted info
     //getting button id
 
-    var btn = document.getElementById('button')
+    var btn = document.getElementById("button");
     var firstday = "FourDays";
     var fifthday = "SevenDays";
     var seventhday = "ElevenDays";
-    btn.onclick = function clicker(){
-      
-      
-      
-      switch(finalselect){   
-         case firstday:
-          window.location.href = "#secondcontainer"
-          break; 
-         case fifthday:
-           window.location.href = "#secondcontainer"
-           secondselect.style.display = "flex";
-           break;
-           
-          case seventhday:
-            window.location.href = "#secondcontainer"
-            secondselect.style.display = "flex";
-            thirdselect.style.display = "flex";
-            break;
-       }  
-    }
-})});
+    btn.onclick = function clicker() {
+      switch (finalselect) {
+        case firstday:
+          window.location.href = "#secondcontainer";
+          break;
+        case fifthday:
+          window.location.href = "#secondcontainer";
+          secondselect.style.display = "flex";
+          break;
 
+        case seventhday:
+          window.location.href = "#secondcontainer";
+          secondselect.style.display = "flex";
+          thirdselect.style.display = "flex";
+          break;
+      }
+    };
+  });
+});
 
 //background change
-function hoverbg(card,url){
-  card.addEventListener('mouseover',()=>{
-    secondcontainer.style.backgroundImage= `url(${url})`; 
-    
-  })
-  card.addEventListener('mouseout',()=>{
-    secondcontainer.style.backgroundImage= 'url("../States/img/haryana/surajkund_lake/surajkund_lake1.jpg")'; 
-    
-  })
+function hoverbg(card, url) {
+  card.addEventListener("mouseover", () => {
+    secondcontainer.style.backgroundImage = `url(${url})`;
+  });
+  card.addEventListener("mouseout", () => {
+    secondcontainer.style.backgroundImage =
+      'url("../States/img/haryana/surajkund_lake/surajkund_lake1.jpg")';
+  });
 }
 
-hoverbg(no1,"../States\img\haryana\brahma_sarovar\brahma_sarovar1.jpeg");
-hoverbg(no2,"../States\img\haryana\chhatbir_zoo\chhatbir_zoo1.jpg");
-hoverbg(no3,"../States\img\haryana\hanuman_mandir\hanuman_mandir1.JPG");
-hoverbg(no4,"../States\img\haryana\morni_hills\morni_hills1.jpg");
-hoverbg(no5,"../States\img\haryana\panikot_lake\panikot_lake1.jpg");
-hoverbg(no6,"../States\img\haryana\pratapgarh_farms\pratapgarh_farms1.jpg");
-hoverbg(no7,"../States\img\haryana\raja_nahar_singh_palace\raja_nahar_singh_palace1.JPG");
-hoverbg(no8,"../States\img\haryana\surajkund_lake\surajkund_lake4.jpg");
-hoverbg(no9,"../States\img\haryana\panikot_lake\panikot_lake2.jpg");
-hoverbg(no10,"../States\img\haryana\pratapgarh_farms\pratapgarh_farms3.jpg");
-hoverbg(no11,"../States\img\haryana\morni_hills\morni_hills4.jpg");
-
-
-
-
-
-
-
-
+hoverbg(no1, "../States/img/haryana/brahma_sarovar/brahma_sarovar1.jpeg");
+hoverbg(no2, "../States/img/haryana/chhatbir_zoo/chhatbir_zoo1.jpg");
+hoverbg(no3, "../States/img/haryana/hanuman_mandir/hanuman_mandir1.JPG");
+hoverbg(no4, "../States/img/haryana/morni_hills/morni_hills1.jpg");
+hoverbg(no5, "../States/img/haryana/panikot_lake/panikot_lake1.jpg");
+hoverbg(no6, "../States/img/haryana/pratapgarh_farms/pratapgarh_farms1.jpg");
+hoverbg(
+  no7,
+  "../States/img/haryana/raja_nahar_singh_palace/raja_nahar_singh_palace1.JPG"
+);
+hoverbg(no8, "../States/img/haryana/surajkund_lake/surajkund_lake4.jpg");
+hoverbg(no9, "../States/img/haryana/panikot_lake/panikot_lake2.jpg");
+hoverbg(no10, "../States/img/haryana/pratapgarh_farms/pratapgarh_farms3.jpg");
+hoverbg(no11, "../States/img/haryana/morni_hills/morni_hills4.jpg");
 
 //navbar
 
@@ -107,72 +97,41 @@ const menu = document.querySelector(".menu");
 const nav_container = document.querySelector(".nav-container");
 let menuopen = false;
 
-window.addEventListener('scroll', ()=> {
-    let scroll = window.scrollY;
-	iffalse();
-})
+window.addEventListener("scroll", () => {
+  let scroll = window.scrollY;
+  iffalse();
+});
 
-// Menu 
+// Menu
 
 function iftrue() {
-    menu.classList.add('open');
-        nav_container.style.top = "0";     
-        menuopen= true;
-        innerContainer.style.display="none";
-        before.display="none";
+  menu.classList.add("open");
+  nav_container.style.top = "0";
+  menuopen = true;
+  innerContainer.style.display = "none";
+  before.display = "none";
 }
-function iffalse () {
-    
-        menu.classList.remove('open');
-        nav_container.style.top = "-150vh"
-        menuopen = false;
-        innerContainer.style.display="flex";
+function iffalse() {
+  menu.classList.remove("open");
+  nav_container.style.top = "-150vh";
+  menuopen = false;
+  innerContainer.style.display = "flex";
 }
-menu.addEventListener('click', ()=> {
-    if(!menuopen) {
-        iftrue()
-    } else { 
-        iffalse();
-    }
-})
-nav_container.addEventListener('click', ()=> {
+menu.addEventListener("click", () => {
+  if (!menuopen) {
+    iftrue();
+  } else {
     iffalse();
-})
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  }
+});
+nav_container.addEventListener("click", () => {
+  iffalse();
+});
 
 // no1.addEventListener('mouseover',()=>{
-//   secondcontainer.style.backgroundImage= 'url("../Images/winter-cold-memento-mori-wallpaper-preview.jpg")';  
-// }) 
+//   secondcontainer.style.backgroundImage= 'url("../Images/winter-cold-memento-mori-wallpaper-preview.jpg")';
+// })
 
 // no1.addEventListener('mouseout',()=>{
-//   secondcontainer.style.backgroundImage= 'url("../Images/borracaves1.jpg")';  
-// }) 
+//   secondcontainer.style.backgroundImage= 'url("../Images/borracaves1.jpg")';
+// })

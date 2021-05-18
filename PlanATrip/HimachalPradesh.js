@@ -72,21 +72,21 @@ function hoverbg(card, url) {
   });
   card.addEventListener("mouseout", () => {
     secondcontainer.style.backgroundImage =
-      'url("../Images/Andrapradesh/3280.jpg")';
+      'url("../States/img/himachal_pradesh/kasol/kasol1.jpg")';
   });
 }
 
-hoverbg(no1, "../Images/Andrapradesh/andhraPradeshNo1.jpg");
-hoverbg(no2, "../Images/Andrapradesh/andhraPradeshNo1.jpg");
-hoverbg(no3, "../Images/Andrapradesh/andhraPradeshNo1.jpg");
-hoverbg(no4, "../Images/Andrapradesh/andhraPradeshNo1.jpg");
-hoverbg(no5, "../Images/Andrapradesh/andhraPradeshNo1.jpg");
-hoverbg(no6, "../Images/Andrapradesh/andhraPradeshNo1.jpg");
-hoverbg(no7, "../Images/Andrapradesh/andhraPradeshNo1.jpg");
-hoverbg(no8, "../Images/Andrapradesh/andhraPradeshNo1.jpg");
-hoverbg(no9, "../Images/Andrapradesh/andhraPradeshNo1.jpg");
-hoverbg(no10, "../Images/Andrapradesh/andhraPradeshNo1.jpg");
-hoverbg(no11, "../Images/Andrapradesh/andhraPradeshNo1.jpg");
+hoverbg(no1, "../States/img/himachal_pradesh/bir_billing/bir_billing1.jpg");
+hoverbg(no2, "../States/img/himachal_pradesh/chitkul/chitkul1.jpg");
+hoverbg(no3, "../States/img/himachal_pradesh/dharamshala/dharamshala1.jpeg");
+hoverbg(no4, "../States/img/himachal_pradesh/kasauli/kasauli1.jpg");
+hoverbg(no5, "../States/img/himachal_pradesh/kasol/kasol2.jpg");
+hoverbg(no6, "../States/img/himachal_pradesh/manali/manali1.jpg");
+hoverbg(no7, "../States/img/himachal_pradesh/shimla/shimla1.jpg");
+hoverbg(no8, "../States/img/himachal_pradesh/spiti_valley/spiti_valley1.jpg");
+hoverbg(no9, "../States/img/himachal_pradesh/shimla/shimla4.jpg");
+hoverbg(no10, "../States/img/himachal_pradesh/manali/manali3.jpg");
+hoverbg(no11, "../States/img/himachal_pradesh/kasol/kasol4.jpg");
 
 //navbar
 

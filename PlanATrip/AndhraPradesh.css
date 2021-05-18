@@ -198,7 +198,7 @@ body{
   
 .selected::after {
     content: "";
-    background: url("../Images/DropDownArrow2.png");
+    background: url("../PlanATrip/img/DropDownArrow2.png");
     background-size: contain;
     background-repeat: no-repeat;
     position: absolute;
@@ -349,7 +349,7 @@ body{
     display: flex;
     align-items: center;
     /* background: url("../Images/Andrapradesh/3280.jpg") fixed; */
-    background: url("../") fixed;   
+    background: url("../States/img/Andhra/rishikonda_beach/rishikonda_beach1.jpg") fixed;   
     background-repeat: no-repeat; 
     background-size: cover;
     overflow-x: scroll;

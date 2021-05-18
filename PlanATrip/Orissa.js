@@ -76,17 +76,17 @@ function hoverbg(card, url) {
   });
 }
 
-hoverbg(no1, "../Images/Andrapradesh/andhraPradeshNo1.jpg");
-hoverbg(no2, "../Images/Andrapradesh/andhraPradeshNo1.jpg");
-hoverbg(no3, "../Images/Andrapradesh/andhraPradeshNo1.jpg");
-hoverbg(no4, "../Images/Andrapradesh/andhraPradeshNo1.jpg");
-hoverbg(no5, "../Images/Andrapradesh/andhraPradeshNo1.jpg");
-hoverbg(no6, "../Images/Andrapradesh/andhraPradeshNo1.jpg");
-hoverbg(no7, "../Images/Andrapradesh/andhraPradeshNo1.jpg");
-hoverbg(no8, "../Images/Andrapradesh/andhraPradeshNo1.jpg");
-hoverbg(no9, "../Images/Andrapradesh/andhraPradeshNo1.jpg");
-hoverbg(no10, "../Images/Andrapradesh/andhraPradeshNo1.jpg");
-hoverbg(no11, "../Images/Andrapradesh/andhraPradeshNo1.jpg");
+hoverbg(no1, "../States/img/odisha/bhubanesm.jpg");
+hoverbg(no2, "../States/img/odisha/images (29).jpeg");
+hoverbg(no3, "../States/img/odisha/images (30).jpeg");
+hoverbg(no4, "../States/img/odisha/images (31).jpeg");
+hoverbg(no5, "../States/img/odisha/images (32).jpeg");
+hoverbg(no6, "../States/img/odisha/images (33).jpeg");
+hoverbg(no7, "../States/img/odisha/puri.jpg");
+hoverbg(no8, "../States/img/odisha/bhubanesm.jpg");
+hoverbg(no9, "../States/img/odisha/images (29).jpeg");
+hoverbg(no10, "../States/img/odisha/images (30).jpeg");
+hoverbg(no11, "../States/img/odisha/images (32).jpeg");
 
 //navbar
 

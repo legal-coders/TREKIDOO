@@ -349,7 +349,8 @@ body {
   display: flex;
   align-items: center;
   /* background: url("../Images/Andrapradesh/3280.jpg") fixed; */
-  background: url("../States/img/m") fixed;
+  background: url("States\img\meghalaya\280px-Noakalikai_falls_1480244029215.jpg")
+    fixed;
   background-repeat: no-repeat;
   background-size: cover;
   overflow-x: scroll;

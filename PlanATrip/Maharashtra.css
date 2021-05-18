@@ -119,7 +119,7 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    background: url("../Images/mountain.jpg");
+    background: url("../PlanATrip/img/mountain.jpg");
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -204,7 +204,7 @@ body{
   
 .selected::after {
     content: "";
-    background: url("../Images/DropDownArrow2.png");
+    background: url("../PlanATrip/img/DropDownArrow2.png");
     background-size: contain;
     background-repeat: no-repeat;
     position: absolute;
@@ -364,7 +364,7 @@ body{
     display: flex;
     align-items: center;
     /* background: url("../Images/Andrapradesh/3280.jpg") fixed; */
-    background: url("../Images/Andrapradesh/andhraPradeshNo1.jpg") fixed;   
+    background: url("../States/img/Maharastra/mahabaleshwar/mahabaleshwar3.jpg") fixed;   
     background-repeat: no-repeat; 
     background-size: cover;
     overflow-x: scroll;
@@ -438,16 +438,7 @@ body{
     color: white;
     padding-bottom: 3rem;
 }
-.secondcontainer h1::after{
-    content: "";
-    position:absolute;
-    top: 23%;
-    left: 41%;
-    width: 15%;
-    height: 1.5%;
-    border-radius: 30px;
-    background-color: black;
-}
+
 .secondcontainer li{
     cursor: pointer;
 }

@@ -1,0 +1,382 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+
+
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'Oswald', sans-serif;
+  box-sizing: border-box;
+}
+
+.firstcontainer::before{
+  content: "";
+  position:absolute;
+  bottom: 8%;
+  right: 21%;
+  width: 10%;
+  height:20%;
+  border-radius: 30px;
+  display: inline;
+  background-color: rgba(255,255,255,0.2);
+  backdrop-filter: blur(50px);
+  border-bottom: 1px solid rgba(255,255,255,0.5);
+  border-right: 1px solid rgba(255,255,255,0.5);
+}
+
+.firstcontainer::after{
+  content: "";
+    position:absolute;
+    top: 8%;
+    left: 21%;
+    width: 10%;
+    height:20%;
+    border-radius: 30px;
+    background-color: rgba(255,255,255,0.1);
+    backdrop-filter: blur(2px);
+    border-top: 1px solid rgba(255,255,255,0.5);
+    border-left: 1px solid rgba(255,255,255,0.5);
+}
+
+.firstcontainer{
+  height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url("../Images/mountain.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+
+.innercontainer{
+  background-color: rgba(255,255,255,0.2);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+  display: flex;
+  flex-direction: column;
+  height: 68vh;
+  width: 50vw;
+  border-radius: 30px;
+  border-bottom: 1px solid rgba(255,255,255,0.5);
+  border-right: 1px solid rgba(255,255,255,0.5);
+  backdrop-filter: blur(2px);
+  align-items: center;
+  justify-content: center;
+}
+
+.innercontainer .container h1{
+  position: absolute;
+  left: 50%;
+  top: 10%;
+  transform: translate(-50% );
+  font-size: 80px;
+  background:linear-gradient(136deg,black,#008F7A);
+  /* background: linear-gradient(to right,#845EC2,#2C73D2,#008F7A); */
+  /* background-size: 300%; */
+  /* background-position: left;
+  animation: gradiant 2s infinite alternate; */
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  font-weight: bolder;
+  font-family:  Helvetica, sans-serif;
+}
+
+/* @keyframes gradiant{
+  0%{
+    background-position: left;
+  }
+  100%{
+    background-position: right;
+  }
+} */
+
+.innercontainer .container h2{
+  margin-left: 41%;
+  margin-bottom: 16px;
+  font-weight: bolder;
+}
+
+.opentext.head{
+  opacity: 0;
+}
+
+
+.container {
+  margin-top: 100px;
+  padding: 32px;
+}
+
+.select-box {
+  display: flex;
+  width: 400px;
+  flex-direction: column;
+}
+
+.select-box .options-container {
+  background: rgb(18, 149, 236);
+  color: #f5f6fa;
+  max-height: 0;
+  width: 100%;
+  opacity: 0;
+  transition: all 0.4s;
+  border-radius: 8px;
+  overflow: hidden;
+  order: 1;
+}
+
+.selected {
+  background: rgb(18, 149, 236);
+  border-radius: 8px;
+  margin-bottom: 8px;
+  color: #f5f6fa;
+  position: relative;
+  order: 0;
+}
+
+.selected::after {
+  content: "";
+  background: url("../Images/DropDownArrow2.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  height: 100%;
+  width: 32px;
+  right: 10px;
+  top: 5px;
+  transition: all 0.4s;
+}
+
+.select-box .options-container.active {
+  max-height: 240px;
+  opacity: 1;
+  overflow-y: scroll;
+}
+
+.select-box .options-container.active + .selected::after {
+  transform: rotateX(180deg);
+  top: -6px;
+}
+
+.select-box .options-container::-webkit-scrollbar {
+  width: 8px;
+  background: #0d141f;
+  border-radius: 0 8px 8px 0;
+}
+
+.select-box .options-container::-webkit-scrollbar-thumb {
+  background: aqua;
+  border-radius: 0 8px 8px 0;
+}
+
+.select-box .option,
+.selected {
+  padding: 12px 24px;
+  cursor: pointer;
+}
+
+.select-box .option:hover {
+  background: rgb(28, 108, 161);
+}
+
+.select-box label {
+  cursor: pointer;
+}
+
+.select-box .option .radio {
+  display: none;
+}
+
+.button{
+  position: absolute;
+  display: inline-block;
+  bottom: 8%;
+  padding: 12px 30px;
+  color: rgba(255,255,255,1);
+  letter-spacing: 2px;
+  background: rgb(18, 149, 236);
+  transition: 0.5s;
+  border: none;
+  font-size: 16px;   
+  cursor: pointer;
+  z-index: -1;
+}
+
+.button:hover{
+  color: rgb(2, 48, 253);
+  font-weight: bolder;
+}
+
+.button:focus{
+  border: none;
+  outline: none;
+}
+
+.button span{
+  display: block;
+  position: absolute;
+  background: rgb(2, 48, 253);
+
+}
+
+.button span:nth-child(1){
+  left:0;
+  bottom: 0%;
+  width: 2px;
+  height: 100%;
+  transform:scaley(0);
+  transform-origin: top;
+  transition:transform 0.5s;
+}
+
+.button:hover span:nth-child(1){
+  transform:scaley(1);
+  transform-origin: bottom;
+  transition:transform 0.5s;
+}
+
+
+.button span:nth-child(2){
+  left:0;
+  bottom: 0%;
+  width: 100%;
+  height: 2px;
+  transform:scalex(0);
+  transform-origin: right;
+  transition:transform 0.5s;
+}
+
+.button:hover span:nth-child(2){
+  transform:scalex(1);
+  transform-origin: left;
+  transition:transform 0.5s;
+}
+
+
+.button span:nth-child(3){
+  right:0;
+  bottom: 0%;
+  width: 2px;
+  height: 100%;
+  transform:scaley(0);
+  transform-origin: top;
+  transition:transform 0.5s;
+  transition-delay: 0.5s;
+}
+
+.button:hover span:nth-child(3){
+  transform:scaley(1);
+  transform-origin: bottom;
+  transition:transform 0.5s;
+  transition-delay: 0.5s;
+}
+
+.button span:nth-child(4){
+  left:0;
+  top: 0%;
+  width: 100%;
+  height: 2px;
+  transform:scalex(0);
+  transform-origin: right;
+  transition:transform 0.5s;
+  transition-delay: 0.5s;
+}
+
+.button:hover span:nth-child(4){
+  transform:scalex(1);
+  transform-origin: left;
+  transition:transform 0.5s;
+  transition-delay: 0.5s;
+}
+
+
+@media screen and (max-width:970px){
+  .innercontainer{
+    height: 55vh;
+    width: 60vw;
+    border-radius: 30px;
+    
+    }
+  
+      
+    .firstcontainer::before{
+      bottom: 8%;
+      right: 9%;
+      width: 20%;
+      height: 25%;
+      border-radius: 25px;
+    }
+      
+    .firstcontainer::after{
+      top: 10%;
+      left: 10%;
+      width: 20%;
+      height: 25%;
+      border-radius: 25px;
+    }
+    
+    .select-box {
+      width: 270px;
+      font-size: 19px;
+    }
+  
+    .selected::after {
+      height: 70%;
+      width: 32px;
+      right: 9px;
+      top: 5px;
+      
+    }
+  
+    .select-box .options-container.active + .selected::after {
+      transform: rotateX(180deg);
+      top: 6px;
+    }
+
+}
+
+@media screen and (max-width:500px){
+  .innercontainer{
+  height: 40vh;
+  width: 60vw;
+  border-radius: 30px;
+  
+  }
+
+    
+  .firstcontainer::before{
+    bottom: 23%;
+    right: 10%;
+    width: 20%;
+    height:12%;
+    border-radius: 25px;
+  }
+    
+  .firstcontainer::after{
+    top: 24%;
+    left: 9%;
+    width: 22%;
+    height:12%;
+    border-radius: 25px;
+  }
+  
+  .select-box {
+    width: 140px;
+    font-size: 12px;
+  }
+
+  .selected::after {
+    height: 70%;
+    width: 32px;
+    right: 9px;
+    top: 5px;
+    
+  }
+
+  .select-box .options-container.active + .selected::after {
+    transform: rotateX(180deg);
+    top: 6px;
+  }
+  
+}
+

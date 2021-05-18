@@ -1,0 +1,191 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #1f242d;
+}
+
+.button{
+    position: relative;
+    display: inline-block;
+    padding: 20px 40px;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.4);
+    letter-spacing: 2px;
+    background: #262c37;
+    transition: 0.5s;
+    border: none;
+    font-size: 16px;
+    
+}
+
+.button:hover{
+    color: rgba(255,255,255,1);
+}
+
+.button:focus{
+    border: none;
+    outline: none;
+}
+
+.button span{
+    display: block;
+    position: absolute;
+    background-color: #2894ff;
+
+}
+
+.button span:nth-child(1){
+    left:0;
+    bottom: 0%;
+    width: 1px;
+    height: 100%;
+    transform:scaley(0);
+    transform-origin: top;
+    transition:transform 0.5s;
+}
+
+.button:hover span:nth-child(1){
+    transform:scaley(1);
+    transform-origin: bottom;
+    transition:transform 0.5s;
+}
+
+
+.button span:nth-child(2){
+    left:0;
+    bottom: 0%;
+    width: 100%;
+    height: 1px;
+    transform:scalex(0);
+    transform-origin: right;
+    transition:transform 0.5s;
+}
+
+.button:hover span:nth-child(2){
+    transform:scalex(1);
+    transform-origin: left;
+    transition:transform 0.5s;
+}
+
+
+.button span:nth-child(3){
+    right:0;
+    bottom: 0%;
+    width: 1px;
+    height: 100%;
+    transform:scaley(0);
+    transform-origin: top;
+    transition:transform 0.5s;
+    transition-delay: 0.5s;
+}
+
+.button:hover span:nth-child(3){
+    transform:scaley(1);
+    transform-origin: bottom;
+    transition:transform 0.5s;
+    transition-delay: 0.5s;
+}
+
+.button span:nth-child(4){
+    left:0;
+    top: 0%;
+    width: 100%;
+    height: 1px;
+    transform:scalex(0);
+    transform-origin: right;
+    transition:transform 0.5s;
+    transition-delay: 0.5s;
+}
+
+.button:hover span:nth-child(4){
+    transform:scalex(1);
+    transform-origin: left;
+    transition:transform 0.5s;
+    transition-delay: 0.5s;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    overflow-y:hidden ;
+    background: gray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.outerdiv .front{
+    background: url("../Images/winter-cold-memento-mori-wallpaper-preview.jpg");
+    background-size: 100% 100%;
+    height: 20vh;
+    width: 20vw;
+
+}
+
+.outerdiv .second{
+    background: url("../Images/himalayas.jpg");
+    background-size: 100% 100%;
+    border-right: 2px solid black;
+}
+
+.outerdiv .third{
+    background: url("../Images/kangchenjunga-peak1.jpg");
+    color: wheat;
+    width: 100%;
+    height: 100%;
+}
+
+.outerdiv{
+	width: 70%;
+	height: 80%;
+    margin: 5% 5%;
+}
+
+.outerdiv .turn-page{
+	background-color:#ccc;
+} */

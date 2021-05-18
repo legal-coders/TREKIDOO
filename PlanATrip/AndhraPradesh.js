@@ -76,17 +76,17 @@ function hoverbg(card, url) {
   });
 }
 
-hoverbg(no1, "../Images/Andrapradesh/andhraPradeshNo1.jpg");
-hoverbg(no2, "../Images/Andrapradesh/andhraPradeshNo1.jpg");
-hoverbg(no3, "../Images/Andrapradesh/andhraPradeshNo1.jpg");
-hoverbg(no4, "../Images/Andrapradesh/andhraPradeshNo1.jpg");
-hoverbg(no5, "../Images/Andrapradesh/andhraPradeshNo1.jpg");
-hoverbg(no6, "../Images/Andrapradesh/andhraPradeshNo1.jpg");
-hoverbg(no7, "../Images/Andrapradesh/andhraPradeshNo1.jpg");
-hoverbg(no8, "../Images/Andrapradesh/andhraPradeshNo1.jpg");
-hoverbg(no9, "../Images/Andrapradesh/andhraPradeshNo1.jpg");
-hoverbg(no10, "../Images/Andrapradesh/andhraPradeshNo1.jpg");
-hoverbg(no11, "../Images/Andrapradesh/andhraPradeshNo1.jpg");
+hoverbg(no1, "../States\img\Andhra\ahobilam_temple\ahobilam_temple1.jpg");
+hoverbg(no2, "../States/img/Andra/");
+hoverbg(no3, "../States/img/Andra/");
+hoverbg(no4, "../States/img/Andra/");
+hoverbg(no5, "../States/img/Andra/");
+hoverbg(no6, "../States/img/Andra/");
+hoverbg(no7, "../States/img/Andra/");
+hoverbg(no8, "../States/img/Andra/");
+hoverbg(no9, "../States/img/Andra/");
+hoverbg(no10, "../States/img/Andra/");
+hoverbg(no11, "../States/img/Andra/");
 
 //navbar
 

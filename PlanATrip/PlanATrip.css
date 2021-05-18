@@ -8,6 +8,78 @@
   box-sizing: border-box;
 }
 
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 2rem;
+  position: absolute;
+  z-index: 31;
+  top: 0;
+  background: linear-gradient(rgba(0,0,0,0.5),transparent);
+  padding: 35px 0;
+}
+
+.logo-container {
+  margin-left: 3rem;
+}
+
+.logo {
+  text-decoration: none;
+  color: white;
+  font-size: 1.7rem;
+  font-weight: 200;
+  letter-spacing: 2px;
+  transition: all 0.3s;
+}
+
+.logo span {
+  font-weight: 600;
+}
+
+.logo:hover {
+  transform: scale(1.1);
+  text-shadow: 0px 0px 5px white, 0 0 8px black;
+  border-bottom: 3px solid white;
+  border-radius: 10px;
+}
+
+.menu {
+  position: absolute;
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 3rem;
+}
+
+.list-item {
+  padding: 10px;
+  list-style-type: none;
+}
+
+.list-item a {
+  text-decoration: none;
+  color: white;
+  transition: all 0.3s;
+  font-size: 1.1rem;
+}
+
+.list-item a:hover{
+  border-bottom: 3px solid white;
+  border-radius: 0px;
+}
+.list-item a.plan{
+  color: black;
+  background: white;
+  border-radius: 50px;
+  mix-blend-mode: screen;
+  padding: 6px 10px;
+}
+
 .firstcontainer::before{
   content: "";
   position:absolute;
@@ -43,7 +115,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: url("../Images/mountain.jpg");
+  background: url("../PlanATrip/img/mountain.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 
@@ -136,7 +208,7 @@
 
 .selected::after {
   content: "";
-  background: url("../Images/DropDownArrow2.png");
+  background: url("../PlanATrip/img/DropDownArrow2.png");
   background-size: contain;
   background-repeat: no-repeat;
   position: absolute;
@@ -291,6 +363,84 @@
 
 
 @media screen and (max-width:970px){
+
+  /* Navigation Section */
+
+  .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 3.5rem;
+    position: absolute;
+    z-index: 31;
+    top: 0;
+    background: linear-gradient(to bottom,rgba(0,0,0,0.5),transparent);
+}
+
+.nav-container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    transition: all .8s ease-in-out;
+    backdrop-filter: blur(15px);
+    line-height: 5rem;
+    font-size: 1.5rem;
+    top: -150vh;
+    font-weight: 500;
+}
+
+.menu {
+    position: relative;
+    right: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 2rem;
+    height: 2rem;
+    cursor: pointer;
+    transition: all .5s ease-in-out;
+}
+.menu-lines {
+    position: absolute;
+    width: 1.4rem;
+    height: .2rem;
+    background: white;
+    border-radius: 5px;
+    transition: all .5s ease-in-out;
+}
+
+.menu-lines::before, .menu-lines::after {
+    content: '';
+    position: absolute;
+    width: 1.4rem;
+    height: .2rem;
+    background: white;
+    border-radius: 5px;
+    transition: all .5s ease-in-out;
+}
+.menu-lines::before {
+    transform: translateY(.5rem);
+}
+.menu-lines::after {
+    transform: translateY(-.5rem);
+}
+
+.menu.open .menu-lines {
+    transform: translateX(1.8rem);
+    background: transparent;
+}
+.menu.open .menu-lines::before {
+    transform: rotate(45deg) translate(-20px, 20px) ;
+}
+.menu.open .menu-lines::after {
+transform: rotate(-45deg) translate(-20px, -20px);
+}
+
   .innercontainer{
     height: 55vh;
     width: 60vw;

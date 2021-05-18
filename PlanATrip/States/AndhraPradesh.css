@@ -349,7 +349,7 @@ body{
     display: flex;
     align-items: center;
     /* background: url("../Images/Andrapradesh/3280.jpg") fixed; */
-    background: url("../Images/Andrapradesh/andhraPradeshNo1.jpg") fixed;   
+    background: url("../") fixed;   
     background-repeat: no-repeat; 
     background-size: cover;
     overflow-x: scroll;

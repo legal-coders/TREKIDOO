@@ -172,7 +172,7 @@ header {
     display: flex;
     height: 100vh;
     width: 100%;
-    background: url('../img/bg1.jpg') fixed;
+    background: url('../img/Wonders/bg1.jpg') fixed;
     background-position: center;
     background-size: cover;
     align-items: center;
@@ -266,54 +266,54 @@ header {
 }
 
 #wondersofindia {
-    background: url('../img/Thiruvalluvar_Statue.jpeg') fixed;
+    background: url('../img/Wonders/Thiruvalluvar_Statue.jpeg') fixed;
     background-size: cover;
     position: absolute;
 }
 #tajmahal {
-    background: url('../img/Taj_Mahal.jpg') fixed;
+    background: url('../img/Wonders/Taj_Mahal.jpg') fixed;
     background-size: cover;
     background-position: center;
     position: absolute;
     opacity: 0;
 }
 #gomateshwara {
-    background: url('../img/Gomateshwara.jpg') fixed;
+    background: url('../img/Wonders/Gomateshwara.jpg') fixed;
     background-size: cover;
     background-position: center;
     position: absolute;
     opacity: 0;
 }
 #hampi {
-    background: url('../img/Hampi.jpg') fixed;
+    background: url('../img/Wonders/Hampi.jpg') fixed;
     background-size: cover;
     background-position: center;
     position: absolute;
     opacity: 0;
 }
 #goldenTemple {
-    background: url('../img/goldenTemple.jpg') fixed;
+    background: url('../img/Wonders/goldenTemple.jpg') fixed;
     background-size: cover;
     background-position: center;
     position: absolute;
     opacity: 0;
 }
 #konarkSunTemple {
-    background: url('../img/KonarkSunTemple.jpg') fixed;
+    background: url('../img/Wonders/KonarkSunTemple.jpg') fixed;
     background-size: cover;
     background-position: center;
     position: absolute;
     opacity: 0;
 }
 #nalanda {
-    background: url('../img/nalanda.jpg') fixed;
+    background: url('../img/Wonders/nalanda.jpg') fixed;
     background-size: cover;
     background-position: center;
     position: absolute;
     opacity: 0;
 }
 #khajuraho {
-    background: url('../img/khajuraho.jpg') fixed;
+    background: url('../img/Wonders/khajuraho.jpg') fixed;
     background-size: cover;
     background-position: center;
     position: absolute;
@@ -355,37 +355,37 @@ header {
 }
 
 .tajmahal {
-    background: url('../img/Taj_Mahal.jpg');
+    background: url('../img/Wonders/Taj_Mahal.jpg');
     background-size: cover;
     background-position: center;
 }
 .gomateshwara {
-    background: url('../img/Gomateshwara.jpg');
+    background: url('../img/Wonders/Gomateshwara.jpg');
     background-size: cover;
     background-position: top;
 }
 .hampi {
-    background: url('../img/Hampi.jpg');
+    background: url('../img/Wonders/Hampi.jpg');
     background-size: cover;
     background-position: center;
 }
 .goldenTemple {
-    background: url('../img/goldenTemple.jpg');
+    background: url('../img/Wonders/goldenTemple.jpg');
     background-size: cover;
     background-position: center;
 }
 .konarkSunTemple {
-    background: url('../img/KonarkSunTemple.jpg');
+    background: url('../img/Wonders/KonarkSunTemple.jpg');
     background-size: cover;
     background-position: center;
 }
 .nalanda {
-    background: url('../img/nalanda.jpg');
+    background: url('../img/Wonders/nalanda.jpg');
     background-size: cover;
     background-position: center;
 }
 .khajuraho {
-    background: url('../img/khajuraho.jpg');
+    background: url('../img/Wonders/khajuraho.jpg');
     background-size: cover;
     background-position: center;
 }
@@ -558,7 +558,7 @@ header {
     }
 
     #tajmahal {
-        background: url('../img/Taj_Mahal.jpg') fixed;
+        background: url('../img/Wonders/Taj_Mahal.jpg') fixed;
         background-size: cover;
         background-position: center;
         position: relative;
@@ -567,7 +567,7 @@ header {
     }
 
     #gomateshwara {
-        background: url('../img/Gomateshwara.jpg') fixed;
+        background: url('../img/Wonders/Gomateshwara.jpg') fixed;
         background-size: cover;
         background-position: center;
         position: relative;
@@ -576,7 +576,7 @@ header {
     }
     
     #hampi {
-        background: url('../img/Hampi.jpg') fixed;
+        background: url('../img/Wonders/Hampi.jpg') fixed;
         background-size: cover;
         background-position: center;
         position: relative;
@@ -585,7 +585,7 @@ header {
 
     }
     #goldenTemple {
-        background: url('../img/goldenTemple.jpg') fixed;
+        background: url('../img/Wonders/goldenTemple.jpg') fixed;
         background-size: cover;
         background-position: center;
         position: relative;
@@ -594,7 +594,7 @@ header {
 
     }
     #konarkSunTemple {
-        background: url('../img/KonarkSunTemple.jpg') fixed;
+        background: url('../img/Wonders/KonarkSunTemple.jpg') fixed;
         background-size: cover;
         background-position: center;
         position: relative;
@@ -603,7 +603,7 @@ header {
 
     }
     #nalanda {
-        background: url('../img/nalanda.jpg') fixed;
+        background: url('../img/Wonders/nalanda.jpg') fixed;
         background-size: cover;
         background-position: center;
         position: relative;
@@ -612,7 +612,7 @@ header {
 
     }
     #khajuraho {
-        background: url('../img/khajuraho.jpg') fixed;
+        background: url('../img/Wonders/khajuraho.jpg') fixed;
         background-size: cover;
         background-position: center;
         position: relative;

@@ -464,6 +464,7 @@ body::before {
     width: 100%;
     transition: 0.3s;
     border-radius: 10px;
+    object-fit: cover;
 }
 .card .content{
     
@@ -496,7 +497,7 @@ body::before {
 .bottom a{
     float: center;
     line-height: 5rem;
-    padding: 7px 10px;
+    padding: 2px 12px 7px 12px;
     font-size: 17px;
     background: linear-gradient(45deg,#ffc75f,#ff9671,#ff6f91);
     text-decoration: none;

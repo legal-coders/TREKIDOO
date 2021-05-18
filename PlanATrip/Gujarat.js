@@ -76,22 +76,22 @@ function hoverbg(card,url){
     
   })
   card.addEventListener('mouseout',()=>{
-    secondcontainer.style.backgroundImage= 'url("../Images/Andrapradesh/3280.jpg")'; 
+    secondcontainer.style.backgroundImage= 'url("../States/img/Gujarat/ahmadabad/ahmadabad2.jpeg")'; 
     
   })
 }
 
-hoverbg(no1,"../Images/Andrapradesh/andhraPradeshNo1.jpg");
-hoverbg(no2,"../Images/Andrapradesh/andhraPradeshNo1.jpg");
-hoverbg(no3,"../Images/Andrapradesh/andhraPradeshNo1.jpg");
-hoverbg(no4,"../Images/Andrapradesh/andhraPradeshNo1.jpg");
-hoverbg(no5,"../Images/Andrapradesh/andhraPradeshNo1.jpg");
-hoverbg(no6,"../Images/Andrapradesh/andhraPradeshNo1.jpg");
-hoverbg(no7,"../Images/Andrapradesh/andhraPradeshNo1.jpg");
-hoverbg(no8,"../Images/Andrapradesh/andhraPradeshNo1.jpg");
-hoverbg(no9,"../Images/Andrapradesh/andhraPradeshNo1.jpg");
-hoverbg(no10,"../Images/Andrapradesh/andhraPradeshNo1.jpg");
-hoverbg(no11,"../Images/Andrapradesh/andhraPradeshNo1.jpg");
+hoverbg(no1,"../States/img/Gujarat/ahmadabad/ahmadabad1.jpg");
+hoverbg(no2,"../States/img/Gujarat/baroda/baroda1.png");
+hoverbg(no3,"../States/img/Gujarat/bhuj/bhuj1.jpg");
+hoverbg(no4,"../States/img/Gujarat/dwarkadhish_temple/dwarkadhish_temple1.jpg");
+hoverbg(no5,"../States/img/Gujarat/junagadh/junagadh1.jpg");
+hoverbg(no6,"../States/img/Gujarat/rann_of_kutch/rann_of_kutch1.jpg");
+hoverbg(no7,"../States/img/Gujarat/sasan_gir_national_park/national_park1.jpg");
+hoverbg(no8,"../States/img/Gujarat/somnath/somnath1.jpg");
+hoverbg(no9,"../States/img/Gujarat/rann_of_kutch/rann_of_kutch3.jpg");
+hoverbg(no10,"../States/img/Gujarat/sasan_gir_national_park/national_park4.jpg");
+hoverbg(no11,"../States/img/Gujarat/junagadh/junagadh3.jpg");
 
 
 

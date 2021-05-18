@@ -72,21 +72,21 @@ function hoverbg(card, url) {
   });
   card.addEventListener("mouseout", () => {
     secondcontainer.style.backgroundImage =
-      'url("../Images/Andrapradesh/3280.jpg")';
+      'url("../States/img/arunachal_pradesh/dirang/dirang1.jpg")';
   });
 }
 
-hoverbg(no1, "../Images/Andrapradesh/andhraPradeshNo1.jpg");
-hoverbg(no2, "../Images/Andrapradesh/andhraPradeshNo1.jpg");
-hoverbg(no3, "../Images/Andrapradesh/andhraPradeshNo1.jpg");
-hoverbg(no4, "../Images/Andrapradesh/andhraPradeshNo1.jpg");
-hoverbg(no5, "../Images/Andrapradesh/andhraPradeshNo1.jpg");
-hoverbg(no6, "../Images/Andrapradesh/andhraPradeshNo1.jpg");
-hoverbg(no7, "../Images/Andrapradesh/andhraPradeshNo1.jpg");
-hoverbg(no8, "../Images/Andrapradesh/andhraPradeshNo1.jpg");
-hoverbg(no9, "../Images/Andrapradesh/andhraPradeshNo1.jpg");
-hoverbg(no10, "../Images/Andrapradesh/andhraPradeshNo1.jpg");
-hoverbg(no11, "../Images/Andrapradesh/andhraPradeshNo1.jpg");
+hoverbg(no1, "../States/img/arunachal_pradesh/dirang/dirang4.jpg");
+hoverbg(no2, "../States/img/arunachal_pradesh/namdapha_national_park/namdapha_national_park1.jpg");
+hoverbg(no3, "../States/img/arunachal_pradesh/nuranang_falls/nuranang_waterfalls1.jpg");
+hoverbg(no4, "../States/img/arunachal_pradesh/pasighat/pasighat1.jpg");
+hoverbg(no5, "../States/img/arunachal_pradesh/sangti/sangiti3.jpg");
+hoverbg(no6, "../States/img/arunachal_pradesh/sela_pass/sela_pass1.jpg");
+hoverbg(no7, "../States/img/arunachal_pradesh/tawang/tawang1.jpg");
+hoverbg(no8, "../States/img/arunachal_pradesh/tezu/tezu1.jpg");
+hoverbg(no9, "../States/img/arunachal_pradesh/dirang/dirang2.jpg");
+hoverbg(no10, "../States/img/arunachal_pradesh/namdapha_national_park/namdapha_national_park2.jpg");
+hoverbg(no11, "../States/img/arunachal_pradesh/nuranang_falls/nuranang_waterfalls2.jpg");
 
 //navbar
 

@@ -76,22 +76,22 @@ function hoverbg(card,url){
     
   })
   card.addEventListener('mouseout',()=>{
-    secondcontainer.style.backgroundImage= 'url("../Images/Andrapradesh/3280.jpg")'; 
+    secondcontainer.style.backgroundImage= 'url("../States/img/haryana/surajkund_lake/surajkund_lake1.jpg")'; 
     
   })
 }
 
-hoverbg(no1,"../Images/Andrapradesh/andhraPradeshNo1.jpg");
-hoverbg(no2,"../Images/Andrapradesh/andhraPradeshNo1.jpg");
-hoverbg(no3,"../Images/Andrapradesh/andhraPradeshNo1.jpg");
-hoverbg(no4,"../Images/Andrapradesh/andhraPradeshNo1.jpg");
-hoverbg(no5,"../Images/Andrapradesh/andhraPradeshNo1.jpg");
-hoverbg(no6,"../Images/Andrapradesh/andhraPradeshNo1.jpg");
-hoverbg(no7,"../Images/Andrapradesh/andhraPradeshNo1.jpg");
-hoverbg(no8,"../Images/Andrapradesh/andhraPradeshNo1.jpg");
-hoverbg(no9,"../Images/Andrapradesh/andhraPradeshNo1.jpg");
-hoverbg(no10,"../Images/Andrapradesh/andhraPradeshNo1.jpg");
-hoverbg(no11,"../Images/Andrapradesh/andhraPradeshNo1.jpg");
+hoverbg(no1,"../States\img\haryana\brahma_sarovar\brahma_sarovar1.jpeg");
+hoverbg(no2,"../States\img\haryana\chhatbir_zoo\chhatbir_zoo1.jpg");
+hoverbg(no3,"../States\img\haryana\hanuman_mandir\hanuman_mandir1.JPG");
+hoverbg(no4,"../States\img\haryana\morni_hills\morni_hills1.jpg");
+hoverbg(no5,"../States\img\haryana\panikot_lake\panikot_lake1.jpg");
+hoverbg(no6,"../States\img\haryana\pratapgarh_farms\pratapgarh_farms1.jpg");
+hoverbg(no7,"../States\img\haryana\raja_nahar_singh_palace\raja_nahar_singh_palace1.JPG");
+hoverbg(no8,"../States\img\haryana\surajkund_lake\surajkund_lake4.jpg");
+hoverbg(no9,"../States\img\haryana\panikot_lake\panikot_lake2.jpg");
+hoverbg(no10,"../States\img\haryana\pratapgarh_farms\pratapgarh_farms3.jpg");
+hoverbg(no11,"../States\img\haryana\morni_hills\morni_hills4.jpg");
 
 
 

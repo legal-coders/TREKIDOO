@@ -72,21 +72,21 @@ function hoverbg(card, url) {
   });
   card.addEventListener("mouseout", () => {
     secondcontainer.style.backgroundImage =
-      'url("../Images/Andrapradesh/3280.jpg")';
+      'url("../States/img/Andhra/rishikonda_beach/rishikonda_beach1.jpg"")';
   });
 }
 
-hoverbg(no1, "../States\img\Andhra\ahobilam_temple\ahobilam_temple1.jpg");
-hoverbg(no2, "../States\img\Andhra\belum_caves\belum_caves1.jpg);
-hoverbg(no3, "../States\img\Andhra\borra_caves\borra_caves1.jpg");
-hoverbg(no4, "../States/img/Andra/");
-hoverbg(no5, "../States/img/Andra/");
-hoverbg(no6, "../States/img/Andra/");
-hoverbg(no7, "../States/img/Andra/");
-hoverbg(no8, "../States/img/Andra/");
-hoverbg(no9, "../States/img/Andra/");
-hoverbg(no10, "../States/img/Andra/");
-hoverbg(no11, "../States/img/Andra/");
+hoverbg(no1, "../States/img/Andhra/ahobilam_temple/ahobilam_temple1.jpg");
+hoverbg(no2, "../States/img/Andhra/belum_caves/belum_caves1.jpg");
+hoverbg(no3, "../States/img/Andhra/borra_caves/borra_caves1.jpg");
+hoverbg(no4, "../States/img/Andhra/ins_museum/ins_museum1.jpg");
+hoverbg(no5, "../States/img/Andhra/kailasagiri/kailasagiri1.jpg");
+hoverbg(no6, "../States/img/Andhra/rishikonda_beach/rishikonda_beach4.jpg");
+hoverbg(no7, "../States/img/Andhra/tada_falls/tada_falls1.jpg");
+hoverbg(no8, "../States/img/Andhra/thirumala/tirumala_temple1.jpg");
+hoverbg(no9, "../States/img/Andhra/belum_caves/belum_caves2.jpg");
+hoverbg(no10, "../States/img/Andhra/kailasagiri/kailasagiri2.jpg");
+hoverbg(no11, "../States/img/Andhra/rishikonda_beach/rishikonda_beach3.jpg");
 
 //navbar
 

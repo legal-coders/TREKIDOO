@@ -8,7 +8,6 @@ let menuopen = false;
 function height(container) {
     let height = place1.offsetHeight;
     container.style.height = `${height - 2}px`;
-    console.log(container.style.height);
 }
 
 height(document.querySelector(".main_body"));

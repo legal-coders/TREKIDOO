@@ -77,8 +77,8 @@ function hoverbg(card, url) {
 }
 
 hoverbg(no1, "../States\img\Andhra\ahobilam_temple\ahobilam_temple1.jpg");
-hoverbg(no2, "../States/img/Andra/");
-hoverbg(no3, "../States/img/Andra/");
+hoverbg(no2, "../States\img\Andhra\belum_caves\belum_caves1.jpg);
+hoverbg(no3, "../States\img\Andhra\borra_caves\borra_caves1.jpg");
 hoverbg(no4, "../States/img/Andra/");
 hoverbg(no5, "../States/img/Andra/");
 hoverbg(no6, "../States/img/Andra/");

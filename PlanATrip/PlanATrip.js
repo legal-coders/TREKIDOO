@@ -58,88 +58,88 @@ optionsList.forEach(o => {
     
     switch(finalselect){
         case AndhraPradesh:
-        window.location.href="../States/AndhraPradesh.html"
+        window.location.href="./AndhraPradesh.html"
         break;
         case ArunachalPradesh:
-        window.location.href="../States/ArunachalPradesh.html"
+        window.location.href="./ArunachalPradesh.html"
         break;
         case Assam:
-        window.location.href="../States/Assam.html"
+        window.location.href="./Assam.html"
         break;
         case Chhattisgarh:
-        window.location.href="../States/Chhattisgarh.html"
+        window.location.href="./Chhattisgarh.html"
         break;
         case Goa:
-        window.location.href="../States/Goa.html"
+        window.location.href="./Goa.html"
         break;
         case Gujarat:
-        window.location.href="../States/Gujarat.html"
+        window.location.href="./Gujarat.html"
         break;
         case Haryana:
-        window.location.href="../States/Haryana.html"
+        window.location.href="./Haryana.html"
         break;
         case HimachalPradesh:
-        window.location.href="../States/HimachalPradesh.html"
+        window.location.href="./HimachalPradesh.html"
         break;
         case JammuandKashmir:
-        window.location.href="../States/JammuandKashmir.html"
+        window.location.href="./JammuandKashmir.html"
         break;
         case Jharkhand:
-        window.location.href="../States/Jharkhand.html"
+        window.location.href="./Jharkhand.html"
         break;
         case Karnataka:
-        window.location.href="../States/Karnataka.html"
+        window.location.href="./Karnataka.html"
         break;
         case Kerala:
-        window.location.href="../States/Kerala.html"
+        window.location.href="./Kerala.html"
         break;
         case Ladakh:
-        window.location.href="../States/Ladakh.html"
+        window.location.href="./Ladakh.html"
         break;
         case MadhyaPradesh:
-        window.location.href="../States/MadhyaPradesh.html"
+        window.location.href="./MadhyaPradesh.html"
         break;
         case Maharashtra:
-        window.location.href="../States/Maharashtra.html"
+        window.location.href="./Maharashtra.html"
         break;
         case Manipur:
-        window.location.href="../States/Manipur.html"
+        window.location.href="./Manipur.html"
         break;
         case Meghalaya:
-            window.location.href="../States/Meghalaya.html"
+            window.location.href="./Meghalaya.html"
             break;
             case Mizoram:
-            window.location.href="../States/Mizoram.html"
+            window.location.href="./Mizoram.html"
             break;
             case Nagaland:
-            window.location.href="../States/Nagaland.html"
+            window.location.href="./Nagaland.html"
             break;
             case Odisha:
-            window.location.href="../States/Odisha.html"
+            window.location.href="./Odisha.html"
             break;
             case Punjab:
-            window.location.href="../States/Punjab.html"
+            window.location.href="./Punjab.html"
             break;
             case Rajasthan:
-            window.location.href="../States/Rajasthan.html"
+            window.location.href="./Rajasthan.html"
             break;
             case Sikkim:
-            window.location.href="../States/Sikkim.html"
+            window.location.href="./Sikkim.html"
             break;
             case TamilNadu:
-            window.location.href="../States/TamilNadu.html"
+            window.location.href="./TamilNadu.html"
             break;
             case Telangana:
-            window.location.href="../States/Telangana.html"
+            window.location.href="./Telangana.html"
             break;
             case Tripura:
-            window.location.href="../States/Tripura.html"
+            window.location.href="./Tripura.html"
             break;
             case UttarPradesh:
-            window.location.href="../States/UttarPradesh.html"
+            window.location.href="./UttarPradesh.html"
             break;
             case WestBengal:
-            window.location.href="../States/WestBengal.html"
+            window.location.href="./WestBengal.html"
             break;
 
 

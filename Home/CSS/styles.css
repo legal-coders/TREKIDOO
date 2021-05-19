@@ -154,18 +154,6 @@ header {
     mix-blend-mode: multiply;
 }
 
-/* #title {
-    position: absolute;
-    z-index: 27;
-    top: 30%;
-    left: 50%;
-    transform: translate(-50%, -30%);
-    text-shadow: 0px 0px 5px white, 0 0 8px black;
-    color: white;
-    font-size: 4rem;
-    transition: opacity 1s ease-in-out;
-} */
-
 .title {
     width: 28%;
     position: absolute;

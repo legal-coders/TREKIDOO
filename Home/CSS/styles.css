@@ -154,7 +154,7 @@ header {
     mix-blend-mode: multiply;
 }
 
-#title {
+/* #title {
     position: absolute;
     z-index: 27;
     top: 30%;
@@ -164,6 +164,17 @@ header {
     color: white;
     font-size: 4rem;
     transition: opacity 1s ease-in-out;
+} */
+
+.title {
+    width: 28%;
+    position: absolute;
+    z-index: 27;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -35%);
+    transition: opacity 1s ease-in-out;
+
 }
 
 /* Content Section */

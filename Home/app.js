@@ -1,4 +1,4 @@
-const title = document.getElementById("title");
+const title = document.querySelector(".title");
 const menu = document.querySelector(".menu");
 const nav_container = document.querySelector(".nav-container");
 let menuopen = false;

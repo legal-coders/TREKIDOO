@@ -7,6 +7,86 @@ body {
   overflow: hidden;
 }
 
+/* Navbar Section */
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 3.5rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 31;
+  padding: 35px 0;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), transparent);
+    text-shadow: 1px 1px 2px white, 2px 2px 3px rgba(0, 0, 0, 1);
+}
+
+.logo-container {
+  margin-left: 3rem;
+}
+
+.logo {
+  text-decoration: none;
+  color: white;
+  font-size: 1.7rem;
+  font-weight: 200;
+  letter-spacing: 2px;
+  transition: all 0.3s;
+}
+
+.logo span {
+  font-weight: 600;
+}
+
+.Trekidoo_logo_nav {
+  width: 40px;
+  float: left;
+}
+
+.logo:hover {
+  transform: scale(1.1);
+  text-shadow: 0px 0px 5px white, 0 0 8px black;
+  border-bottom: 3px solid white;
+  border-radius: 10px;
+}
+
+.menu {
+  position: absolute;
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 3rem;
+}
+
+.list-item {
+  padding: 10px;
+  list-style-type: none;
+}
+
+.list-item a {
+  text-decoration: none;
+  color: white;
+  transition: all 0.3s;
+  font-size: 22px;
+}
+
+.list-item a:hover {
+  border-bottom: 3px solid white;
+  border-radius: 0px;
+}
+.list-item a.about {
+  color: black;
+  background: white;
+  border-radius: 50px;
+  padding: 4px 10px 5px 10px;
+}
+
 section {
   display: flex;
   justify-content: center;
@@ -197,6 +277,84 @@ z-index: 31;
 }
 
 @media (max-width: 800px) {
+
+    /* Navigation Section */
+  
+    .navbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      height: 3.5rem;
+      z-index: 31;
+      position: absolute;
+      top: 0;
+      background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), transparent);
+    }
+  
+    .nav-container {
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      transition: all 0.8s ease-in-out;
+      backdrop-filter: blur(15px);
+      line-height: 5rem;
+      font-size: 1.5rem;
+      top: -150vh;
+      font-weight: 500;
+    }
+  
+    .menu {
+      position: relative;
+      right: 3rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 2rem;
+      height: 2rem;
+      cursor: pointer;
+      transition: all 0.5s ease-in-out;
+    }
+    .menu-lines {
+      position: absolute;
+      width: 1.4rem;
+      height: 0.2rem;
+      background: white;
+      border-radius: 5px;
+      transition: all 0.5s ease-in-out;
+    }
+  
+    .menu-lines::before,
+    .menu-lines::after {
+      content: "";
+      position: absolute;
+      width: 1.4rem;
+      height: 0.2rem;
+      background: white;
+      border-radius: 5px;
+      transition: all 0.5s ease-in-out;
+    }
+    .menu-lines::before {
+      transform: translateY(0.5rem);
+    }
+    .menu-lines::after {
+      transform: translateY(-0.5rem);
+    }
+  
+    .menu.open .menu-lines {
+      transform: translateX(1.8rem);
+      background: transparent;
+    }
+    .menu.open .menu-lines::before {
+      transform: rotate(45deg) translate(-20px, 20px);
+    }
+    .menu.open .menu-lines::after {
+      transform: rotate(-45deg) translate(-20px, -20px);
+    }
   body {
     background: linear-gradient(to bottom, #008e9b, #008f7a);
     height: 100vh;

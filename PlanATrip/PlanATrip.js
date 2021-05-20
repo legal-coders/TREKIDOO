@@ -54,6 +54,7 @@ optionsList.forEach(o => {
             var Telangana = "Telangana";
             var UttarPradesh = "Uttar Pradesh";
             var WestBengal = "West Bengal";
+            var Uttarakhand = "Uttarakhand";
 
 
             switch (finalselect) {
@@ -102,9 +103,6 @@ optionsList.forEach(o => {
                 case Meghalaya:
                     window.location.href = "./Meghalaya.html"
                     break;
-                case Mizoram:
-                    window.location.href = "./Mizoram.html"
-                    break;
                 case Nagaland:
                     window.location.href = "./Nagaland.html"
                     break;
@@ -121,19 +119,18 @@ optionsList.forEach(o => {
                     window.location.href = "./Sikkim.html"
                     break;
                 case TamilNadu:
-                    window.location.href = "./TamilNadu.html"
+                    window.location.href = "./Tamilnadu.html"
                     break;
                 case Telangana:
-                    window.location.href = "./Telangana.html"
+                    window.location.href = "./Telungana.html"
                     break;
-                case Tripura:
-                    window.location.href = "./Tripura.html"
+                case Uttarakhand:
+                    window.location.href = "./Uttarkhand.html"
                     break;
                 case UttarPradesh:
                     window.location.href = "./UttarPradesh.html"
                     break;
                 case WestBengal:
-                    console.log("hi");
                     window.location.href = "./WestBengal.html"
                     break;
 

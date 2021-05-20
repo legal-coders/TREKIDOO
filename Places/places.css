@@ -111,6 +111,7 @@ body::before {
   background: white;
   border-radius: 50px;
   padding: 2px 14px 5px 13px;
+  text-shadow: 1px 1px 3px;
 }
 
 .container30 {

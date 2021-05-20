@@ -47,10 +47,9 @@ body
     position: absolute;
     top: 0;
     left: 0;
-z-index: 31;
-    
+    z-index: 31;
     padding: 35px 0;
-  background: linear-gradient(rgba(0, 0, 0, 0.5), transparent);
+    background: linear-gradient(rgba(0, 0, 0, 0.5), transparent);
     text-shadow: 1px 1px 2px white, 2px 2px 3px rgba(0, 0, 0, 1);
     text-shadow: 1px 1px 2px white, 2px 2px 3px rgba(0, 0, 0, 1);
 }
@@ -116,6 +115,7 @@ z-index: 31;
     background: white;
     border-radius: 50px;
     padding: 3px 14px 4px 16px;
+    text-shadow: 1px 1px 3px;
   }
 
 @keyframes gradient
@@ -258,7 +258,6 @@ z-index: 31;
     height: 100px;
     bottom: 0;
     left: 0;
-z-index: 31;
     z-index: 1;
 }
 .content1 img

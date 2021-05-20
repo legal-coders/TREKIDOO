@@ -110,6 +110,7 @@ body {
   background: white;
   border-radius: 50px;
   padding: 4px 10px 5px 10px;
+  text-shadow: 1px 1px 3px;
 }
 
 /* Parallax Section */

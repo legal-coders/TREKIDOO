@@ -99,14 +99,16 @@ section
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: linear-gradient(to bottom,#845EC2,#5C3A99);
+    /* background: linear-gradient(to bottom,#845EC2,#5C3A99); */
+    background: url("https://i2.wp.com/thestrongtraveller.com/wp-content/uploads/2020/12/bhangadh-fort.jpg?fit=1920%2C1280&ssl=1") no-repeat center;
+    background-size: cover;
 }
 section .color
 {
     position: absolute;
     filter: blur(150px);
 }
-section .color:nth-child(1)
+/* section .color:nth-child(1)
 {
     top: -350px;
     width: 600px;
@@ -128,7 +130,7 @@ section .color:nth-child(2)
     width: 300px;
     height: 300px;
     background: #845EC2;
-}
+} */
 .box
 {
     position: relative;

@@ -92,13 +92,15 @@ section {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background: linear-gradient(to bottom, #2c73d2, #3596b5);
+  /* background: linear-gradient(to bottom, #2c73d2, #3596b5); */
+  background: url("https://cdn.discordapp.com/attachments/843450590763679749/844971580345548800/photo-1476067897447-d0c5df27b5df.png") no-repeat center;
+  background-size: cover;
 }
 section .color {
   position: absolute;
   filter: blur(150px);
 }
-section .color:nth-child(1) {
+/* section .color:nth-child(1) {
   top: -350px;
   width: 600px;
   height: 600px;
@@ -117,7 +119,7 @@ section .color:nth-child(2) {
   width: 300px;
   height: 300px;
   background: #0004ff;
-}
+} */
 .box {
   position: relative;
 }

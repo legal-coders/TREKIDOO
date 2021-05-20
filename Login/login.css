@@ -164,16 +164,24 @@ section .color:nth-child(2) {
   color: #fff;
   box-shadow: 0 5px 15px rgba(255, 255, 255, 0.05);
 }
-.inputbox button {
-  position: relative;
-  background: rgb(255, 255, 255);
-  padding: 11px 40px;
-  border-color: rgb(255, 255, 255);
-  border-radius: 50px;
-  left: 90px;
+
+.inputbox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+
 .inputbox a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
   text-decoration: none;
+  border-radius: 20px;
+  width: 50%;
+  height: 34px;
+  color: #00c9a7;
+  background-color: white;
 }
 .form .inputbox input::placeholder {
   color: rgb(255, 255, 255);

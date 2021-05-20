@@ -32,16 +32,19 @@ body::before {
   backdrop-filter: blur(3px);
 }
 
+/* Navbar Section */
+
 .navbar {
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  height: 2rem;
+  height: 3.5rem;
   position: absolute;
-  z-index: 31;
   top: 0;
-  background: rgba(0, 0, 0, 1);
+  left: 0;
+  z-index: 31;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), transparent);
   padding: 35px 0;
 }
 
@@ -60,6 +63,11 @@ body::before {
 
 .logo span {
   font-weight: 600;
+}
+
+.Trekidoo_logo_nav {
+  width: 40px;
+  float: left;
 }
 
 .logo:hover {
@@ -89,12 +97,18 @@ body::before {
   text-decoration: none;
   color: white;
   transition: all 0.3s;
-  font-size: 1.1rem;
+  font-size: 22px;
 }
 
 .list-item a:hover {
   border-bottom: 3px solid white;
   border-radius: 0px;
+}
+.list-item a.places {
+  color: black;
+  background: white;
+  border-radius: 50px;
+  padding: 4px 10px 5px 10px;
 }
 
 .container30 {

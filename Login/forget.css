@@ -108,29 +108,7 @@ section .color
     position: absolute;
     filter: blur(150px);
 }
-/* section .color:nth-child(1)
-{
-    top: -350px;
-    width: 600px;
-    height: 600px;
-    background: #DCB0FF;
-}
-section .color:nth-child(2)
-{
-    bottom: 150px;
-    left: 100px;
-    width: 500px;
-    height: 500px;
-    background: #C031B5;
-}
-section .color:nth-child(2)
-{
-    bottom: 50px;
-    right: 100px;
-    width: 300px;
-    height: 300px;
-    background: #845EC2;
-} */
+
 .box
 {
     position: relative;
@@ -207,10 +185,9 @@ section .color:nth-child(2)
     justify-content: center;
     align-items: center;
     backdrop-filter: blur(5px);
-    box-shadow: 0 25px 45px rgba(0,0,0,0.1);
-    border: 1px solid rgba(255,255,255,0.5);
-    border-radius: 1px solid rgba(255,255,255,0.2);
-    border-bottom: 1px solid rgba(255,255,255,0.2);
+    box-shadow: -2px 3px 13px rgb(255 255 255 / 60%);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 0.5px solid rgba(255, 255, 255, 0.2);
 }
 .form
 {
@@ -287,6 +264,14 @@ z-index: 31;
     text-decoration: none;
     width: 50%;
     left: 23%;
+    color: #191e32;
+}
+
+.inputbox a:hover {
+  background-color: #191e32;
+  color: white;
+  
+  box-shadow: 3px 3px 8px rgba(255, 255, 255, 0.6);
 }
 
 .form .inputbox input::placeholder
@@ -342,7 +327,7 @@ z-index: 31;
           line-height: 5rem;
           font-size: 1.5rem;
           top: -150vh;
-          font-weight: 500;
+          font-weight: 500;;
         }
       
         .menu {
@@ -405,8 +390,6 @@ z-index: 31;
     .containerForget
     {
         position: relative;
-        top: -65px;
-        left: -35px;
         width: 300px;
         min-height: 400px;
         background: rgba(255,255,255,0.1);
@@ -415,10 +398,6 @@ z-index: 31;
         justify-content: center;
         align-items: center;
         backdrop-filter: blur(5px);
-        box-shadow: 0 25px 45px rgba(0,0,0,0.1);
-        border: 1px solid rgba(255,255,255,0.5);
-        border-radius: 1px solid rgba(255,255,255,0.2);
-        border-bottom: 1px solid rgba(255,255,255,0.2);
         overflow: hidden;
     }
     .inputbox button
@@ -429,6 +408,10 @@ z-index: 31;
         border-color: rgb(255, 255, 255);
         border-radius: 50px;
         left: 35px;
+    }
+
+    .square {
+      display: none;
     }
 }
 

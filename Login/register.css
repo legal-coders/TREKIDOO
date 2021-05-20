@@ -186,24 +186,28 @@ section .color:nth-child(2) {
   justify-content: center;
   align-items: center;
   backdrop-filter: blur(5px);
-  box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
+  box-shadow: -2px 3px 13px rgb(255 255 255 / 60%);
   border: 1px solid rgba(255, 255, 255, 0.5);
-  border-radius: 1px solid rgba(255, 255, 255, 0.2);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 0.5px solid rgba(255, 255, 255, 0.2);
 }
 .form {
   position: relative;
   width: 100%;
   height: 100%;
   padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .form h2 {
   position: relative;
-  color: white;
+  color: #28363d;
   font-size: 24px;
   font-weight: 600;
   letter-spacing: 1px;
   margin-bottom: 40px;
+  padding-bottom: 5px;
+  border-bottom: 4px solid #28363d;
 }
 .forget a {
   color: rgb(0, 217, 255);
@@ -212,16 +216,15 @@ section .color:nth-child(2) {
 .forget:hover a {
   color: rgb(0, 4, 255);
 }
-.form h2::before {
+/* .form h2::before {
   content: "";
   position: absolute;
   left: 0;
-z-index: 31;
   bottom: -10px;
   width: 80px;
   height: 4px;
   background: #fff;
-}
+} */
 .form .inputbox {
   width: 100%;
   margin-top: 20px;
@@ -231,7 +234,7 @@ z-index: 31;
 .form .inputbox input {
   display: flex;
   flex-direction: column;
-  width: 100%;
+  width: 132%;
   background: rgba(255, 255, 255, 0.2);
   border: none;
   outline: none;
@@ -244,6 +247,8 @@ z-index: 31;
   letter-spacing: 1px;
   color: #fff;
   box-shadow: 0 5px 15px rgba(255, 255, 255, 0.05);
+  position: relative;
+  left: -32px;
 }
 .inputbox button {
   position: relative;
@@ -251,7 +256,7 @@ z-index: 31;
   padding: 11px 40px;
   border-color: rgb(255, 255, 255);
   border-radius: 50px;
-  left: 90px;
+  margin-left: 55px;
 }
 .inputbox a {
   text-decoration: none;
@@ -272,10 +277,9 @@ z-index: 31;
   margin-top: 5px;
   color: #fff;
   margin: 10px auto;
-}
-.forget {
   color: #fff;
   font-weight: 600;
+  margin-left: 30px;
 }
 
 @media (max-width: 800px) {
@@ -367,8 +371,6 @@ z-index: 31;
   }
   .containerRegister {
     position: relative;
-    top: -65px;
-    left: -35px;
     width: 300px;
     min-height: 400px;
     background: rgba(255, 255, 255, 0.1);
@@ -377,10 +379,6 @@ z-index: 31;
     justify-content: center;
     align-items: center;
     backdrop-filter: blur(5px);
-    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.5);
-    border-radius: 1px solid rgba(255, 255, 255, 0.2);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
     overflow: hidden;
   }
   .inputbox button {
@@ -389,6 +387,27 @@ z-index: 31;
     padding: 11px 40px;
     border-color: rgb(255, 255, 255);
     border-radius: 50px;
-    left: 50px;
+    left: -9px;
+    cursor: pointer;
   }
+
+  .inputbox button:hover {
+    color: white;
+    background-color: #28363d;
+    border: none;
+    box-shadow: 3px 3px 8px rgba(255, 255, 255, 0.6);
+  }
+
+  .square {
+    display: none;
+  }
+
+  .forget {
+    margin-left: 22px;
+  }
+
+.form .inputbox input {
+  width: 115%;
+  left: -14px;
+}
 }

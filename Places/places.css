@@ -43,7 +43,7 @@ body::before {
   position: absolute;
   top: 0;
   left: 0;
-z-index: 31;
+  z-index: 31;
   z-index: 31;
   padding: 35px 0;
   background: linear-gradient(rgba(0, 0, 0, 0.5), transparent);
@@ -304,6 +304,7 @@ z-index: 31;
   border-radius: 10px;
   object-fit: cover;
 }
+
 .card .content {
   position: absolute;
   bottom: 0px;
@@ -321,6 +322,7 @@ z-index: 31;
   margin-bottom: 0px;
   color: white;
 }
+
 .bottom p {
   /* position: absolute; */
   color: #ffffff;

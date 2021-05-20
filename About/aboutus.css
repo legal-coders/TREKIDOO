@@ -54,9 +54,11 @@ body {
   position: absolute;
   top: 0;
   left: 0;
+z-index: 31;
   z-index: 31;
   padding: 35px 0;
   background: linear-gradient(rgba(0, 0, 0, 0.5), transparent);
+    text-shadow: 1px 1px 2px white, 2px 2px 3px rgba(0, 0, 0, 1);
 }
 
 .logo-container {
@@ -178,6 +180,7 @@ body {
   position: absolute;
   top: 0;
   left: 0;
+z-index: 31;
   width: 100%;
   height: 100%;
   border-radius: 1.25rem;
@@ -188,6 +191,7 @@ body {
   position: absolute;
   top: 0;
   left: 0;
+z-index: 31;
   width: 100%;
   height: 100%;
   background: rgba(0, 98, 255, 0.5);
@@ -234,6 +238,7 @@ body {
 }
 .card:hover .message {
   left: 0;
+z-index: 31;
   opacity: 1;
   visibility: visible;
   padding-left: 5rem;

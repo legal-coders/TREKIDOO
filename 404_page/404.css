@@ -1,9 +1,20 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald&display=swap%27");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap%27");
+
+h1,
+h2,
+h3 {
+  font-family: "Roboto", sans-serif;
+}
+
+
 body
 {
     margin: 0;
     background-image: linear-gradient(to top, #1e3c72 0%, #1e3c72 1%, #2a5298 100%);
     overflow-y: hidden;
     overflow-x: hidden;
+    font-family: "Oswald", sans-serif;
 }
 
 /* Navbar Section */

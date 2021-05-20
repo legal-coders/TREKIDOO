@@ -64,6 +64,35 @@
     height: 80px;
 }
 
+.innercontainer .container h1 {
+    position: absolute;
+    left: 50%;
+    top: 10%;
+    transform: translate(-50%);
+    font-size: 80px;
+    background: linear-gradient(to right, #845ec2, #2c73d2, #008f7a);
+    background-size: 300%;
+    background-position: left;
+    animation: gradiant 2s infinite alternate;
+    background-clip: text;
+    -webkit-background-clip: text;
+  
+    color: transparent;
+    font-weight: bolder;
+    font-family: Helvetica, sans-serif;
+    /* -webkit-text-stroke-width: 1.5px;
+      -webkit-text-stroke-color: #0d141f; */
+  }
+  
+  @keyframes gradiant {
+  0% {
+    background-position: left;
+  }
+  100% {
+    background-position: right;
+  }
+  }
+
 @media (max-width: 600px) {
     .square {
         display: none;

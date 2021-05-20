@@ -119,10 +119,7 @@ z-index: 31;
   top: 10%;
   transform: translate(-50%);
   font-size: 80px;
-  background: linear-gradient(to right, #845ec2, #2c73d2, #008f7a);
-  background-size: 300%;
-  background-position: left;
-  animation: gradiant 2s infinite alternate;
+  
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;

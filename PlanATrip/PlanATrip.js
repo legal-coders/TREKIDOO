@@ -67,7 +67,7 @@ optionsList.forEach(o => {
         window.location.href="./Assam.html"
         break;
         case Chhattisgarh:
-        window.location.href="./Chhattisgarh.html"
+        window.location.href="./Chattisgarh.html";
         break;
         case Goa:
         window.location.href="./Goa.html"

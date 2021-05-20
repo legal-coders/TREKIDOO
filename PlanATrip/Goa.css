@@ -129,7 +129,7 @@ z-index: 31;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: url("../PlanATrip/img/mountain.jpg");
+  background: url("https://images-ext-2.discordapp.net/external/5FmHxHwaTE-uzC9f2Z6mv_gEAoTON4ZGGAUdeqm8WqA/https/i.assetzen.net/i/ASIL8phgCZ6j/w%3A1920/h%3A/q%3A70.jpg?width=709&height=473");
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -171,7 +171,7 @@ z-index: 31;
 }
 
 .select-box .options-container {
-  background: rgb(18, 149, 236);
+  background: rgb(221, 94, 9);
   color: #f5f6fa;
   max-height: 0;
   width: 100%;
@@ -183,7 +183,7 @@ z-index: 31;
 }
 
 .selected {
-  background: rgb(18, 149, 236);
+  background: rgb(221, 94, 9);
   border-radius: 8px;
   margin-bottom: 8px;
   color: #f5f6fa;
@@ -222,7 +222,7 @@ z-index: 31;
 }
 
 .select-box .option:hover {
-  background: rgb(28, 108, 161);
+  background: rgb(225, 117, 46);
 }
 
 .select-box label {
@@ -250,7 +250,7 @@ z-index: 31;
   padding: 12px 30px;
   color: rgba(255, 255, 255, 1);
   letter-spacing: 2px;
-  background: rgb(18, 149, 236);
+  background: rgb(221, 94, 9);
   transition: 0.5s;
   border: none;
   font-size: 16px;
@@ -259,7 +259,7 @@ z-index: 31;
 }
 
 .button:hover {
-  color: rgb(2, 48, 253);
+  color: rgb(255, 255, 255);
   font-weight: bolder;
 }
 
@@ -271,7 +271,7 @@ z-index: 31;
 .button span {
   display: block;
   position: absolute;
-  background: rgb(2, 48, 253);
+  background: rgb(255, 255, 255);
 }
 
 .button span:nth-child(1) {
@@ -603,7 +603,7 @@ z-index: 31;
     padding: 12px 30px;
     color: rgba(255, 255, 255, 0.6);
     letter-spacing: 2px;
-    background: rgb(18, 149, 236);
+    background: rgb(221, 94, 9);
     transition: 0.5s;
     border: none;
     font-size: 16px;

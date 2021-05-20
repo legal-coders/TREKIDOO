@@ -70,7 +70,7 @@
     top: 10%;
     transform: translate(-50%);
     font-size: 80px;
-    background: linear-gradient(to right, #845ec2, #2c73d2, #008f7a);
+    background: linear-gradient(to right, #ff6609, #ff7504, #ff8303, #ff9107, #ff9e0f, #ffab19, #ffb724, #ffc32f, #ffcf3b, #ffda47, #ffe654, #fff162);
     background-size: 300%;
     background-position: left;
     animation: gradiant 2s infinite alternate;

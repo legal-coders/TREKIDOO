@@ -46,7 +46,7 @@ optionsList.forEach(o => {
             var Maharashtra = "Maharashtra";
             var Meghalaya = "Meghalaya";
             var Nagaland = "Nagaland";
-            var Odisha = "Odisha";
+            var Odisha = "Orissa";
             var Punjab = "Punjab";
             var Rajasthan = "Rajasthan";
             var Sikkim = "Sikkim";
@@ -107,7 +107,7 @@ optionsList.forEach(o => {
                     window.location.href = "./Nagaland.html"
                     break;
                 case Odisha:
-                    window.location.href = "./Odisha.html"
+                    window.location.href = "./Orissa.html"
                     break;
                 case Punjab:
                     window.location.href = "./Punjab.html"

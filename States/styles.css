@@ -245,7 +245,7 @@ body
     mix-blend-mode: multiply;
     width: 100%;
     height: 100px;
-    top: 87vh;
+    top: caul;
     left: 0;
     z-index: 1;
 }

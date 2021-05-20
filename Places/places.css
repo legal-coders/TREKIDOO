@@ -46,6 +46,7 @@ body::before {
   z-index: 31;
   background: linear-gradient(rgba(0, 0, 0, 0.5), transparent);
   padding: 35px 0;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), transparent);
 }
 
 .logo-container {

@@ -50,7 +50,9 @@ body
     z-index: 31;
     background: linear-gradient(rgba(0, 0, 0, 0.5), transparent);
     padding: 35px 0;
-  }
+  background: linear-gradient(rgba(0, 0, 0, 0.5), transparent);
+    text-shadow: 1px 1px 2px white, 2px 2px 3px rgba(0, 0, 0, 1);
+}
   
   .logo-container {
     margin-left: 3rem;
@@ -234,13 +236,15 @@ body
 .text
 {
     position: absolute;
-    top: 10%;
+    top: 30%;
     color: #fff;
     left: 50%;
-    transform: translate(-50%,-10%);
+    transform: translate(-50%,-30%);
     transition: all 0.5s ease-in;
     font-size: 350%;
     z-index: 1;
+    letter-spacing: 3px;
+    text-shadow: 2px 2px 3px white, 4px 4px 5px rgba(0, 0, 0, 1);
 }
 
 .shadow

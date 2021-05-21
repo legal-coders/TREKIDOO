@@ -51,7 +51,7 @@ body::before {
 }
 
 .logo-container {
-  margin-left: 3rem;
+  margin-left: 3%;
 }
 
 .logo {
@@ -87,7 +87,7 @@ body::before {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-right: 3rem;
+  margin-right: 3%;
 }
 
 .list-item {

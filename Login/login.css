@@ -35,7 +35,7 @@ body {
 }
 
 .logo-container {
-  margin-left: 3rem;
+  margin-left: 3%;
 }
 
 .logo {
@@ -71,7 +71,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-right: 3rem;
+  margin-right: 3%;
 }
 
 .list-item {
@@ -91,13 +91,18 @@ body {
   border-radius: 0px;
 }
 .list-item a.signin {
-  color: black;
+  color: #1bace5;
   background: white;
   border-radius: 50px;
   padding: 5px 15px 8px 15px;
-  text-shadow: 1px 1px 3px;
+  text-shadow: 1px 1px 3px skyblue;
+  border: none;
 }
 
+.list-item a.signin:hover {
+  background-color: #1bace5;
+  color: white;
+}
 section {
   display: flex;
   justify-content: center;
@@ -196,12 +201,19 @@ section .color {
   letter-spacing: 1px;
   margin-bottom: 40px;
 }
-.forget a {
-  color: rgb(4, 0, 255);
-  text-decoration: none;
+
+.forget-container {
+  display: flex;
+  flex-direction: column;
 }
-.forget a:hover {
-  color: rgb(62, 65, 68);
+
+.forget {
+  color: white;
+  text-decoration: none;
+  letter-spacing: 1px;
+}
+.forget:hover {
+  color: skyblue;
 }
 
 .form h2::before {
@@ -244,24 +256,26 @@ section .color {
   justify-content: center;
 }
 
-.inputbox a:hover {
+.button:hover {
   color: white;
   background-color: #1bace5;
   border: none;
   box-shadow: 3px 3px 8px rgba(255, 255, 255, 0.6);
 }
 
-.inputbox a {
+.button {
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
   text-decoration: none;
-  border-radius: 20px;
+  border-radius: 25px;
   width: 50%;
-  height: 34px;
+  height: 45px;
   color: #1bace5;
   background-color: white;
+  border: none;
+  margin: 19px auto 19px;
 }
 .form .inputbox input::placeholder {
   color: rgb(255, 255, 255);
@@ -369,13 +383,12 @@ section .color {
   section .color:nth-child(2) {
     display: none;
   }
-  .inputbox button {
+  .button {
     position: relative;
     background: rgb(255, 255, 255);
     padding: 11px 40px;
     border-color: rgb(255, 255, 255);
-    border-radius: 50px;
-    left: 50px;
+    margin: 20px auto 5px;
   }
 
   .square {

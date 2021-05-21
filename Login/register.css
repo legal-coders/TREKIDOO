@@ -35,7 +35,7 @@ body {
 }
 
 .logo-container {
-  margin-left: 3rem;
+  margin-left: 3%;
 }
 
 .logo {
@@ -71,7 +71,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-right: 3rem;
+  margin-right: 3%;
 }
 
 .list-item {
@@ -170,7 +170,7 @@ section .color {
 }
 .containerRegister {
   position: relative;
-  width: 400px;
+  width: 500px;
   min-height: 400px;
   background: rgba(255, 255, 255, 0.1);
   border-radius: 10px;
@@ -208,15 +208,7 @@ section .color {
 .forget:hover a {
   color: rgb(0, 4, 255);
 }
-/* .form h2::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -10px;
-  width: 80px;
-  height: 4px;
-  background: #fff;
-} */
+
 .form .inputbox {
   width: 100%;
   margin-top: 20px;
@@ -226,7 +218,7 @@ section .color {
 .form .inputbox input {
   display: flex;
   flex-direction: column;
-  width: 132%;
+  width: 100%;
   background: rgba(255, 255, 255, 0.2);
   border: none;
   outline: none;
@@ -240,9 +232,9 @@ section .color {
   color: #fff;
   box-shadow: 0 5px 15px rgba(255, 255, 255, 0.05);
   position: relative;
-  left: -32px;
+  margin: 0 auto;
 }
-.inputbox a {
+.button {
   position: relative;
   background: rgb(255, 255, 255);
   border-color: rgb(255, 255, 255);
@@ -250,14 +242,18 @@ section .color {
   color: #28363d;
   padding: 10px 30px;
   margin: 0 auto;
+  border: none;
+  display: table;
+  margin: 18px auto 8px;
+  font-size: large;
+  font-weight: bold;
 }
-.inputbox a {
-  text-decoration: none;
-}
-.inputbox a:hover
+
+.button:hover
 {
   background-color: #28363d;
   color: #fff;
+  box-shadow: 3px 3px 8px rgba(255, 255, 255, 0.6);
 }
 .form .inputbox input::placeholder {
   color: rgb(255, 255, 255);
@@ -267,16 +263,20 @@ section .color {
   color: #666;
   max-width: 100px;
   cursor: pointer;
-  margin-bottom: 20px;
   font-weight: 600;
   padding: 0 auto;
+  margin: 0 auto;
 }
 .forget {
   position: relative;
-  left: 20px;
+  display: table;
   color: #fff;
   font-weight: 600;
-  margin: 10px auto;
+  margin: 0 auto;
+}
+
+.form form {
+  width: 100%;
 }
 
 @media (max-width: 800px) {
@@ -397,10 +397,6 @@ section .color {
 
   .square {
     display: none;
-  }
-
-  .forget {
-    margin-left: 22px;
   }
 
 .form .inputbox input {

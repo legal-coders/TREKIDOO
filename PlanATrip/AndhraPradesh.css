@@ -31,7 +31,7 @@ z-index: 31;
   }
   
   .logo-container {
-    margin-left: 3rem;
+    margin-right: 3%;
   }
   
   .logo {
@@ -67,7 +67,7 @@ z-index: 31;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-right: 3rem;
+    margin-right: 3%;
   }
   
   .list-item {

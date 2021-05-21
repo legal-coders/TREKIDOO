@@ -176,14 +176,14 @@ $(".card8").hover(function () {
 
 // cards
 const cardContent = document.querySelectorAll('.card-content-all');
-const cardContentLength = document.querySelectorAll(".card-content-all").length;
 
 scrollContent.forEach(element => {
   element.addEventListener('click', function content() {
+    var audio = new Audio("./click_audio.mp3");
+    audio.play();
     scrollContent.forEach(content => content.classList.remove('animation'));
     cardContent.forEach(content => content.classList.remove('show'));
     this.classList.add('animation');
-    console.log(this.id);
     const carContentItems = document.querySelector(`.${this.id}-content`);
     carContentItems.classList.add('show');
   })});

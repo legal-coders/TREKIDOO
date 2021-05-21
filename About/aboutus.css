@@ -251,6 +251,8 @@ body {
 .message p {
   color: #fff;
   padding-top: 10px;
+  word-spacing: 2px;
+  font-size: 19px;
 }
 .message h3 {
   position: relative;

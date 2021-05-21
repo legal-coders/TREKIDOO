@@ -215,6 +215,12 @@ section .color {
   display: flex;
   flex-direction: column;
 }
+
+.form .inputbox input:focus {
+  border: 3px solid #28363d;
+  box-shadow: 2px 2px 3px #28363d;
+}
+
 .form .inputbox input {
   display: flex;
   flex-direction: column;
@@ -273,6 +279,7 @@ section .color {
   color: #fff;
   font-weight: 600;
   margin: 0 auto;
+  letter-spacing: 1.5px;
 }
 
 .form form {

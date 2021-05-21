@@ -178,7 +178,7 @@ $(".card8").hover(function () {
 const cardContent = document.querySelectorAll('.card-content-all');
 
 scrollContent.forEach(element => {
-  element.addEventListener('click', function content() {
+  element.addEventListener('mouseover', function content() {
     var audio = new Audio("./click_audio.mp3");
     audio.play();
     scrollContent.forEach(content => content.classList.remove('animation'));

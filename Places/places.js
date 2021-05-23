@@ -190,7 +190,7 @@ scrollContent.forEach(element => {
 
 const readMore = document.querySelectorAll(".readMore");
 readMore.forEach(function places(listen) {
-  listen.addEventListener('click', function readMoreId() {
+  listen.addEventListener('click', function() {
     localStorage.setItem("id", this.id);
   })
 })

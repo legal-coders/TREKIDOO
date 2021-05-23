@@ -9,45 +9,6 @@ let menuopen = false;
     place.style.display = "block";
 })();
 
-// function height(container) {
-//     let height = place1.offsetHeight;
-//     container.style.height = `${height - 2}px`;
-// }
-
-// height(document.querySelector(".main_body"));
-// window.addEventListener('mousemove', ()=> {
-//     height(document.querySelector(".main_body"));
-//     height(document.querySelector(".place3"));
-//     height(document.querySelector(".place2"));
-//     height(document.querySelector(".place4"));
-//     height(document.querySelector(".place5"));
-//     height(document.querySelector(".place6"));
-//     height(document.querySelector(".place7"));
-//     height(document.querySelector(".place8"));
-// })
-// window.addEventListener('resize', ()=> {
-//     height(document.querySelector(".main_body"));
-//     height(document.querySelector(".place2"));
-//     height(document.querySelector(".place3"));
-//     height(document.querySelector(".place4"));
-//     height(document.querySelector(".place5"));
-//     height(document.querySelector(".place6"));
-//     height(document.querySelector(".place7"));
-//     height(document.querySelector(".place8"));
-// })
-
-// window.addEventListener('scroll', ()=> {
-//     height(document.querySelector(".main_body"));
-//     height(document.querySelector(".place2"));
-//     height(document.querySelector(".place3"));
-//     height(document.querySelector(".place4"));
-//     height(document.querySelector(".place5"));
-//     height(document.querySelector(".place6"));
-//     height(document.querySelector(".place7"));
-//     height(document.querySelector(".place8"));
-//     iffalse();
-// })
-
 function iftrue() {
     menu.classList.add('open');
     nav_container.style.top = "0";

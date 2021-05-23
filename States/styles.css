@@ -55,7 +55,7 @@ body
 }
   
   .logo-container {
-    margin-right: 3%;
+    margin-left: 3%;
   }
   
   .logo {
@@ -204,36 +204,10 @@ body
     padding: 50px 30px;
 }
 
-.place1 {
+.place1, .place2, .place3, .place4, .place5, .place6, .place7, .place8 {
     position: relative;
-}
-
-.place2 {
-    position: relative;
-}
-
-.place3 {
-    position: relative;
-}
-
-.place4 {
-    position: relative;
-}
-
-.place5 {
-    position: relative;
-}
-
-.place6 {
-    position: relative;
-}
-
-.place7 {
-    position: relative;
-}
-
-.place8 {
-    position: relative;
+    display: none
+    ;
 }
 
 .text
@@ -352,11 +326,6 @@ footer
     width: 7%;
     opacity: 0.6;
 }
-
-.main_body {
-    overflow: hidden;
-}
-
 
 @media (max-width: 800px)
 {

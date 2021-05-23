@@ -187,3 +187,10 @@ scrollContent.forEach(element => {
     const carContentItems = document.querySelector(`.${this.id}-content`);
     carContentItems.classList.add('show');
   })});
+
+const readMore = document.querySelectorAll(".readMore");
+readMore.forEach(function places(listen) {
+  listen.addEventListener('click', function readMoreId() {
+    localStorage.setItem("id", this.id);
+  })
+})

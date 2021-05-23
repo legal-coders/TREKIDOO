@@ -3,26 +3,22 @@ const nav_container = document.querySelector(".nav-container");
 let menuopen = false;
 
 function iftrue() {
-    menu.classList.add('open');
-        nav_container.style.top = "0";     
-        menuopen= true;
+    menu.classList.add("open");
+    nav_container.style.top = "0";
+    menuopen = true;
 }
-function iffalse () {
-    
-        menu.classList.remove('open');
-        nav_container.style.top = "-150vh";
-        menuopen = false;
+function iffalse() {
+    menu.classList.remove("open");
+    nav_container.style.top = "-150vh";
+    menuopen = false;
 }
-menu.addEventListener('click', ()=> {
-    if(!menuopen) {
-        iftrue()
-    } else { 
+menu.addEventListener("click", () => {
+    if (!menuopen) {
+        iftrue();
+    } else {
         iffalse();
     }
-})
-nav_container.addEventListener('click', ()=> {
+});
+nav_container.addEventListener("click", () => {
     iffalse();
-})
-
-
-
+});

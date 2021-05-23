@@ -104,7 +104,8 @@ section {
   align-items: center;
   min-height: 100vh;
   /* background: linear-gradient(to bottom, #2c73d2, #3596b5); */
-  background: url("https://cdn.discordapp.com/attachments/843450590763679749/844971580345548800/photo-1476067897447-d0c5df27b5df.png") no-repeat center;
+  background: url("https://cdn.discordapp.com/attachments/843450590763679749/844971580345548800/photo-1476067897447-d0c5df27b5df.png")
+    no-repeat center;
   background-size: cover;
 }
 section .color {
@@ -255,8 +256,7 @@ section .color {
   font-weight: bold;
 }
 
-.button:hover
-{
+.button:hover {
   background-color: #28363d;
   color: #fff;
   box-shadow: 3px 3px 8px rgba(255, 255, 255, 0.6);
@@ -287,84 +287,83 @@ section .color {
 }
 
 @media (max-width: 800px) {
+  /* Navigation Section */
 
-    /* Navigation Section */
-  
-    .navbar {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      width: 100%;
-      height: 3.5rem;
-      z-index: 31;
-      position: absolute;
-      top: 0;
-      background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), transparent);
-    }
-  
-    .nav-container {
-      width: 100%;
-      height: 100vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      position: absolute;
-      transition: all 0.8s ease-in-out;
-      backdrop-filter: blur(15px);
-      line-height: 5rem;
-      font-size: 1.5rem;
-      top: -150vh;
-      font-weight: 500;
-    }
-  
-    .menu {
-      position: relative;
-      right: 3rem;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 2rem;
-      height: 2rem;
-      cursor: pointer;
-      transition: all 0.5s ease-in-out;
-    }
-    .menu-lines {
-      position: absolute;
-      width: 1.4rem;
-      height: 0.2rem;
-      background: white;
-      border-radius: 5px;
-      transition: all 0.5s ease-in-out;
-    }
-  
-    .menu-lines::before,
-    .menu-lines::after {
-      content: "";
-      position: absolute;
-      width: 1.4rem;
-      height: 0.2rem;
-      background: white;
-      border-radius: 5px;
-      transition: all 0.5s ease-in-out;
-    }
-    .menu-lines::before {
-      transform: translateY(0.5rem);
-    }
-    .menu-lines::after {
-      transform: translateY(-0.5rem);
-    }
-  
-    .menu.open .menu-lines {
-      transform: translateX(1.8rem);
-      background: transparent;
-    }
-    .menu.open .menu-lines::before {
-      transform: rotate(45deg) translate(-20px, 20px);
-    }
-    .menu.open .menu-lines::after {
-      transform: rotate(-45deg) translate(-20px, -20px);
-    }
+  .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 3.5rem;
+    z-index: 31;
+    position: absolute;
+    top: 0;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), transparent);
+  }
+
+  .nav-container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    transition: all 0.8s ease-in-out;
+    backdrop-filter: blur(15px);
+    line-height: 5rem;
+    font-size: 1.5rem;
+    top: -150vh;
+    font-weight: 500;
+  }
+
+  .menu {
+    position: relative;
+    right: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 2rem;
+    height: 2rem;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+  }
+  .menu-lines {
+    position: absolute;
+    width: 1.4rem;
+    height: 0.2rem;
+    background: white;
+    border-radius: 5px;
+    transition: all 0.5s ease-in-out;
+  }
+
+  .menu-lines::before,
+  .menu-lines::after {
+    content: "";
+    position: absolute;
+    width: 1.4rem;
+    height: 0.2rem;
+    background: white;
+    border-radius: 5px;
+    transition: all 0.5s ease-in-out;
+  }
+  .menu-lines::before {
+    transform: translateY(0.5rem);
+  }
+  .menu-lines::after {
+    transform: translateY(-0.5rem);
+  }
+
+  .menu.open .menu-lines {
+    transform: translateX(1.8rem);
+    background: transparent;
+  }
+  .menu.open .menu-lines::before {
+    transform: rotate(45deg) translate(-20px, 20px);
+  }
+  .menu.open .menu-lines::after {
+    transform: rotate(-45deg) translate(-20px, -20px);
+  }
   body {
     background: linear-gradient(to bottom, #008e9b, #008f7a);
     height: 100vh;
@@ -406,8 +405,8 @@ section .color {
     display: none;
   }
 
-.form .inputbox input {
-  width: 115%;
-  left: -14px;
-}
+  .form .inputbox input {
+    width: 115%;
+    left: -14px;
+  }
 }

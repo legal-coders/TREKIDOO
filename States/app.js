@@ -3,11 +3,10 @@ const menu = document.querySelector(".menu");
 const nav_container = document.querySelector(".nav-container");
 let menuopen = false;
 
-(function () {
-    var id = localStorage.getItem("id");
-    const place = document.querySelector(`#${id}`);
-    place.style.display = "block";
-})();
+var id = localStorage.getItem("id");
+console.log(id);
+const place = document.querySelector(`#${id}`);
+place.style.display = "block";
 
 function iftrue() {
     menu.classList.add('open');

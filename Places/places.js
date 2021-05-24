@@ -186,11 +186,12 @@ scrollContent.forEach(element => {
     this.classList.add('animation');
     const carContentItems = document.querySelector(`.${this.id}-content`);
     carContentItems.classList.add('show');
-  })});
+  })
+});
 
 const readMore = document.querySelectorAll(".readMore");
 readMore.forEach(function places(listen) {
-  listen.addEventListener('click', function() {
+  listen.addEventListener('click', function () {
     localStorage.setItem("id", this.id);
   })
 })

@@ -206,8 +206,7 @@ body
 
 .place1, .place2, .place3, .place4, .place5, .place6, .place7, .place8 {
     position: relative;
-    display: none
-    ;
+    display: none;
 }
 
 .text

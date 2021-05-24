@@ -18,10 +18,10 @@ const no10 = document.querySelector(".no10");
 const no11 = document.querySelector(".no11");
 
 const innerContainer = document.querySelector(".innercontainer");
-const before = window.getComputedStyle(
-  document.querySelector(".innercontainer"),
-  ":before"
-);
+// const before = window.getComputedStyle(
+//   document.querySelector(".innercontainer"),
+//   ":before"
+// );
 
 const optionsList = document.querySelectorAll(".option");
 //open and close

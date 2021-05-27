@@ -25,16 +25,17 @@
                 <div class="containerForget">
                     <div class="form">
                         <h2>Forgot Password</h2>
-                        <form action="/login">
+                        <form action="/forget" method="POST">
                             <div class="inputbox">
-                                <input type="text" placeholder="Enter E-mail" required>
+                                <input type="text" name="email" placeholder="Enter E-mail">
                             </div>
                             <div class="inputbox">
-                                <input type="password" placeholder="Enter New Password" required>
+                                <input type="password" name="newpassword" placeholder="Enter new password">
                             </div>
                             <div class="inputbox">
-                                <input type="password" placeholder="Confirm Password" required>
+                                <input type="password" name="confirmpassword" placeholder="Confirm new password">
                             </div>
+                            <p id="wrongPassword"><%= wrongPassword %></p>
                             <button type="submit" class="button">Continue</button>
                         </form>
                     </div>

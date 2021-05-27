@@ -26,13 +26,14 @@
                     <div class="container">
                         <div class="form">
                             <h2>Sign in</h2>
-                            <form action="/">
+                            <form action="/login" method="POST">
                                 <div class="inputbox">
-                                    <input type="text" placeholder="E-mail" required>
+                                    <input type="text" name="email" placeholder="E-mail" required>
                                 </div>
                                 <div class="inputbox">
-                                    <input type="password" placeholder="Password" required>
+                                    <input type="password" name="password" placeholder="Password" required>
                                 </div>
+                                <p id="wrongPassword"><%= wrongPassword %></p>
                                 <button type="submit" class="button">Sign in</button>
                             </form>
                             <div class="forget-container">

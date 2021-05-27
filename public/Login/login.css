@@ -305,6 +305,15 @@ input::placeholder {
   font-weight: 600;
 }
 
+#wrongPassword {
+  margin-top: 1rem;
+  text-align: center;
+  color: rgb(236, 31, 31);
+  font-size: 1.2rem;
+  font-weight: 1.2rem;
+  letter-spacing: 1px;
+}
+
 @media (max-width: 800px) {
   /* Navigation Section */
 

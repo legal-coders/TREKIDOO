@@ -81,8 +81,13 @@ app.route("/forget")
                 console.log(err);
             } else {
                 if (foundUser) {
-                    if (req.body.password === req.body.confirmpassword) {
-                        User.updateOne({email: req.body.email}, {$set: {password: req.body.password}});
+                    if (req.body.newpassword === req.body.confirmpassword) {
+                        User.updateOne({email: req.body.email}, {$set: {password: req.body.newpassword}}, (err) => {
+                            if(err) {
+                                console.log(err);
+                            }
+                        });
+                        res.redirect("/login");
                     } else {
                         res.render("Login/forget", { wrongPassword: "E-mail or Password is incorrect!" });
                     }

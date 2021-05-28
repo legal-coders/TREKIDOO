@@ -76,7 +76,7 @@ function hoverbg(card, url) {
   });
 }
 
-hoverbg(no1, "/Places/states_img/haryana/brahma_sarovar/brahma_sarovar1.jpeg");
+hoverbg(no1, "/Places/states_img/haryana/brahma_sarovar/brahma_sarovar1.jpg");
 hoverbg(no2, "/Places/states_img/haryana/chhatbir_zoo/chhatbir_zoo1.jpg");
 hoverbg(no3, "/Places/states_img/haryana/hanuman_mandir/hanuman_mandir1.JPG");
 hoverbg(no4, "/Places/states_img/haryana/morni_hills/morni_hills1.jpg");

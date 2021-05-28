@@ -77,16 +77,16 @@ function hoverbg(card, url) {
 }
 
 hoverbg(no1, "/Places/states_img/odisha/bhubanesm.jpg");
-hoverbg(no2, "/Places/states_img/odisha/images (29).jpeg");
-hoverbg(no3, "/Places/states_img/odisha/images (30).jpeg");
-hoverbg(no4, "/Places/states_img/odisha/images (31).jpeg");
-hoverbg(no5, "/Places/states_img/odisha/images (32).jpeg");
-hoverbg(no6, "/Places/states_img/odisha/images (33).jpeg");
+hoverbg(no2, "/Places/states_img/odisha/images (29).jpg");
+hoverbg(no3, "/Places/states_img/odisha/images (30).jpg");
+hoverbg(no4, "/Places/states_img/odisha/images (31).jpg");
+hoverbg(no5, "/Places/states_img/odisha/images (32).jpg");
+hoverbg(no6, "/Places/states_img/odisha/images (33).jpg");
 hoverbg(no7, "/Places/states_img/odisha/puri.jpg");
 hoverbg(no8, "/Places/states_img/odisha/bhubanesm.jpg");
-hoverbg(no9, "/Places/states_img/odisha/images (29).jpeg");
-hoverbg(no10, "/Places/states_img/odisha/images (30).jpeg");
-hoverbg(no11, "/Places/states_img/odisha/images (32).jpeg");
+hoverbg(no9, "/Places/states_img/odisha/images (29).jpg");
+hoverbg(no10, "/Places/states_img/odisha/images (30).jpg");
+hoverbg(no11, "/Places/states_img/odisha/images (32).jpg");
 
 //navbar
 

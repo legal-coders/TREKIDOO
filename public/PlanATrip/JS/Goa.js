@@ -85,7 +85,7 @@ hoverbg(no6, "/Places/states_img/goa/mangesh_temple/mangesh_temple1.jpg");
 hoverbg(no7, "/Places/states_img/goa/reis_magos/reis_magos1.png");
 hoverbg(no8, "/Places/states_img/goa/shanta_durga_temple/shanta_durga_temple1.jpg");
 hoverbg(no9, "/Places/states_img/goa/reis_magos/reis_magos3.jpg");
-hoverbg(no10, "/Places/states_img/goa/shanta_durga_temple/shanta_durga_temple3.jpeg");
+hoverbg(no10, "/Places/states_img/goa/shanta_durga_temple/shanta_durga_temple3.jpg");
 hoverbg(no11, "/Places/states_img/goa/divar_island/divar_island4.jpg");
 
 //navbar

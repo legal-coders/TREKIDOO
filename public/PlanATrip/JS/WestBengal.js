@@ -72,21 +72,21 @@ function hoverbg(card, url) {
   });
   card.addEventListener("mouseout", () => {
     secondcontainer.style.backgroundImage =
-      'url("/Places/states_img/west bengal/images (55).jpeg")';
+      'url("/Places/states_img/west bengal/images (55).jpg")';
   });
 }
 
-hoverbg(no1, "/Places/states_img/west bengal/images (50).jpeg");
-hoverbg(no2, "/Places/states_img/west bengal/images (51).jpeg");
-hoverbg(no3, "/Places/states_img/west bengal/images (52).jpeg");
-hoverbg(no4, "/Places/states_img/west bengal/images (53).jpeg");
-hoverbg(no5, "/Places/states_img/west bengal/images (54).jpeg");
-hoverbg(no6, "/Places/states_img/west bengal/images (55).jpeg");
-hoverbg(no7, "/Places/states_img/west bengal/images (56).jpeg");
-hoverbg(no8, "/Places/states_img/west bengal/images (58).jpeg");
-hoverbg(no9, "/Places/states_img/west bengal/images (50).jpeg");
-hoverbg(no10, "/Places/states_img/west bengal/images (51).jpeg");
-hoverbg(no11, "/Places/states_img/west bengal/images (52).jpeg");
+hoverbg(no1, "/Places/states_img/west bengal/images (50).jpg");
+hoverbg(no2, "/Places/states_img/west bengal/images (51).jpg");
+hoverbg(no3, "/Places/states_img/west bengal/images (52).jpg");
+hoverbg(no4, "/Places/states_img/west bengal/images (53).jpg");
+hoverbg(no5, "/Places/states_img/west bengal/images (54).jpg");
+hoverbg(no6, "/Places/states_img/west bengal/images (55).jpg");
+hoverbg(no7, "/Places/states_img/west bengal/images (56).jpg");
+hoverbg(no8, "/Places/states_img/west bengal/images (58).jpg");
+hoverbg(no9, "/Places/states_img/west bengal/images (50).jpg");
+hoverbg(no10, "/Places/states_img/west bengal/images (51).jpg");
+hoverbg(no11, "/Places/states_img/west bengal/images (52).jpg");
 
 //navbar
 

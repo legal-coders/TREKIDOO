@@ -72,21 +72,21 @@ function hoverbg(card, url) {
   });
   card.addEventListener("mouseout", () => {
     secondcontainer.style.backgroundImage =
-      'url("/Places/states_img/punjab/images (35).jpeg")';
+      'url("/Places/states_img/punjab/images (35).jpg")';
   });
 }
 
-hoverbg(no1, "/Places/states_img/punjab/images (34).jpeg");
-hoverbg(no2, "/Places/states_img/punjab/images (35).jpeg");
-hoverbg(no3, "/Places/states_img/punjab/images (36).jpeg");
-hoverbg(no4, "/Places/states_img/punjab/images (37).jpeg");
-hoverbg(no5, "/Places/states_img/punjab/images (38).jpeg");
-hoverbg(no6, "/Places/states_img/punjab/images (39).jpeg");
-hoverbg(no7, "/Places/states_img/punjab/images (40).jpeg");
-hoverbg(no8, "/Places/states_img/punjab/images (41).jpeg");
-hoverbg(no9, "/Places/states_img/punjab/images (34).jpeg");
-hoverbg(no10, "/Places/states_img/punjab/images (35).jpeg");
-hoverbg(no11, "/Places/states_img/punjab/images (36).jpeg");
+hoverbg(no1, "/Places/states_img/punjab/images (34).jpg");
+hoverbg(no2, "/Places/states_img/punjab/images (35).jpg");
+hoverbg(no3, "/Places/states_img/punjab/images (36).jpg");
+hoverbg(no4, "/Places/states_img/punjab/images (37).jpg");
+hoverbg(no5, "/Places/states_img/punjab/images (38).jpg");
+hoverbg(no6, "/Places/states_img/punjab/images (39).jpg");
+hoverbg(no7, "/Places/states_img/punjab/images (40).jpg");
+hoverbg(no8, "/Places/states_img/punjab/images (41).jpg");
+hoverbg(no9, "/Places/states_img/punjab/images (34).jpg");
+hoverbg(no10, "/Places/states_img/punjab/images (35).jpg");
+hoverbg(no11, "/Places/states_img/punjab/images (36).jpg");
 
 //navbar
 

@@ -188,10 +188,3 @@ scrollContent.forEach(element => {
     carContentItems.classList.add('show');
   })
 });
-
-const readMore = document.querySelectorAll(".readMore");
-readMore.forEach(function places(listen) {
-  listen.addEventListener('click', function () {
-    localStorage.setItem("id", this.id);
-  })
-})

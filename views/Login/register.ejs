@@ -33,10 +33,14 @@
                                 <input type="text" name="username" placeholder="Username" required>
                             </div>
                             <div class="inputbox">
-                                <input type="password" name="password" placeholder="Enter Password" required>
+                                <input class="inputPassword" type="password" name="password" placeholder="Enter Password" required>
+                                <div class="eyesContainer">
+                                    <img class="eyes" id="eye" src="/Images/eye-solid.svg" alt="" />
+                                    <img class="eyes" id="slashedEye" src="/Images/eye-slash-solid.svg" alt="" />
+                                </div>
                             </div>
                             <div class="inputbox">
-                                <input type="password" name="confirmpassword" placeholder="Confirm Password" required>
+                                <input class="inputPassword" type="password" name="confirmpassword" placeholder="Confirm Password" required>
                             </div>
                             <p id="wrongPassword">
                                 <%= wrongPassword %>

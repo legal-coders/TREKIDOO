@@ -219,7 +219,7 @@ input::placeholder {
   width: 100%;
   margin-top: 20px;
   display: flex;
-  flex-direction: column;
+  position: relative;
 }
 
 .form .inputbox input:focus {
@@ -298,6 +298,19 @@ input::placeholder {
   font-size: 1.2rem;
   font-weight: 1.2rem;
   letter-spacing: 1px;
+}
+
+.eyesContainer {
+  position: absolute;
+  right: 9%;
+  top: 28%;
+  cursor: pointer;
+}
+
+.eyes {
+  position: absolute;
+  width: 20px;
+  cursor: pointer;
 }
 
 @media (max-width: 800px) {

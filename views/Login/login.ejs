@@ -31,7 +31,11 @@
                                     <input type="text" name="email" placeholder="E-mail" required>
                                 </div>
                                 <div class="inputbox">
-                                    <input type="password" name="password" placeholder="Password" required>
+                                    <input class="inputPassword" type="password" name="password" placeholder="Password" required>
+                                    <div class="eyesContainer">
+                                        <img class="eyes" id="eye" src="/Images/eye-solid.svg" alt="" />
+                                        <img class="eyes" id="slashedEye" src="/Images/eye-slash-solid.svg" alt="" />
+                                    </div>
                                 </div>
                                 <p id="wrongPassword"><%= wrongPassword %></p>
                                 <button type="submit" class="button">Sign in</button>

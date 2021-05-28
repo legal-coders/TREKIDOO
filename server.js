@@ -8,14 +8,14 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
 app.set("view engine", "ejs");
 
-mongoose.connect("mongodb://localhost:27017/userDB", { useNewUrlParser: true });
-const userSchema = new mongoose.Schema({
-    email: String,
-    userName: String,
-    password: String,
-    confirmpassword: String
-});
-const User = mongoose.model("User", userSchema);
+// mongoose.connect("mongodb://localhost:27017/userDB", { useNewUrlParser: true });
+// const userSchema = new mongoose.Schema({
+//     email: String,
+//     userName: String,
+//     password: String,
+//     confirmpassword: String
+// });
+// const User = mongoose.model("User", userSchema);
 
 app.get("/", (req, res) => {
     res.render("Home/home");

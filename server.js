@@ -2,19 +2,27 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const ejs = require("ejs");
 const mongoose = require("mongoose");
+const encrypt = require("mongoose-encryption");
 
 const app = express();
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
 app.set("view engine", "ejs");
 
-mongoose.connect("mongodb://localhost:27017/userDB", { useNewUrlParser: true });
+mongoose.connect(
+    "mongodb+srv://admin:projectpirates2020@trekidoo.mxbfu.mongodb.net/userDB",
+    { useNewUrlParser: true }
+);
 const userSchema = new mongoose.Schema({
     email: String,
     userName: String,
     password: String,
-    confirmpassword: String
+    confirmpassword: String,
 });
+
+const secret = "ThisisaIndiantravelwebsite";
+userSchema.plugin(encrypt, { secret: secret, encryptedFields: ["password"] });
+
 const User = mongoose.model("User", userSchema);
 
 app.get("/", (req, res) => {
@@ -31,9 +39,9 @@ app.get("/places/:state/:place", (req, res) => {
     res.render(`Places/${state}`, { place: place });
 });
 
-app.get("/404", ((req, res) => {
+app.get("/404", (req, res) => {
     res.render("404/404");
-}))
+});
 
 app.get("/PlanATrip", (req, res) => {
     res.render("PlanATrip/PlanATrip");
@@ -42,12 +50,11 @@ app.get("/PlanATrip", (req, res) => {
 app.get("/PlanATrip/:place", (req, res) => {
     const place = req.params.place;
     res.render(`PlanATrip/${place}`);
-})
+});
 
-app.route("/about")
-    .get((req, res) => {
-        res.render("About/about");
-    });
+app.route("/about").get((req, res) => {
+    res.render("About/about");
+});
 
 app.route("/login")
     .get((req, res) => {
@@ -62,10 +69,14 @@ app.route("/login")
                     if (foundUser.password === req.body.password) {
                         res.redirect("/");
                     } else {
-                        res.render("Login/login", { wrongPassword: "E-mail or Password is incorrect!" });
+                        res.render("Login/login", {
+                            wrongPassword: "E-mail or Password is incorrect!",
+                        });
                     }
                 } else {
-                    res.render("Login/login", { wrongPassword: "E-mail or Password is incorrect!" });
+                    res.render("Login/login", {
+                        wrongPassword: "E-mail or Password is incorrect!",
+                    });
                 }
             }
         });
@@ -82,17 +93,25 @@ app.route("/forget")
             } else {
                 if (foundUser) {
                     if (req.body.newpassword === req.body.confirmpassword) {
-                        User.updateOne({email: req.body.email}, {$set: {password: req.body.newpassword}}, (err) => {
-                            if(err) {
-                                console.log(err);
+                        User.updateOne(
+                            { email: req.body.email },
+                            { $set: { password: req.body.newpassword } },
+                            (err) => {
+                                if (err) {
+                                    console.log(err);
+                                }
                             }
-                        });
+                        );
                         res.redirect("/login");
                     } else {
-                        res.render("Login/forget", { wrongPassword: "E-mail or Password is incorrect!" });
+                        res.render("Login/forget", {
+                            wrongPassword: "E-mail or Password is incorrect!",
+                        });
                     }
                 } else {
-                    res.render("Login/forget", { wrongPassword: "E-mail or Password is incorrect!" });
+                    res.render("Login/forget", {
+                        wrongPassword: "E-mail or Password is incorrect!",
+                    });
                 }
             }
         });
@@ -110,21 +129,14 @@ app.route("/register")
             const newUser = new User({
                 email: req.body.email,
                 userName: req.body.username,
-                password: password
+                password: password,
             });
             newUser.save();
-            User.findOne({
-                email: "legalpirates2020@gmail.com"
-            }, (err, found) => {
-                if (err) {
-                    console.log(err);
-                } else {
-                    console.log(found.userName);
-                }
-            });
             res.redirect("/");
         } else {
-            res.render("Login/register", { wrongPassword: "*Password does not match!" });
+            res.render("Login/register", {
+                wrongPassword: "*Password does not match!",
+            });
         }
     });
 

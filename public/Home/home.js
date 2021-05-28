@@ -8,9 +8,9 @@ function parallax(element, distance, speed) {
     item.style.transform = `translateY(${distance * speed}px)`;
 }
 
-window.addEventListener('scroll', ()=> {
+window.addEventListener('scroll', () => {
     let scroll = window.scrollY;
-    title.style.opacity = 1 - (scroll/300);
+    title.style.opacity = 1 - (scroll / 300);
     parallax("#layer1", scroll, -0.8);
     parallax("#layer2", scroll, -0.7);
     parallax("#layer3", scroll, -0.6);
@@ -27,24 +27,24 @@ window.addEventListener('scroll', ()=> {
 function iftrue() {
     menu.classList.add('open');
     nav_container.style.top = "0";
-    title.style.opacity = "0";        
-    menuopen= true;
+    title.style.opacity = "0";
+    menuopen = true;
 }
-function iffalse () {
-    
+function iffalse() {
+
     menu.classList.remove('open');
     nav_container.style.top = "-150vh"
     title.style.opacity = "1";
     menuopen = false;
 }
-menu.addEventListener('click', ()=> {
-    if(!menuopen) {
+menu.addEventListener('click', () => {
+    if (!menuopen) {
         iftrue()
-    } else { 
+    } else {
         iffalse();
     }
 })
-nav_container.addEventListener('click', ()=> {
+nav_container.addEventListener('click', () => {
     iffalse();
 })
 
@@ -59,11 +59,11 @@ const Nalanda = document.querySelector(".nalanda");
 const Khajuraho = document.querySelector(".khajuraho");
 
 function hover(place, id, transform) {
-    place.addEventListener("mouseover", ()=> {
+    place.addEventListener("mouseover", () => {
         document.querySelector(id).style.opacity = "1";
         document.querySelector(transform).style.transform = `scale(${1})`;
     })
-    place.addEventListener("mouseout", ()=> {
+    place.addEventListener("mouseout", () => {
         document.querySelector(id).style.opacity = "0";
         document.querySelector(transform).style.transform = `scale(${0})`;
     })
@@ -76,3 +76,15 @@ hover(goldenTemple, "#goldenTemple", ".glass5");
 hover(KonarkSunTemple, "#konarkSunTemple", ".glass6");
 hover(Nalanda, "#nalanda", ".glass7");
 hover(Khajuraho, "#khajuraho", ".glass8");
+
+const signin = document.querySelector(".signin");
+const plan = document.querySelector(".plan");
+const signinText = signin.innerText;
+const compareText = "Sign in";
+
+if (signinText == compareText) {
+    plan.addEventListener("click", () => {
+        confirm("Login to view the Plans");
+    })
+    
+} 

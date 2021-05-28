@@ -171,4 +171,3 @@ menu.addEventListener('click', () => {
 nav_container.addEventListener('click', () => {
     iffalse();
 })
-

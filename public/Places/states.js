@@ -4,7 +4,6 @@ const nav_container = document.querySelector(".nav-container");
 let menuopen = false;
 
 var id = document.getElementById("placeNone").innerText;
-console.log(id);
 const place = document.querySelector(`#${id}`);
 place.style.display = "block";
 

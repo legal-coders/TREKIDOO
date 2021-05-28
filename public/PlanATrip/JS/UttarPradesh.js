@@ -72,21 +72,21 @@ function hoverbg(card, url) {
   });
   card.addEventListener("mouseout", () => {
     secondcontainer.style.backgroundImage =
-      'url("/Places/states_img/Utrar pradesh/images (33).jpeg")';
+      'url("/Places/states_img/Utrar pradesh/images (33).jpg")';
   });
 }
 
-hoverbg(no1, "/Places/states_img/Utrar pradesh/images (29).jpeg");
-hoverbg(no2, "/Places/states_img/Utrar pradesh/images (30).jpeg");
-hoverbg(no3, "/Places/states_img/Utrar pradesh/images (31).jpeg");
-hoverbg(no4, "/Places/states_img/Utrar pradesh/images (32).jpeg");
-hoverbg(no5, "/Places/states_img/Utrar pradesh/images (33).jpeg");
-hoverbg(no6, "/Places/states_img/Utrar pradesh/images (34).jpeg");
-hoverbg(no7, "/Places/states_img/Utrar pradesh/images (35).jpeg");
-hoverbg(no8, "/Places/states_img/Utrar pradesh/images (36).jpeg");
-hoverbg(no1, "/Places/states_img/Utrar pradesh/images (29).jpeg");
-hoverbg(no2, "/Places/states_img/Utrar pradesh/images (30).jpeg");
-hoverbg(no3, "/Places/states_img/Utrar pradesh/images (31).jpeg");
+hoverbg(no1, "/Places/states_img/Utrar pradesh/images (29).jpg");
+hoverbg(no2, "/Places/states_img/Utrar pradesh/images (30).jpg");
+hoverbg(no3, "/Places/states_img/Utrar pradesh/images (31).jpg");
+hoverbg(no4, "/Places/states_img/Utrar pradesh/images (32).jpg");
+hoverbg(no5, "/Places/states_img/Utrar pradesh/images (33).jpg");
+hoverbg(no6, "/Places/states_img/Utrar pradesh/images (34).jpg");
+hoverbg(no7, "/Places/states_img/Utrar pradesh/images (35).jpg");
+hoverbg(no8, "/Places/states_img/Utrar pradesh/images (36).jpg");
+hoverbg(no1, "/Places/states_img/Utrar pradesh/images (29).jpg");
+hoverbg(no2, "/Places/states_img/Utrar pradesh/images (30).jpg");
+hoverbg(no3, "/Places/states_img/Utrar pradesh/images (31).jpg");
 
 //navbar
 

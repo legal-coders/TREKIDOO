@@ -72,21 +72,21 @@ function hoverbg(card, url) {
   });
   card.addEventListener("mouseout", () => {
     secondcontainer.style.backgroundImage =
-      'url("/Places/states_img/rajasthan/images (45).jpeg")';
+      'url("/Places/states_img/rajasthan/images (45).jpg")';
   });
 }
 
-hoverbg(no1, "/Places/states_img/rajasthan/images (42).jpeg");
-hoverbg(no2, "/Places/states_img/rajasthan/images (43).jpeg");
-hoverbg(no3, "/Places/states_img/rajasthan/images (44).jpeg");
-hoverbg(no4, "/Places/states_img/rajasthan/images (45).jpeg");
-hoverbg(no5, "/Places/states_img/rajasthan/images (46).jpeg");
-hoverbg(no6, "/Places/states_img/rajasthan/images (47).jpeg");
-hoverbg(no7, "/Places/states_img/rajasthan/images (48).jpeg");
-hoverbg(no8, "/Places/states_img/rajasthan/images (49).jpeg");
-hoverbg(no9, "/Places/states_img/rajasthan/images (42).jpeg");
-hoverbg(no10, "/Places/states_img/rajasthan/images (43).jpeg");
-hoverbg(no11, "/Places/states_img/rajasthan/images (44).jpeg");
+hoverbg(no1, "/Places/states_img/rajasthan/images (42).jpg");
+hoverbg(no2, "/Places/states_img/rajasthan/images (43).jpg");
+hoverbg(no3, "/Places/states_img/rajasthan/images (44).jpg");
+hoverbg(no4, "/Places/states_img/rajasthan/images (45).jpg");
+hoverbg(no5, "/Places/states_img/rajasthan/images (46).jpg");
+hoverbg(no6, "/Places/states_img/rajasthan/images (47).jpg");
+hoverbg(no7, "/Places/states_img/rajasthan/images (48).jpg");
+hoverbg(no8, "/Places/states_img/rajasthan/images (49).jpg");
+hoverbg(no9, "/Places/states_img/rajasthan/images (42).jpg");
+hoverbg(no10, "/Places/states_img/rajasthan/images (43).jpg");
+hoverbg(no11, "/Places/states_img/rajasthan/images (44).jpg");
 
 //navbar
 

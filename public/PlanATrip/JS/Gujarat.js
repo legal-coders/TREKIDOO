@@ -77,7 +77,7 @@ function hoverbg(card, url) {
 
   })
   card.addEventListener('mouseout', () => {
-    secondcontainer.style.backgroundImage = 'url("/Places/states_img/Gujarat/ahmadabad/ahmadabad2.jpeg")';
+    secondcontainer.style.backgroundImage = 'url("/Places/states_img/Gujarat/ahmadabad/ahmadabad2.jpg")';
 
   })
 }

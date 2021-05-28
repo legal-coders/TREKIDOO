@@ -78,7 +78,7 @@ function hoverbg(card, url) {
 
 hoverbg(no1, "/Places/states_img/himachal_pradesh/bir_billing/bir_billing1.jpg");
 hoverbg(no2, "/Places/states_img/himachal_pradesh/chitkul/chitkul1.jpg");
-hoverbg(no3, "/Places/states_img/himachal_pradesh/dharamshala/dharamshala1.jpeg");
+hoverbg(no3, "/Places/states_img/himachal_pradesh/dharamshala/dharamshala1.jpg");
 hoverbg(no4, "/Places/states_img/himachal_pradesh/kasauli/kasauli1.jpg");
 hoverbg(no5, "/Places/states_img/himachal_pradesh/kasol/kasol2.jpg");
 hoverbg(no6, "/Places/states_img/himachal_pradesh/manali/manali1.jpg");

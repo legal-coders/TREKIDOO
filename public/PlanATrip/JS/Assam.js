@@ -82,7 +82,7 @@ hoverbg(no3, "/Places/states_img/Assam/Chitralekha_Udayan_Park/Chitralekha_Udaya
 hoverbg(no4, "/Places/states_img/Assam/hoollongapar_gibbon_sanctuary/hoollongapar_gibbon_sanctuary1.jpg");
 hoverbg(no5, "/Places/states_img/Assam/kalia_bhomora_bridge/kalia_bhomora_bridge4.jpg");
 hoverbg(no6, "/Places/states_img/Assam/kamakhya_temple/kamakhya_temple1.jpg");
-hoverbg(no7, "/Places/states_img/Assam/pobitora_wildlife_sanctuary/pobitora_wildlife_sanctuary1.jpeg");
+hoverbg(no7, "/Places/states_img/Assam/pobitora_wildlife_sanctuary/pobitora_wildlife_sanctuary1.jpg");
 hoverbg(no8, "/Places/states_img/Assam/umananda_temple/umananda_temple1.jpg");
 hoverbg(no9, "/Places/states_img/Assam/brahmaputra_river/brahmaputra_river3.jpg");
 hoverbg(no10, "/Places/states_img/Assam/kalia_bhomora_bridge/kalia_bhomora_bridge3.jpg");

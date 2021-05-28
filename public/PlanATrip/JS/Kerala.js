@@ -82,7 +82,7 @@ hoverbg(no3, "/Places/states_img/kerala/kerala_backwater/kerala_backwaters1.jpg"
 hoverbg(no4, "/Places/states_img/kerala/nellaiampathi/nelliampathi_hills1.jpg");
 hoverbg(no5, "/Places/states_img/kerala/padmanabhaswa/padmanabhaswamy_temple1.jpg");
 hoverbg(no6, "/Places/states_img/kerala/parambikulam/parambikulam_tiger_reserve1.jpg");
-hoverbg(no7, "/Places/states_img/kerala/poovar/poovar_island1.jpeg");
+hoverbg(no7, "/Places/states_img/kerala/poovar/poovar_island1.jpg");
 hoverbg(no8, "/Places/states_img/kerala/tea_gardens/tea_gardens2.jpg");
 hoverbg(no9, "/Places/states_img/kerala/kappad/kappad_beach3.jpg");
 hoverbg(no11, "/Places/states_img/kerala/padmanabhaswa/padmanabhaswamy_temple3.jpg");

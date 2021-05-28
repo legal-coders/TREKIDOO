@@ -86,7 +86,7 @@ hoverbg(no7, "/Places/states_img/jharkhand/patratu_valley/patratu_valley1.jpg");
 hoverbg(no8, "/Places/states_img/jharkhand/rock_garden/Rock-Garden1.jpg");
 hoverbg(no9, "/Places/states_img/jharkhand/jubilee_park/jubilee_park3.jpg");
 hoverbg(no10, "/Places/states_img/jharkhand/jonha_falls/jonha-falls3.jpg");
-hoverbg(no11, "/Places/states_img/jharkhand/maldhan_dam/maldhan_dam3.jpeg");
+hoverbg(no11, "/Places/states_img/jharkhand/maldhan_dam/maldhan_dam3.jpg");
 
 //navbar
 

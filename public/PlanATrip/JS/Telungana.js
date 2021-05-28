@@ -80,7 +80,7 @@ hoverbg(no1, "/Places/states_img/Telangana/Ananthagiri-Hills.jpg");
 hoverbg(no2, "/Places/states_img/Telangana/Chowmahalla.jpg");
 hoverbg(no3, "/Places/states_img/Telangana/Golkonda_Fort.jpg");
 hoverbg(no4, "/Places/states_img/Telangana/laknavaram.jpg");
-hoverbg(no5, "/Places/states_img/Telangana/ramappa.jpeg");
+hoverbg(no5, "/Places/states_img/Telangana/ramappa.jpg");
 hoverbg(no6, "/Places/states_img/Telangana/Reiek.jpg");
 hoverbg(no7, "/Places/states_img/Telangana/salar-jung-museum.jpg");
 hoverbg(no8, "/Places/states_img/Telangana/saraswathi.jpg");

@@ -78,7 +78,7 @@ function hoverbg(card, url) {
 
 hoverbg(no1, "/Places/states_img/karnataka/aihole/aihole1.jpg");
 hoverbg(no2, "/Places/states_img/karnataka/cuban_park/cu.jpg");
-hoverbg(no3, "/Places/states_img/karnataka/jog_falls/jog_falls1.jpeg");
+hoverbg(no3, "/Places/states_img/karnataka/jog_falls/jog_falls1.jpg");
 hoverbg(no4, "/Places/states_img/karnataka/kodachdri/Kodachadri1.jpg");
 hoverbg(no5, "/Places/states_img/karnataka/lalbagh/Bangalore_Lalbagh-Garden3.jpg");
 hoverbg(no6, "/Places/states_img/karnataka/mulayanagiri/mullayanagiri1.jpg");

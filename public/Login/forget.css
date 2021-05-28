@@ -125,6 +125,7 @@ section .color {
 
 .box {
   position: relative;
+  text-align: center;
 }
 .square {
   position: absolute;
@@ -211,9 +212,8 @@ section .color {
 .form h2::before {
   content: "";
   position: absolute;
-  left: 0;
   bottom: -10px;
-  width: 80px;
+  width: 90%;
   height: 4px;
   background: #fff;
 }
@@ -294,7 +294,7 @@ input::placeholder {
 
 .eyesContainer {
   position: absolute;
-  right: 11%;
+  right: 35px;
   top: 30%;
   cursor: pointer;
 }
@@ -393,7 +393,7 @@ input::placeholder {
   }
   .containerForget {
     position: relative;
-    width: 300px;
+    width: 100%;
     min-height: 400px;
     background: rgba(255, 255, 255, 0.1);
     border-radius: 10px;
@@ -412,5 +412,15 @@ input::placeholder {
 
   .square {
     display: none;
+  }
+
+  .box {
+    width: 50%;
+  }
+}
+
+@media (max-width: 600px) {
+  .box {
+    width: 60%;
   }
 }

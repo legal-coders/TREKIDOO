@@ -239,6 +239,7 @@ section .color {
   letter-spacing: 1px;
   color: #fff;
   box-shadow: 0 5px 15px rgba(255, 255, 255, 0.05);
+  text-align: center;
 }
 
 input::placeholder {

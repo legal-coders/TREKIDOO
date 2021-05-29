@@ -10,40 +10,35 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
 app.set("view engine", "ejs");
 
-mongoose.connect(
-    "mongodb+srv://admin:projectpirates2020@trekidoo.mxbfu.mongodb.net/userDB",
-    { useNewUrlParser: true }
-);
+mongoose.connect("mongodb+srv://admin:projectpirates2020@trekidoo.mxbfu.mongodb.net/userDB", { useNewUrlParser: true });
 const userSchema = new mongoose.Schema({
-    email: { type: String, required: true },
-    userName: {
-        type: String,
-        required: true, 
-        minlength: 8,
-        maxlength: 12
-    },
-    password: {
-        type: String,
-        required: true,
-        minlength: 8
-    },
-    confirmpassword: {
-        type: String,
-        required: true,
-        minlength: 8
-    }
+    email: String,
+    userName: String,
+    password: String,
+    signedin: String
 });
 
-userSchema.plugin(encrypt, { secret: process.env.SECRET, encryptedFields: ["password"] });
+userSchema.plugin(encrypt, { secret: process.env.SECRET, encryptedFields: ["password"] }); 
 
 const User = mongoose.model("User", userSchema);
 
+function signin(signedin) { const Signedin = signedin; }
+
+function Email() {
+    const a = 6;
+    return a
+}
+User.findOne({email: })
+
 app.get("/", (req, res) => {
+    const b = Email();
+    console.log(b);
     res.render("Home/home");
 });
 
 app.get("/places", (req, res) => {
     res.render("Places/places");
+    Email("hi");
 });
 
 app.get("/places/:state/:place", (req, res) => {
@@ -69,7 +64,8 @@ app.get("/about", (req, res) => {
     res.render("About/about");
 });
 
-app.route("/login")
+app
+    .route("/login")
     .get((req, res) => {
         res.render("Login/login", { wrongPassword: "" });
     })
@@ -80,7 +76,7 @@ app.route("/login")
             } else {
                 if (foundUser) {
                     if (foundUser.password === req.body.password) {
-                        res.redirect("/");
+                        res.render("Home/home");
                     } else {
                         res.render("Login/login", {
                             wrongPassword: "E-mail or Password is incorrect!",
@@ -95,7 +91,8 @@ app.route("/login")
         });
     });
 
-app.route("/forget")
+app
+    .route("/forget")
     .get((req, res) => {
         res.render("Login/forget", { wrongPassword: "" });
     })
@@ -121,6 +118,7 @@ app.route("/forget")
                             wrongPassword: "E-mail or Password is incorrect!",
                         });
                     }
+                    
                 } else {
                     res.render("Login/forget", {
                         wrongPassword: "E-mail or Password is incorrect!",
@@ -130,7 +128,8 @@ app.route("/forget")
         });
     });
 
-app.route("/register")
+app
+    .route("/register")
     .get((req, res) => {
         res.render("Login/register", { wrongPassword: "" });
     })
@@ -138,13 +137,16 @@ app.route("/register")
         const confirmpassword = req.body.confirmpassword;
         const password = req.body.password;
 
+
         if (password === confirmpassword) {
             const newUser = new User({
                 email: req.body.email,
                 userName: req.body.username,
                 password: password,
+                signedin: "true"
             });
             newUser.save();
+            signin(newUser.email, newUser.signerin);
             res.redirect("/");
         } else {
             res.render("Login/register", {

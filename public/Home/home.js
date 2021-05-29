@@ -76,15 +76,3 @@ hover(goldenTemple, "#goldenTemple", ".glass5");
 hover(KonarkSunTemple, "#konarkSunTemple", ".glass6");
 hover(Nalanda, "#nalanda", ".glass7");
 hover(Khajuraho, "#khajuraho", ".glass8");
-
-const signin = document.querySelector(".signin");
-const plan = document.querySelector(".plan");
-const signinText = signin.innerText;
-const compareText = "Sign in";
-
-if (signinText == compareText) {
-    plan.addEventListener("click", () => {
-        confirm("Login to view the Plans");
-    })
-    
-} 

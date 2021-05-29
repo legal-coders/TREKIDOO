@@ -271,6 +271,11 @@ input::placeholder {
 .form .inputbox input::placeholder {
   color: rgb(255, 255, 255);
 }
+
+.form .inputbox input:focus::placeholder {
+  color: transparent ;
+}
+
 .form .inputbox input[type="submit"] {
   background: #fff;
   color: #666;

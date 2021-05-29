@@ -15,10 +15,23 @@ mongoose.connect(
     { useNewUrlParser: true }
 );
 const userSchema = new mongoose.Schema({
-    email: String,
-    userName: String,
-    password: String,
-    confirmpassword: String,
+    email: { type: String, required: true },
+    userName: {
+        type: String,
+        required: true, 
+        minlength: 8,
+        maxlength: 12
+    },
+    password: {
+        type: String,
+        required: true,
+        minlength: 8
+    },
+    confirmpassword: {
+        type: String,
+        required: true,
+        minlength: 8
+    }
 });
 
 userSchema.plugin(encrypt, { secret: process.env.SECRET, encryptedFields: ["password"] });

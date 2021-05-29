@@ -279,6 +279,11 @@ input::placeholder {
   margin-bottom: 20px;
   font-weight: 600;
 }
+
+.form .inputbox input:focus::placeholder {
+  color: transparent ;
+}
+
 .forget {
   margin-top: 5px;
   font-weight: 600;

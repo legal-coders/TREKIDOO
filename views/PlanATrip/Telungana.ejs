@@ -1,186 +1,179 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<%- include("../partials/head") %>
+    <title>Telangana</title>
     <link rel="stylesheet" href="../PlanATrip/CSS/Telungana.css">
     <link rel="stylesheet" href="../PlanATrip/CSS/animation.css">
-    <link rel="shortcut icon" href="/Images/Trekidoo_logo.png" type="image/x-icon">
-    <title>Telangana</title>
-</head>
+    </head>
 
-<body>
-    <%- include("../partials/header") %>
+    <body>
+        <%- include("../partials/header") %>
 
-        <section class="firstcontainer">
-            <div class="box">
-                <div class="square" style="--i:0;"></div>
-                <div class="square" style="--i:1;"></div>
-                <div class="square" style="--i:2;"></div>
-                <div class="square" style="--i:3;"></div>
-                <div class="square" style="--i:4;"></div>
-                <div class="innercontainer">
-                    <div class="container">
-                        <h1>Trekidoo</h1>
-                        <h2>Telangana</h2>
+            <section class="firstcontainer">
+                <div class="box">
+                    <div class="square" style="--i:0;"></div>
+                    <div class="square" style="--i:1;"></div>
+                    <div class="square" style="--i:2;"></div>
+                    <div class="square" style="--i:3;"></div>
+                    <div class="square" style="--i:4;"></div>
+                    <div class="innercontainer">
+                        <div class="container">
+                            <h1>Trekidoo</h1>
+                            <h2>Telangana</h2>
 
-                        <div class="select-box">
-                            <div class="options-container">
-                                <div class="option">
-                                    <input type="radio" class="radio" id="4days" name="Days" />
-                                    <label for="4days">FourDays</label>
+                            <div class="select-box">
+                                <div class="options-container">
+                                    <div class="option">
+                                        <input type="radio" class="radio" id="4days" name="Days" />
+                                        <label for="4days">FourDays</label>
+                                    </div>
+
+                                    <div class="option">
+                                        <input type="radio" class="radio" id="9days" name="Days" />
+                                        <label for="9days">SevenDays</label>
+                                    </div>
+
+                                    <div class="option">
+                                        <input type="radio" class="radio" id="14days " name="Days" />
+                                        <label for="14days">ElevenDays</label>
+                                    </div>
                                 </div>
 
-                                <div class="option">
-                                    <input type="radio" class="radio" id="9days" name="Days" />
-                                    <label for="9days">SevenDays</label>
+                                <div class="selected">
+                                    Select no of days
                                 </div>
 
-                                <div class="option">
-                                    <input type="radio" class="radio" id="14days " name="Days" />
-                                    <label for="14days">ElevenDays</label>
-                                </div>
                             </div>
-
-                            <div class="selected">
-                                Select no of days
-                            </div>
-
+                        </div>
+                        <!-- <button class="button" id="button">Continue</button> -->
+                        <button class="button" id="button">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            Continue
+                        </button>
+                    </div>
+                </div>
+            </section>
+            <!-- starting of second container-->
+            <section class="secondcontainer" id="secondcontainer">
+                <div class="day1">
+                    <div class="no1">
+                        <h1>Day 1</h1>
+                        <ol>
+                            <li>Kultala Waterfalls</li>
+                            <li>Kadam Dam</li>
+                            <li>Pochera Waterfalls</li>
+                            <li>Jainath Temple</li>
+                            <li>Sathanala Dam</li>
+                        </ol>
+                    </div>
+                    <div class="no2">
+                        <h1>Day 2</h1>
+                        <ol>
+                            <li>Saptha Kund</li>
+                            <li>Tribe Vibe</li>
+                            <li>Knakai Waterfalls</li>
+                            <li>Gayatri Waterfalls</li>
+                            <li>Papahareshwar Temple</li>
+                        </ol>
+                    </div>
+                    <div class="no3">
+                        <h1>Day 3</h1>
+                        <ol>
+                            <li>Ali Sagar Reservoir</li>
+                            <li>Sarangapur Temple</li>
+                            <li>Quilla Temple</li>
+                            <li>Sri Dattashram</li>
+                            <li>Kanteshwar Temple</li>
+                        </ol>
+                    </div>
+                    <div class="no4">
+                        <h1>Day 4</h1>
+                        <ol>
+                            <li>Medak Fort</li>
+                            <li>Medak Cathedral</li>
+                            <li>Pocharam Lake</li>
+                            <li>Durga Temple</li>
+                            <li>Edithanur Cave</li>
+                        </ol>
+                    </div>
+                    <div class="fifthday">
+                        <div class="no5">
+                            <h1>Day 5</h1>
+                            <ol>
+                                <li>Papikondlau Hills</li>
+                                <li>Gandi Pochamma Temple</li>
+                                <li>Perantapalli Village</li>
+                                <li>kbr Park</li>
+                                <li>Jammalapuram Temple</li>
+                            </ol>
+                        </div>
+                        <div class="no6">
+                            <h1>Day 6</h1>
+                            <ol>
+                                <li>Secunderabad Clock</li>
+                                <li>Shamirpet Lake</li>
+                                <li>Hussain Sagar Lake</li>
+                                <li>Peddamma Temple</li>
+                                <li>Paigarh Palace</li>
+                            </ol>
+                        </div>
+                        <div class="no7">
+                            <h1>Day 7</h1>
+                            <ol>
+                                <li>Rashtrapati Nilayam</li>
+                                <li>Fox Sagar Lake</li>
+                                <li>Kapra Lake</li>
+                                <li>Moula Ali Dargah</li>
+                                <li>Edulbad Lake</li>
+                            </ol>
                         </div>
                     </div>
-                    <!-- <button class="button" id="button">Continue</button> -->
-                    <button class="button" id="button">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        Continue
-                    </button>
-                </div>
-            </div>
-        </section>
-        <!-- starting of second container-->
-        <section class="secondcontainer" id="secondcontainer">
-            <div class="day1">
-                <div class="no1">
-                    <h1>Day 1</h1>
-                    <ol>
-                        <li>Kultala Waterfalls</li>
-                        <li>Kadam Dam</li>
-                        <li>Pochera Waterfalls</li>
-                        <li>Jainath Temple</li>
-                        <li>Sathanala Dam</li>
-                    </ol>
-                </div>
-                <div class="no2">
-                    <h1>Day 2</h1>
-                    <ol>
-                        <li>Saptha Kund</li>
-                        <li>Tribe Vibe</li>
-                        <li>Knakai Waterfalls</li>
-                        <li>Gayatri Waterfalls</li>
-                        <li>Papahareshwar Temple</li>
-                    </ol>
-                </div>
-                <div class="no3">
-                    <h1>Day 3</h1>
-                    <ol>
-                        <li>Ali Sagar Reservoir</li>
-                        <li>Sarangapur Temple</li>
-                        <li>Quilla Temple</li>
-                        <li>Sri Dattashram</li>
-                        <li>Kanteshwar Temple</li>
-                    </ol>
-                </div>
-                <div class="no4">
-                    <h1>Day 4</h1>
-                    <ol>
-                        <li>Medak Fort</li>
-                        <li>Medak Cathedral</li>
-                        <li>Pocharam Lake</li>
-                        <li>Durga Temple</li>
-                        <li>Edithanur Cave</li>
-                    </ol>
-                </div>
-                <div class="fifthday">
-                    <div class="no5">
-                        <h1>Day 5</h1>
-                        <ol>
-                            <li>Papikondlau Hills</li>
-                            <li>Gandi Pochamma Temple</li>
-                            <li>Perantapalli Village</li>
-                            <li>kbr Park</li>
-                            <li>Jammalapuram Temple</li>
-                        </ol>
-                    </div>
-                    <div class="no6">
-                        <h1>Day 6</h1>
-                        <ol>
-                            <li>Secunderabad Clock</li>
-                            <li>Shamirpet Lake</li>
-                            <li>Hussain Sagar Lake</li>
-                            <li>Peddamma Temple</li>
-                            <li>Paigarh Palace</li>
-                        </ol>
-                    </div>
-                    <div class="no7">
-                        <h1>Day 7</h1>
-                        <ol>
-                            <li>Rashtrapati Nilayam</li>
-                            <li>Fox Sagar Lake</li>
-                            <li>Kapra Lake</li>
-                            <li>Moula Ali Dargah</li>
-                            <li>Edulbad Lake</li>
-                        </ol>
+                    <div class="eighthday">
+                        <div class="no8">
+                            <h1>Day 8</h1>
+                            <ol>
+                                <li>Chaya Temple</li>
+                                <li>Pillalamarri Temple</li>
+                                <li>Kapurala Gutta</li>
+                                <li>Bhongir Fort</li>
+                                <li>Musi Reservoir</li>
+                            </ol>
+                        </div>
+                        <div class="no9">
+                            <h1>Day 9</h1>
+                            <ol>
+                                <li>Mallela Theertham</li>
+                                <li>Palair Reservoir</li>
+                                <li>Khammam Fort</li>
+                                <li>Dhanavayi Gudem Park</li>
+                                <li>Ayyappa Temple</li>
+                            </ol>
+                        </div>
+                        <div class="no10">
+                            <h1>Day 10</h1>
+                            <ol>
+                                <li>Bogatha Falls</li>
+                                <li>Pakhal Lake</li>
+                                <li>Warangal Fort</li>
+                                <li>Ramappa Temple</li>
+                                <li>Bhadrakali Temple</li>
+                            </ol>
+                        </div>
+                        <div class="no11">
+                            <h1>Day 11</h1>
+                            <ol>
+                                <li>Kakatiya Rock Garden</li>
+                                <li>Padmakshi Temple</li>
+                                <li>Laknavaram Temple</li>
+                                <li>Siddeshwara Temple</li>
+                                <li>Ramappa Temple</li>
+                            </ol>
+                        </div>
                     </div>
                 </div>
-                <div class="eighthday">
-                    <div class="no8">
-                        <h1>Day 8</h1>
-                        <ol>
-                            <li>Chaya Temple</li>
-                            <li>Pillalamarri Temple</li>
-                            <li>Kapurala Gutta</li>
-                            <li>Bhongir Fort</li>
-                            <li>Musi Reservoir</li>
-                        </ol>
-                    </div>
-                    <div class="no9">
-                        <h1>Day 9</h1>
-                        <ol>
-                            <li>Mallela Theertham</li>
-                            <li>Palair Reservoir</li>
-                            <li>Khammam Fort</li>
-                            <li>Dhanavayi Gudem Park</li>
-                            <li>Ayyappa Temple</li>
-                        </ol>
-                    </div>
-                    <div class="no10">
-                        <h1>Day 10</h1>
-                        <ol>
-                            <li>Bogatha Falls</li>
-                            <li>Pakhal Lake</li>
-                            <li>Warangal Fort</li>
-                            <li>Ramappa Temple</li>
-                            <li>Bhadrakali Temple</li>
-                        </ol>
-                    </div>
-                    <div class="no11">
-                        <h1>Day 11</h1>
-                        <ol>
-                            <li>Kakatiya Rock Garden</li>
-                            <li>Padmakshi Temple</li>
-                            <li>Laknavaram Temple</li>
-                            <li>Siddeshwara Temple</li>
-                            <li>Ramappa Temple</li>
-                        </ol>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <script src="../PlanATrip/JS/Telungana.js"></script>
-</body>
+            </section>
+            <script src="../PlanATrip/JS/Telungana.js"></script>
+    </body>
 
-</html>
+    </html>

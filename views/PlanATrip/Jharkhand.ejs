@@ -1,103 +1,96 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<%- include("../partials/head") %>
+    <title>Jharkhand</title>
     <link rel="stylesheet" href="../PlanATrip/CSS/Jharkhand.css">
     <link rel="stylesheet" href="../PlanATrip/CSS/animation.css">
-    <link rel="shortcut icon" href="/Images/Trekidoo_logo.png" type="image/x-icon">
-    <title>Jharkhand</title>
-</head>
+    </head>
 
-<body>
-    <%- include("../partials/header") %>
+    <body>
+        <%- include("../partials/header") %>
 
 
-        <section class="firstcontainer">
-            <div class="box">
-                <div class="square" style="--i:0;"></div>
-                <div class="square" style="--i:1;"></div>
-                <div class="square" style="--i:2;"></div>
-                <div class="square" style="--i:3;"></div>
-                <div class="square" style="--i:4;"></div>
-                <div class="innercontainer">
-                    <div class="container">
-                        <h1>Trekidoo</h1>
-                        <h2>Jharkhand</h2>
+            <section class="firstcontainer">
+                <div class="box">
+                    <div class="square" style="--i:0;"></div>
+                    <div class="square" style="--i:1;"></div>
+                    <div class="square" style="--i:2;"></div>
+                    <div class="square" style="--i:3;"></div>
+                    <div class="square" style="--i:4;"></div>
+                    <div class="innercontainer">
+                        <div class="container">
+                            <h1>Trekidoo</h1>
+                            <h2>Jharkhand</h2>
 
-                        <div class="select-box">
-                            <div class="options-container">
-                                <div class="option">
-                                    <input type="radio" class="radio" id="4days" name="Days" />
-                                    <label for="4days">FourDays</label>
+                            <div class="select-box">
+                                <div class="options-container">
+                                    <div class="option">
+                                        <input type="radio" class="radio" id="4days" name="Days" />
+                                        <label for="4days">FourDays</label>
+                                    </div>
+
+                                    <div class="option">
+                                        <input type="radio" class="radio" id="9days" name="Days" />
+                                        <label for="9days">SevenDays</label>
+                                    </div>
+
+                                    <div class="option">
+                                        <input type="radio" class="radio" id="14days " name="Days" />
+                                        <label for="14days">ElevenDays</label>
+                                    </div>
                                 </div>
 
-                                <div class="option">
-                                    <input type="radio" class="radio" id="9days" name="Days" />
-                                    <label for="9days">SevenDays</label>
+                                <div class="selected">
+                                    Select no of days
                                 </div>
 
-                                <div class="option">
-                                    <input type="radio" class="radio" id="14days " name="Days" />
-                                    <label for="14days">ElevenDays</label>
-                                </div>
                             </div>
-
-                            <div class="selected">
-                                Select no of days
-                            </div>
-
                         </div>
+                        <!-- <button class="button" id="button">Continue</button> -->
+                        <button class="button" id="button">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            Continue
+                        </button>
                     </div>
-                    <!-- <button class="button" id="button">Continue</button> -->
-                    <button class="button" id="button">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        Continue
-                    </button>
                 </div>
-            </div>
-        </section>
-        <!-- starting of second container-->
-        <section class="secondcontainer" id="secondcontainer">
-            <div class="day1">
-                <div class="no1">
-                    <h1>Day 1</h1>
-                    <ol>
-                        <li>Biodiversity Park</li>
-                        <li>Ranchi Lake</li>
-                        <li>Pahari Mandir</li>
-                        <li>Nakshatra Van</li>
-                        <li>Sidu Kanhu Park</li>
-                    </ol>
+            </section>
+            <!-- starting of second container-->
+            <section class="secondcontainer" id="secondcontainer">
+                <div class="day1">
+                    <div class="no1">
+                        <h1>Day 1</h1>
+                        <ol>
+                            <li>Biodiversity Park</li>
+                            <li>Ranchi Lake</li>
+                            <li>Pahari Mandir</li>
+                            <li>Nakshatra Van</li>
+                            <li>Sidu Kanhu Park</li>
+                        </ol>
+                    </div>
+                    <div class="no2">
+                        <h1>Day 2</h1>
+                        <ol>
+                            <li>Kanke Dam</li>
+                            <li>Rock Garden</li>
+                            <li>Tangore Hill</li>
+                            <li>Patratu Valley</li>
+                            <li>Jaganath Temple</li>
+                        </ol>
+                    </div>
+                    <div class="no3">
+                        <h1>Day 3</h1>
+                        <ol>
+                            <li>Bokaro</li>
+                            <li>Hazaribagh</li>
+                            <li>Kanke dam</li>
+                            <li>Hill View Jamshedpur</li>
+                            <li>Tatanagar</li>
+                        </ol>
+                    </div>
                 </div>
-                <div class="no2">
-                    <h1>Day 2</h1>
-                    <ol>
-                        <li>Kanke Dam</li>
-                        <li>Rock Garden</li>
-                        <li>Tangore Hill</li>
-                        <li>Patratu Valley</li>
-                        <li>Jaganath Temple</li>
-                    </ol>
-                </div>
-                <div class="no3">
-                    <h1>Day 3</h1>
-                    <ol>
-                        <li>Bokaro</li>
-                        <li>Hazaribagh</li>
-                        <li>Kanke dam</li>
-                        <li>Hill View Jamshedpur</li>
-                        <li>Tatanagar</li>
-                    </ol>
-                </div>
-            </div>
-        </section>
-        <script src="../PlanATrip/JS/Jharkhand.js"></script>
-</body>
+            </section>
+            <script src="../PlanATrip/JS/Jharkhand.js"></script>
+    </body>
 
-</html>
+    </html>

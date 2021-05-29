@@ -1,187 +1,180 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<%- include("../partials/head") %>
+    <title>Sikkim</title>
     <link rel="stylesheet" href="../PlanATrip/CSS/Sikkim.css">
     <link rel="stylesheet" href="../PlanATrip/CSS/animation.css">
-    <link rel="shortcut icon" href="/Images/Trekidoo_logo.png" type="image/x-icon">
-    <title>Sikkim</title>
-</head>
+    </head>
 
-<body>
-    <%- include("../partials/header") %>
+    <body>
+        <%- include("../partials/header") %>
 
-        <section class="firstcontainer">
-            <div class="box">
-                <div class="square" style="--i:0;"></div>
-                <div class="square" style="--i:1;"></div>
-                <div class="square" style="--i:2;"></div>
-                <div class="square" style="--i:3;"></div>
-                <div class="square" style="--i:4;"></div>
-                <div class="innercontainer">
-                    <div class="container">
-                        <h1>Trekidoo</h1>
-                        <h2>Sikkim</h2>
+            <section class="firstcontainer">
+                <div class="box">
+                    <div class="square" style="--i:0;"></div>
+                    <div class="square" style="--i:1;"></div>
+                    <div class="square" style="--i:2;"></div>
+                    <div class="square" style="--i:3;"></div>
+                    <div class="square" style="--i:4;"></div>
+                    <div class="innercontainer">
+                        <div class="container">
+                            <h1>Trekidoo</h1>
+                            <h2>Sikkim</h2>
 
-                        <div class="select-box">
-                            <div class="options-container">
-                                <div class="option">
-                                    <input type="radio" class="radio" id="4days" name="Days" />
-                                    <label for="4days">FourDays</label>
+                            <div class="select-box">
+                                <div class="options-container">
+                                    <div class="option">
+                                        <input type="radio" class="radio" id="4days" name="Days" />
+                                        <label for="4days">FourDays</label>
+                                    </div>
+
+                                    <div class="option">
+                                        <input type="radio" class="radio" id="9days" name="Days" />
+                                        <label for="9days">SevenDays</label>
+                                    </div>
+
+                                    <div class="option">
+                                        <input type="radio" class="radio" id="14days " name="Days" />
+                                        <label for="14days">ElevenDays</label>
+                                    </div>
                                 </div>
 
-                                <div class="option">
-                                    <input type="radio" class="radio" id="9days" name="Days" />
-                                    <label for="9days">SevenDays</label>
+                                <div class="selected">
+                                    Select no of days
                                 </div>
 
-                                <div class="option">
-                                    <input type="radio" class="radio" id="14days " name="Days" />
-                                    <label for="14days">ElevenDays</label>
-                                </div>
                             </div>
-
-                            <div class="selected">
-                                Select no of days
-                            </div>
-
+                        </div>
+                        <!-- <button class="button" id="button">Continue</button> -->
+                        <button class="button" id="button">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            Continue
+                        </button>
+                    </div>
+                </div>
+            </section>
+            <!-- starting of second container-->
+            <section class="secondcontainer" id="secondcontainer">
+                <div class="day1">
+                    <div class="no1">
+                        <h1>Day 1</h1>
+                        <ol>
+                            <li>Zuluk</li>
+                            <li>Nathula Pass</li>
+                            <li>Tsomgo Lake</li>
+                            <li>Enchey Monastery</li>
+                            <li>Romtek Monastery</li>
+                        </ol>
+                    </div>
+                    <div class="no2">
+                        <h1>Day 2</h1>
+                        <ol>
+                            <li>Bon Monastery</li>
+                            <li>Ralang Monastery</li>
+                            <li>Ralong Hot Springs</li>
+                            <li>Temi Tea Estate</li>
+                            <li>Meanam Hill</li>
+                        </ol>
+                    </div>
+                    <div class="no3">
+                        <h1>Day 3</h1>
+                        <ol>
+                            <li>Borong</li>
+                            <li>Kewzing Village</li>
+                            <li>Rayong Sunrise View Point</li>
+                            <li>Yoksom</li>
+                            <li>Pemayangtse Monastery</li>
+                        </ol>
+                    </div>
+                    <div class="no4">
+                        <h1>Day 4</h1>
+                        <ol>
+                            <li>Sangachoeling Monastery</li>
+                            <li>Kanchenjunga Falls</li>
+                            <li>Rabdentse Ruins</li>
+                            <li>Tashiding Monastery</li>
+                            <li>Rimbi Waterfall</li>
+                        </ol>
+                    </div>
+                    <div class="fifthday">
+                        <div class="no5">
+                            <h1>Day 5</h1>
+                            <ol>
+                                <li>Darap Village</li>
+                                <li>Sewaro Rock Garden</li>
+                                <li>Khecheopalri Lake</li>
+                                <li>Changey Waterfall</li>
+                                <li>Dubdi Monastery</li>
+                            </ol>
+                        </div>
+                        <div class="no6">
+                            <h1>Day 6</h1>
+                            <ol>
+                                <li>Coronation Throne</li>
+                                <li>Kartok Monastery</li>
+                                <li>Tenka Monastery</li>
+                                <li>Goecha La</li>
+                                <li>Kanchgchendzonga</li>
+                            </ol>
+                        </div>
+                        <div class="no7">
+                            <h1>Day 7</h1>
+                            <ol>
+                                <li>Green Lake</li>
+                                <li>Yumthang Valley</li>
+                                <li>Zero Point</li>
+                                <li>A Day At Lachen</li>
+                                <li>Chungthang Valley</li>
+                            </ol>
                         </div>
                     </div>
-                    <!-- <button class="button" id="button">Continue</button> -->
-                    <button class="button" id="button">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        Continue
-                    </button>
-                </div>
-            </div>
-        </section>
-        <!-- starting of second container-->
-        <section class="secondcontainer" id="secondcontainer">
-            <div class="day1">
-                <div class="no1">
-                    <h1>Day 1</h1>
-                    <ol>
-                        <li>Zuluk</li>
-                        <li>Nathula Pass</li>
-                        <li>Tsomgo Lake</li>
-                        <li>Enchey Monastery</li>
-                        <li>Romtek Monastery</li>
-                    </ol>
-                </div>
-                <div class="no2">
-                    <h1>Day 2</h1>
-                    <ol>
-                        <li>Bon Monastery</li>
-                        <li>Ralang Monastery</li>
-                        <li>Ralong Hot Springs</li>
-                        <li>Temi Tea Estate</li>
-                        <li>Meanam Hill</li>
-                    </ol>
-                </div>
-                <div class="no3">
-                    <h1>Day 3</h1>
-                    <ol>
-                        <li>Borong</li>
-                        <li>Kewzing Village</li>
-                        <li>Rayong Sunrise View Point</li>
-                        <li>Yoksom</li>
-                        <li>Pemayangtse Monastery</li>
-                    </ol>
-                </div>
-                <div class="no4">
-                    <h1>Day 4</h1>
-                    <ol>
-                        <li>Sangachoeling Monastery</li>
-                        <li>Kanchenjunga Falls</li>
-                        <li>Rabdentse Ruins</li>
-                        <li>Tashiding Monastery</li>
-                        <li>Rimbi Waterfall</li>
-                    </ol>
-                </div>
-                <div class="fifthday">
-                    <div class="no5">
-                        <h1>Day 5</h1>
-                        <ol>
-                            <li>Darap Village</li>
-                            <li>Sewaro Rock Garden</li>
-                            <li>Khecheopalri Lake</li>
-                            <li>Changey Waterfall</li>
-                            <li>Dubdi Monastery</li>
-                        </ol>
-                    </div>
-                    <div class="no6">
-                        <h1>Day 6</h1>
-                        <ol>
-                            <li>Coronation Throne</li>
-                            <li>Kartok Monastery</li>
-                            <li>Tenka Monastery</li>
-                            <li>Goecha La</li>
-                            <li>Kanchgchendzonga</li>
-                        </ol>
-                    </div>
-                    <div class="no7">
-                        <h1>Day 7</h1>
-                        <ol>
-                            <li>Green Lake</li>
-                            <li>Yumthang Valley</li>
-                            <li>Zero Point</li>
-                            <li>A Day At Lachen</li>
-                            <li>Chungthang Valley</li>
-                        </ol>
+                    <div class="eighthday">
+                        <div class="no8">
+                            <h1>Day 8</h1>
+                            <ol>
+                                <li>Thangu Valley</li>
+                                <li>Gurudongmar Lake</li>
+                                <li>Green Lake Trek</li>
+                                <li>Tosar Lake</li>
+                                <li>Yume Samdong</li>
+                            </ol>
+                        </div>
+                        <div class="no9">
+                            <h1>Day 9</h1>
+                            <ol>
+                                <li>Thangu valley</li>
+                                <li>Tso Ihamo Lake</li>
+                                <li>Namchi</li>
+                                <li>Tashi View Point</li>
+                                <li>Singshore Bridge</li>
+                            </ol>
+                        </div>
+                        <div class="no10">
+                            <h1>Day 10</h1>
+                            <ol>
+                                <li>Banjakri Falls</li>
+                                <li>Ridge Park</li>
+                                <li>Bakthang Falls</li>
+                                <li>Hanuman Tok</li>
+                                <li>Ganesh Tok</li>
+                            </ol>
+                        </div>
+                        <div class="no11">
+                            <h1>Day 11</h1>
+                            <ol>
+                                <li>Phodong Monastery</li>
+                                <li>Zemu Glacier</li>
+                                <li>Mu Kimchi</li>
+                                <li>Baker's Cafe</li>
+                                <li>Chopstick,Gangtok</li>
+                            </ol>
+                        </div>
                     </div>
                 </div>
-                <div class="eighthday">
-                    <div class="no8">
-                        <h1>Day 8</h1>
-                        <ol>
-                            <li>Thangu Valley</li>
-                            <li>Gurudongmar Lake</li>
-                            <li>Green Lake Trek</li>
-                            <li>Tosar Lake</li>
-                            <li>Yume Samdong</li>
-                        </ol>
-                    </div>
-                    <div class="no9">
-                        <h1>Day 9</h1>
-                        <ol>
-                            <li>Thangu valley</li>
-                            <li>Tso Ihamo Lake</li>
-                            <li>Namchi</li>
-                            <li>Tashi View Point</li>
-                            <li>Singshore Bridge</li>
-                        </ol>
-                    </div>
-                    <div class="no10">
-                        <h1>Day 10</h1>
-                        <ol>
-                            <li>Banjakri Falls</li>
-                            <li>Ridge Park</li>
-                            <li>Bakthang Falls</li>
-                            <li>Hanuman Tok</li>
-                            <li>Ganesh Tok</li>
-                        </ol>
-                    </div>
-                    <div class="no11">
-                        <h1>Day 11</h1>
-                        <ol>
-                            <li>Phodong Monastery</li>
-                            <li>Zemu Glacier</li>
-                            <li>Mu Kimchi</li>
-                            <li>Baker's Cafe</li>
-                            <li>Chopstick,Gangtok</li>
-                        </ol>
-                    </div>
-                </div>
-            </div>
 
-        </section>
-        <script src="../PlanATrip/JS/Sikkim.js"></script>
-</body>
+            </section>
+            <script src="../PlanATrip/JS/Sikkim.js"></script>
+    </body>
 
-</html>
+    </html>

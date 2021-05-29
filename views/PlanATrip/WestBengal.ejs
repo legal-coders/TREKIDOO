@@ -1,187 +1,180 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<%- include("../partials/head") %>
+    <title>West Bengal</title>
     <link rel="stylesheet" href="../PlanATrip/CSS/WestBengal.css">
     <link rel="stylesheet" href="../PlanATrip/CSS/animation.css">
-    <link rel="shortcut icon" href="/Images/Trekidoo_logo.png" type="image/x-icon">
-    <title>West Bengal</title>
-</head>
+    </head>
 
-<body>
-    <%- include("../partials/header") %>
+    <body>
+        <%- include("../partials/header") %>
 
-        <section class="firstcontainer">
-            <div class="box">
-                <div class="square" style="--i:0;"></div>
-                <div class="square" style="--i:1;"></div>
-                <div class="square" style="--i:2;"></div>
-                <div class="square" style="--i:3;"></div>
-                <div class="square" style="--i:4;"></div>
-                <div class="innercontainer">
-                    <div class="container">
-                        <h1>Trekidoo</h1>
-                        <h2>West Bengal</h2>
+            <section class="firstcontainer">
+                <div class="box">
+                    <div class="square" style="--i:0;"></div>
+                    <div class="square" style="--i:1;"></div>
+                    <div class="square" style="--i:2;"></div>
+                    <div class="square" style="--i:3;"></div>
+                    <div class="square" style="--i:4;"></div>
+                    <div class="innercontainer">
+                        <div class="container">
+                            <h1>Trekidoo</h1>
+                            <h2>West Bengal</h2>
 
-                        <div class="select-box">
-                            <div class="options-container">
-                                <div class="option">
-                                    <input type="radio" class="radio" id="4days" name="Days" />
-                                    <label for="4days">FourDays</label>
+                            <div class="select-box">
+                                <div class="options-container">
+                                    <div class="option">
+                                        <input type="radio" class="radio" id="4days" name="Days" />
+                                        <label for="4days">FourDays</label>
+                                    </div>
+
+                                    <div class="option">
+                                        <input type="radio" class="radio" id="9days" name="Days" />
+                                        <label for="9days">SevenDays</label>
+                                    </div>
+
+                                    <div class="option">
+                                        <input type="radio" class="radio" id="14days " name="Days" />
+                                        <label for="14days">ElevenDays</label>
+                                    </div>
                                 </div>
 
-                                <div class="option">
-                                    <input type="radio" class="radio" id="9days" name="Days" />
-                                    <label for="9days">SevenDays</label>
+                                <div class="selected">
+                                    Select no of days
                                 </div>
 
-                                <div class="option">
-                                    <input type="radio" class="radio" id="14days " name="Days" />
-                                    <label for="14days">ElevenDays</label>
-                                </div>
                             </div>
-
-                            <div class="selected">
-                                Select no of days
-                            </div>
-
+                        </div>
+                        <!-- <button class="button" id="button">Continue</button> -->
+                        <button class="button" id="button">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            Continue
+                        </button>
+                    </div>
+                </div>
+            </section>
+            <!-- starting of second container-->
+            <section class="secondcontainer" id="secondcontainer">
+                <div class="day1">
+                    <div class="no1">
+                        <h1>Day 1</h1>
+                        <ol>
+                            <li>Deolo Hill</li>
+                            <li>Pine View Nursery</li>
+                            <li>Durpin Dara Hill</li>
+                            <li>Delo Park</li>
+                            <li>7th Mile view Point</li>
+                        </ol>
+                    </div>
+                    <div class="no2">
+                        <h1>Day 2</h1>
+                        <ol>
+                            <li>Himalayan Railway</li>
+                            <li>Tiger Hill</li>
+                            <li>Sandakphu Trek</li>
+                            <li>Rangit Ropeway</li>
+                            <li>Rock Garden</li>
+                        </ol>
+                    </div>
+                    <div class="no3">
+                        <h1>Day 3</h1>
+                        <ol>
+                            <li>Tea Estate</li>
+                            <li>Castleton Tea Estate</li>
+                            <li>Kettle Valley</li>
+                            <li>Bagora village</li>
+                            <li>Giddapahar View Point</li>
+                        </ol>
+                    </div>
+                    <div class="no4">
+                        <h1>Day 4</h1>
+                        <ol>
+                            <li>City Centre</li>
+                            <li>Kali Mandir</li>
+                            <li>The Science City</li>
+                            <li>Kanchenjunga Stadium</li>
+                            <li>Flytrail</li>
+                        </ol>
+                    </div>
+                    <div class="fifthday">
+                        <div class="no5">
+                            <h1>Day 5</h1>
+                            <ol>
+                                <li>Dooars</li>
+                                <li>Buxa Fort</li>
+                                <li>Sikia Jhora</li>
+                                <li>Panjhora River</li>
+                                <li>Mendabari Fort</li>
+                            </ol>
+                        </div>
+                        <div class="no6">
+                            <h1>Day 6</h1>
+                            <ol>
+                                <li>Kalimpong</li>
+                                <li>Sagar Lighthouse</li>
+                                <li>Hiron Point</li>
+                                <li>Mangrove Eco Garden</li>
+                                <li>Tin Kona Island</li>
+                            </ol>
+                        </div>
+                        <div class="no7">
+                            <h1>Day 7</h1>
+                            <ol>
+                                <li>Maa Tara Temple</li>
+                                <li>Rabindara Bhavan</li>
+                                <li>Kala Bhavana</li>
+                                <li>Chhatimtala</li>
+                                <li>Kankalitala Temple</li>
+                            </ol>
                         </div>
                     </div>
-                    <!-- <button class="button" id="button">Continue</button> -->
-                    <button class="button" id="button">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        Continue
-                    </button>
-                </div>
-            </div>
-        </section>
-        <!-- starting of second container-->
-        <section class="secondcontainer" id="secondcontainer">
-            <div class="day1">
-                <div class="no1">
-                    <h1>Day 1</h1>
-                    <ol>
-                        <li>Deolo Hill</li>
-                        <li>Pine View Nursery</li>
-                        <li>Durpin Dara Hill</li>
-                        <li>Delo Park</li>
-                        <li>7th Mile view Point</li>
-                    </ol>
-                </div>
-                <div class="no2">
-                    <h1>Day 2</h1>
-                    <ol>
-                        <li>Himalayan Railway</li>
-                        <li>Tiger Hill</li>
-                        <li>Sandakphu Trek</li>
-                        <li>Rangit Ropeway</li>
-                        <li>Rock Garden</li>
-                    </ol>
-                </div>
-                <div class="no3">
-                    <h1>Day 3</h1>
-                    <ol>
-                        <li>Tea Estate</li>
-                        <li>Castleton Tea Estate</li>
-                        <li>Kettle Valley</li>
-                        <li>Bagora village</li>
-                        <li>Giddapahar View Point</li>
-                    </ol>
-                </div>
-                <div class="no4">
-                    <h1>Day 4</h1>
-                    <ol>
-                        <li>City Centre</li>
-                        <li>Kali Mandir</li>
-                        <li>The Science City</li>
-                        <li>Kanchenjunga Stadium</li>
-                        <li>Flytrail</li>
-                    </ol>
-                </div>
-                <div class="fifthday">
-                    <div class="no5">
-                        <h1>Day 5</h1>
-                        <ol>
-                            <li>Dooars</li>
-                            <li>Buxa Fort</li>
-                            <li>Sikia Jhora</li>
-                            <li>Panjhora River</li>
-                            <li>Mendabari Fort</li>
-                        </ol>
-                    </div>
-                    <div class="no6">
-                        <h1>Day 6</h1>
-                        <ol>
-                            <li>Kalimpong</li>
-                            <li>Sagar Lighthouse</li>
-                            <li>Hiron Point</li>
-                            <li>Mangrove Eco Garden</li>
-                            <li>Tin Kona Island</li>
-                        </ol>
-                    </div>
-                    <div class="no7">
-                        <h1>Day 7</h1>
-                        <ol>
-                            <li>Maa Tara Temple</li>
-                            <li>Rabindara Bhavan</li>
-                            <li>Kala Bhavana</li>
-                            <li>Chhatimtala</li>
-                            <li>Kankalitala Temple</li>
-                        </ol>
+                    <div class="eighthday">
+                        <div class="no8">
+                            <h1>Day 8</h1>
+                            <ol>
+                                <li>Nehru Park</li>
+                                <li>Sentrum Mall</li>
+                                <li>Stabdi Park</li>
+                                <li>Galaxy Mall</li>
+                                <li>Spandan Park</li>
+                            </ol>
+                        </div>
+                        <div class="no9">
+                            <h1>Day 9</h1>
+                            <ol>
+                                <li>Junction Mall</li>
+                                <li>Durgapur Barrage</li>
+                                <li>Deul Park</li>
+                                <li>Trigata</li>
+                                <li>Bioscope Multiplex</li>
+                            </ol>
+                        </div>
+                        <div class="no10">
+                            <h1>Day 10</h1>
+                            <ol>
+                                <li>Tajpur Beach</li>
+                                <li>Digha Beach</li>
+                                <li>Digha Science Center</li>
+                                <li>Ganagni</li>
+                                <li>Kali Temple</li>
+                            </ol>
+                        </div>
+                        <div class="no11">
+                            <h1>Day 11</h1>
+                            <ol>
+                                <li>Victoria Memorial</li>
+                                <li>Howrah Bridge</li>
+                                <li>Eco Park</li>
+                                <li>Fort William</li>
+                                <li>Marble Palace</li>
+                            </ol>
+                        </div>
                     </div>
                 </div>
-                <div class="eighthday">
-                    <div class="no8">
-                        <h1>Day 8</h1>
-                        <ol>
-                            <li>Nehru Park</li>
-                            <li>Sentrum Mall</li>
-                            <li>Stabdi Park</li>
-                            <li>Galaxy Mall</li>
-                            <li>Spandan Park</li>
-                        </ol>
-                    </div>
-                    <div class="no9">
-                        <h1>Day 9</h1>
-                        <ol>
-                            <li>Junction Mall</li>
-                            <li>Durgapur Barrage</li>
-                            <li>Deul Park</li>
-                            <li>Trigata</li>
-                            <li>Bioscope Multiplex</li>
-                        </ol>
-                    </div>
-                    <div class="no10">
-                        <h1>Day 10</h1>
-                        <ol>
-                            <li>Tajpur Beach</li>
-                            <li>Digha Beach</li>
-                            <li>Digha Science Center</li>
-                            <li>Ganagni</li>
-                            <li>Kali Temple</li>
-                        </ol>
-                    </div>
-                    <div class="no11">
-                        <h1>Day 11</h1>
-                        <ol>
-                            <li>Victoria Memorial</li>
-                            <li>Howrah Bridge</li>
-                            <li>Eco Park</li>
-                            <li>Fort William</li>
-                            <li>Marble Palace</li>
-                        </ol>
-                    </div>
-                </div>
-            </div>
 
-        </section>
-        <script src="../PlanATrip/JS/WestBengal.js"></script>
-</body>
+            </section>
+            <script src="../PlanATrip/JS/WestBengal.js"></script>
+    </body>
 
-</html>
+    </html>

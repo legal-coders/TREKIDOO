@@ -65,7 +65,7 @@ app.get("/PlanATrip/:place", (req, res) => {
     res.render(`PlanATrip/${place}`);
 });
 
-app.route("/about").get((req, res) => {
+app.get("/about", (req, res) => {
     res.render("About/about");
 });
 

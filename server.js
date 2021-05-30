@@ -3,7 +3,7 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const ejs = require("ejs");
 const mongoose = require("mongoose");
-const encrypt = require("mongoose-encryption");
+const md5 = require("md5");
 
 const app = express();
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -18,27 +18,14 @@ const userSchema = new mongoose.Schema({
     signedin: String
 });
 
-userSchema.plugin(encrypt, { secret: process.env.SECRET, encryptedFields: ["password"] }); 
-
 const User = mongoose.model("User", userSchema);
 
-function signin(signedin) { const Signedin = signedin; }
-
-function Email() {
-    const a = 6;
-    return a
-}
-User.findOne({email: })
-
 app.get("/", (req, res) => {
-    const b = Email();
-    console.log(b);
     res.render("Home/home");
 });
 
 app.get("/places", (req, res) => {
     res.render("Places/places");
-    Email("hi");
 });
 
 app.get("/places/:state/:place", (req, res) => {
@@ -75,7 +62,7 @@ app
                 console.log(err);
             } else {
                 if (foundUser) {
-                    if (foundUser.password === req.body.password) {
+                    if (foundUser.password === md5(req.body.password)) {
                         res.render("Home/home");
                     } else {
                         res.render("Login/login", {
@@ -105,7 +92,7 @@ app
                     if (req.body.newpassword === req.body.confirmpassword) {
                         User.updateOne(
                             { email: req.body.email },
-                            { $set: { password: req.body.newpassword } },
+                            { $set: { password: md5(req.body.newpassword) } },
                             (err) => {
                                 if (err) {
                                     console.log(err);
@@ -142,11 +129,9 @@ app
             const newUser = new User({
                 email: req.body.email,
                 userName: req.body.username,
-                password: password,
-                signedin: "true"
+                password: md5(password)
             });
             newUser.save();
-            signin(newUser.email, newUser.signerin);
             res.redirect("/");
         } else {
             res.render("Login/register", {

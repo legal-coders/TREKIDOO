@@ -364,6 +364,7 @@ body {
   letter-spacing: 1px;
   color: #fff;
   box-shadow: 0 5px 0.938rem rgba(255, 255, 255, 0.05);
+  text-align: center;
 }
 
 .content1 input::placeholder {
@@ -374,13 +375,14 @@ body {
   margin: 15px 0;
   color: #e9f5ff;
 }
+
 .content1 input[type="submit"] {
   width: 50%;
   margin: 0 auto;
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #d83133;
+  background: #d83131;
   cursor: pointer;
   margin-top: 14px;
 }
@@ -388,6 +390,7 @@ body {
 .content1 input[type="submit"]:hover {
   background-color: #fff;
   color: #d83133;
+  box-shadow: 3px 3px 8px rgba(255, 255, 255, 0.6);
 }
 .name1 {
   padding: 3% 0;

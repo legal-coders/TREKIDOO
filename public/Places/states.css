@@ -42,6 +42,7 @@ body {
   );
   background-size: 500%;
   animation: gradient 5s infinite alternate;
+  user-select: none;
 }
 
 /* Navbar Section */

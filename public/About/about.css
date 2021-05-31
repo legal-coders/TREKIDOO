@@ -39,6 +39,7 @@ body {
   align-items: center;
   min-height: 100vh;
   overflow: overlay;
+  user-select: none;
 }
 
 
@@ -117,12 +118,19 @@ body {
   border-radius: 0px;
 }
 .list-item a.about {
-  color: black;
+  color: rgb(240,164,16);
   background: white;
   border-radius: 50px;
   padding: 2px 16px 5px 15px;
+  text-shadow: 1px 1px 3px;
 }
-
+.list-item a.about:hover
+{
+  color: white;
+  background: rgb(240,164,16);
+  border: none;
+  box-shadow: 1px 1px 3px #fff;
+}
 .heading {
   display: none;
 }

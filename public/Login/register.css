@@ -91,13 +91,19 @@ body {
   border-radius: 0px;
 }
 .list-item a.signin {
-  color: black;
+  color: #28363d;
   background: white;
   border-radius: 50px;
   padding: 5px 15px 8px 15px;
   text-shadow: 1px 1px 3px;
 }
-
+.list-item a.signin:hover
+{
+  color: white;
+  background: #28363d;
+  border: none;
+  box-shadow: 1px 1px 3px #fff;
+}
 section {
   display: flex;
   justify-content: center;

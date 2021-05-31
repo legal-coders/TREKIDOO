@@ -105,7 +105,8 @@ body {
 .list-item a.signin:hover {
   background-color: #191e32;
   color: white;
-  text-shadow: 1px 1px 3px white;
+  text-shadow: none;
+  box-shadow: 1px 1px 3px #fff;
 }
 
 section {

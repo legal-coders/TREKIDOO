@@ -10,6 +10,7 @@
 body
 {
   overflow: hidden;
+  user-select: none;
 }
 .blur
 {
@@ -121,13 +122,19 @@ z-index: 31;
   border-radius: 0px;
 }
 .list-item a.plan {
-    color: black;
+    color: rgb(221,94,9);
     background: white;
     border-radius: 50px;
     padding: 3px 17px 4px 18px;
     text-shadow: 1px 1px 3px;
   }
-
+.list-item a.plan:hover
+{
+  background: rgb(221,94,9);
+  color: white;
+  border: none;
+  box-shadow: 1px 1px 3px #fff;
+}
 .firstcontainer {
   height: 100vh;
   position: relative;

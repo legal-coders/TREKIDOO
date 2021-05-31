@@ -301,11 +301,14 @@ body {
   border-radius: 3.125rem;
   background: #d83133;
   color: #fff;
+  box-shadow: 3px 3px 8px rgba(255, 255, 255, 0.6);
 }
 .content a:hover {
   color: #d83133;
   background-color: #fff;
+  box-shadow: 3px 3px 8px rgba(255, 255, 255, 0.6);
 }
+
 
 .content1 {
   margin-top: 4%;
@@ -385,6 +388,7 @@ body {
   background: #d83131;
   cursor: pointer;
   margin-top: 14px;
+  box-shadow: 3px 3px 8px rgba(255, 255, 255, 0.6);
 }
 
 .content1 input[type="submit"]:hover {

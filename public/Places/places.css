@@ -349,6 +349,7 @@ body::before {
 }
 .bottom a:hover {
   transform: scale(0.9);
+  background: linear-gradient(45deg, #ff5f5f, #ffbd71, #ffb56f);
 }
 .bottom {
   display: none;

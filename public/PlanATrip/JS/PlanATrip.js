@@ -171,3 +171,11 @@ menu.addEventListener('click', () => {
 nav_container.addEventListener('click', () => {
     iffalse();
 })
+
+const signin = document.querySelector(".signedin");
+const signedin = signin.innerText;
+const signedIn = "signedin";
+const blur = document.querySelector(".blur");
+if (signedin == signedIn) {
+    blur.style.zIndex = "-10";
+}

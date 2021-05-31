@@ -64,6 +64,22 @@
     height: 80px;
 }
 
+.blur h1
+{
+    background: linear-gradient(to right, #ff6609, #ff7504, #ff8303, #ff9107, #ff9e0f, #ffab19, #ffb724, #ffc32f, #ffcf3b, #ffda47, #ffe654, #fff162);
+    background-size: 300%;
+    background-position: left;
+    animation: gradiant 2s infinite alternate;
+    background-clip: text;
+    -webkit-background-clip: text;
+    background-position: left;
+    animation: gradiant 2s infinite alternate;
+    color: transparent;
+}
+
+
+
+
 .innercontainer .container h1 {
     position: absolute;
     left: 50%;

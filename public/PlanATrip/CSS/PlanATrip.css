@@ -7,6 +7,47 @@
   box-sizing: border-box;
 }
 
+body
+{
+  overflow: hidden;
+}
+.blur
+{
+  position: absolute;
+  width: 70%;
+  height: 70%;
+  margin: auto ;
+  background:rgba(255, 255, 255, 0.288);
+  z-index: -10;
+  backdrop-filter: blur(50px);
+  border-radius: 30px;
+  outline: 30% solid black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.blur h1
+{
+  padding: 10px;
+  font-size: 2.5rem;
+}
+.blur button
+{
+  padding: 10px 10px;
+  margin: 10px 15px;
+  border-radius: 30px;
+  font-size: 1.3rem;
+  width: 113px;
+  background-color: #fff;
+  color: rgb(221, 94, 9);
+  border: none;
+}
+.blur button:hover
+{
+  color: #fff;
+  background-color: rgb(221, 94, 9);
+}
 .navbar {
   display: flex;
   align-items: center;
@@ -179,6 +220,12 @@ z-index: 31;
   color: #f5f6fa;
   position: relative;
   order: 0;
+}
+.selected p
+{
+  position:absolute;
+  z-index: -10;
+  top: 0;
 }
 
 .selected::after {

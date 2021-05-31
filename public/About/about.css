@@ -290,6 +290,7 @@ body {
 .content h2 {
   font-size: 1.875rem;
   padding: 1%;
+  border-bottom: 2px solid #1e1f23;
 }
 .content p {
   font-size: 1.313rem;
@@ -347,7 +348,8 @@ body {
 }
 .content1 h2 {
   font-size: 1.875rem;
-  padding: 10px;
+  padding: 10px 10px 10px 0;
+  border-bottom: 2px solid #1e1f23;
 }
 .content1 input {
   display: flex;
@@ -448,11 +450,18 @@ body {
   transform: translateY(-3.125rem);
   box-shadow: 0 2.5rem 4.375rem rgba(0, 0, 0, 0.5);
 }
+.box:hover .space h3
+{
+  border-bottom: 2px solid #2fa1ff;
+  transition: all 0.3s ease-in-out;
+}
+
 
 .space h3 {
   color: #2fa1ff;
   font-size: 1.563rem;
 }
+
 .space p {
   color: #fff;
   font-size: 1.25rem;

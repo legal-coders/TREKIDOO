@@ -39,14 +39,18 @@ passport.deserializeUser(User.deserializeUser());
 
 app.get("/", (req, res) => {
     if (req.isAuthenticated()) {
-        res.render("Home/home", {log: "Account"});
+        res.render("Home/home", { log: "Account" });
     } else {
-        res.render("Home/home", {log: "Sign In"});
+        res.render("Home/home", { log: "Sign In" });
     }
 });
 
 app.get("/places", (req, res) => {
-    res.render("Places/places");
+    if (req.isAuthenticated()) {
+        res.render("Places/places", { log: "Account" });
+    } else {
+        res.render("Places/places", { log: "Sign In" });
+    }
 });
 
 app.get("/places/:state/:place", (req, res) => {
@@ -56,26 +60,46 @@ app.get("/places/:state/:place", (req, res) => {
 });
 
 app.get("/404", (req, res) => {
-    res.render("404/404");
+    if (req.isAuthenticated()) {
+        res.render("404/404", { log: "Account" });
+    } else {
+        res.render("404/404", { log: "Sign In" });
+    }
 });
 
 app.get("/PlanATrip", (req, res) => {
-    res.render("PlanATrip/PlanATrip");
+    if (req.isAuthenticated()) {
+        res.render("PlanATrip/PlanATrip", { log: "Account" });
+    } else {
+        res.render("PlanATrip/PlanATrip", { log: "Sign In" });
+    }
 });
 
 app.get("/PlanATrip/:place", (req, res) => {
     const place = req.params.place;
-    res.render(`PlanATrip/${place}`);
+    if (req.isAuthenticated()) {
+        res.render(`PlanATrip/${place}`, { log: "Account" });
+    } else {
+        res.render(`PlanATrip/${place}`, { log: "Sign In" });
+    }
 });
 
 app.get("/about", (req, res) => {
-    res.render("About/about");
+    if (req.isAuthenticated()) {
+        res.render("About/about", { log: "Account" });
+    } else {
+        res.render("About/about", { log: "Sign In" });
+    }
 });
 
 app
     .route("/login")
     .get((req, res) => {
-        res.render("Login/login", { wrongPassword: "" });
+        if (req.isAuthenticated()) {
+            res.render("Account/account", { log: "Account",});
+        } else {
+            res.render("Login/login", { log: "Sign In", wrongPassword: "" });
+        }
     })
     .post((req, res) => {
         User.findOne({ email: req.body.email }, (err, foundUser) => {
@@ -102,7 +126,11 @@ app
 app
     .route("/forget")
     .get((req, res) => {
-        res.render("Login/forget", { wrongPassword: "" });
+        if (req.isAuthenticated()) {
+            res.render("Login/forget", { log: "Account", wrongPassword: "" });
+        } else {
+            res.render("Login/forget", { log: "Sign In", wrongPassword: "" });
+        }
     })
     .post((req, res) => {
         User.findOne({ email: req.body.email }, (err, foundUser) => {
@@ -139,36 +167,23 @@ app
 app
     .route("/register")
     .get((req, res) => {
-        res.render("Login/register", { wrongPassword: "" });
+        if (req.isAuthenticated()) {
+            res.render("Login/register", { log: "Account", wrongPassword: "" });
+        } else {
+            res.render("Login/register", { log: "Sign In", wrongPassword: "" });
+        }
     })
     .post((req, res) => {
-        User.register({email: req.body.email}, req.body.password, (err, user) => {
+        User.register({ email: req.body.email, username: req.body.username }, req.body.password, (err, user) => {
             if (err) {
                 console.log(err);
                 res.redirect("/register");
             } else {
-                passport.authenticate("local") (req, res, () => {
+                passport.authenticate("local")(req, res, () => {
                     res.redirect("/");
                 });
             }
         });
-        // const confirmpassword = req.body.confirmpassword;
-        // const password = req.body.password;
-
-
-        // if (password === confirmpassword) {
-        //     const newUser = new User({
-        //         email: req.body.email,
-        //         userName: req.body.username,
-        //         password: password
-        //     });
-        //     newUser.save();
-        //     res.redirect("/");
-        // } else {
-        //     res.render("Login/register", {
-        //         wrongPassword: "*Password does not match!",
-        //     });
-        // }
     });
 
 app.listen(process.env.PORT || 3000, () => {

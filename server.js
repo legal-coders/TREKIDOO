@@ -11,19 +11,38 @@ const app = express();
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
 app.set("view engine", "ejs");
+app.use(session({
+    secret: 'keyboard cat',
+    resave: false,
+    saveUninitialized: false
+}));
+app.use(passport.initialize());
+app.use(passport.session());
 
-mongoose.connect("mongodb+srv://admin:projectpirates2020@trekidoo.mxbfu.mongodb.net/userDB", { useNewUrlParser: true });
+mongoose.connect(process.env.DB_CONNECT, { useNewUrlParser: true });
+
+mongoose.set("useCreateIndex", true);
+
 const userSchema = new mongoose.Schema({
     email: String,
     userName: String,
-    password: String,
-    signedin: String
+    password: String
 });
+
+userSchema.plugin(passportLocalMongoose);
 
 const User = mongoose.model("User", userSchema);
 
+passport.use(User.createStrategy());
+passport.serializeUser(User.serializeUser());
+passport.deserializeUser(User.deserializeUser());
+
 app.get("/", (req, res) => {
-    res.render("Home/home");
+    if (req.isAuthenticated()) {
+        res.render("Home/home", {log: "Account"});
+    } else {
+        res.render("Home/home", {log: "Sign In"});
+    }
 });
 
 app.get("/places", (req, res) => {
@@ -123,23 +142,33 @@ app
         res.render("Login/register", { wrongPassword: "" });
     })
     .post((req, res) => {
-        const confirmpassword = req.body.confirmpassword;
-        const password = req.body.password;
+        User.register({email: req.body.email}, req.body.password, (err, user) => {
+            if (err) {
+                console.log(err);
+                res.redirect("/register");
+            } else {
+                passport.authenticate("local") (req, res, () => {
+                    res.redirect("/");
+                });
+            }
+        });
+        // const confirmpassword = req.body.confirmpassword;
+        // const password = req.body.password;
 
 
-        if (password === confirmpassword) {
-            const newUser = new User({
-                email: req.body.email,
-                userName: req.body.username,
-                password: password
-            });
-            newUser.save();
-            res.redirect("/");
-        } else {
-            res.render("Login/register", {
-                wrongPassword: "*Password does not match!",
-            });
-        }
+        // if (password === confirmpassword) {
+        //     const newUser = new User({
+        //         email: req.body.email,
+        //         userName: req.body.username,
+        //         password: password
+        //     });
+        //     newUser.save();
+        //     res.redirect("/");
+        // } else {
+        //     res.render("Login/register", {
+        //         wrongPassword: "*Password does not match!",
+        //     });
+        // }
     });
 
 app.listen(process.env.PORT || 3000, () => {

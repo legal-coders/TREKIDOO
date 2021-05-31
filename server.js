@@ -3,6 +3,9 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const ejs = require("ejs");
 const mongoose = require("mongoose");
+const passport = require("passport");
+const passportLocalMongoose = require("passport-local-mongoose");
+const session = require("express-session");
 
 const app = express();
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -104,7 +107,7 @@ app
                             wrongPassword: "E-mail or Password is incorrect!",
                         });
                     }
-                    
+
                 } else {
                     res.render("Login/forget", {
                         wrongPassword: "E-mail or Password is incorrect!",

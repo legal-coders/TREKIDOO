@@ -3,7 +3,6 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const ejs = require("ejs");
 const mongoose = require("mongoose");
-const md5 = require("md5");
 
 const app = express();
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -62,7 +61,7 @@ app
                 console.log(err);
             } else {
                 if (foundUser) {
-                    if (foundUser.password === md5(req.body.password)) {
+                    if (foundUser.password === req.body.password) {
                         res.render("Home/home");
                     } else {
                         res.render("Login/login", {
@@ -92,7 +91,7 @@ app
                     if (req.body.newpassword === req.body.confirmpassword) {
                         User.updateOne(
                             { email: req.body.email },
-                            { $set: { password: md5(req.body.newpassword) } },
+                            { $set: { password: req.body.newpassword } },
                             (err) => {
                                 if (err) {
                                     console.log(err);
@@ -129,7 +128,7 @@ app
             const newUser = new User({
                 email: req.body.email,
                 userName: req.body.username,
-                password: md5(password)
+                password: password
             });
             newUser.save();
             res.redirect("/");

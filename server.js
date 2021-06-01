@@ -111,7 +111,7 @@ app
     .route("/login")
     .get((req, res) => {
         if (req.isAuthenticated()) {
-            res.redirect("/account");
+            res.render("Account/account", { log: "Account"});
         } else {
             res.render("Login/login", { log: "Sign In", wrongPassword: "" });
         }

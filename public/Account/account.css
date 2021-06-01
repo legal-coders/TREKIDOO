@@ -170,17 +170,6 @@
   text-decoration: underline;
 }
 
-/* .rightside li{
-    color: #FFFFFF;
-    list-style: none;
-    font-size: 30px;
-    line-height: 2.3;
-}
-
-.rightside li:first-child{
-    padding-top: 5%;
-} */
-
 .grid-content {
   color: #ffffff;
   display: grid;
@@ -243,12 +232,15 @@
   border-radius: 50px;
   font-size: 16px;
   cursor: pointer;
+  text-decoration: none;
+  box-shadow: 1px 1px 3px #fff;
 }
 
 .button:hover {
   color: rgb(18, 149, 236);
   background: white;
   font-weight: bolder;
+  box-shadow: none;
 }
 
 .button:focus {

@@ -92,35 +92,44 @@ app.get("/about", (req, res) => {
     }
 });
 
+app.get("/logout", (req, res) => {
+    req.logout();
+    res.redirect("/");
+});
+
 app
     .route("/login")
     .get((req, res) => {
         if (req.isAuthenticated()) {
-            res.render("Account/account", { log: "Account",});
+            res.render("Account/account", { log: "Account", });
         } else {
             res.render("Login/login", { log: "Sign In", wrongPassword: "" });
         }
     })
     .post((req, res) => {
-        User.findOne({ email: req.body.email }, (err, foundUser) => {
+        const user = new User({
+            username: req.body.username,
+            password: req.body.password
+        });
+        User.findOne({ username: req.body.username }, (err, foundUser) => {
             if (err) {
                 console.log(err);
             } else {
                 if (foundUser) {
-                    if (foundUser.password === req.body.password) {
-                        res.render("Home/home");
-                    } else {
-                        res.render("Login/login", {
-                            wrongPassword: "E-mail or Password is incorrect!",
-                        });
-                    }
-                } else {
-                    res.render("Login/login", {
-                        wrongPassword: "E-mail or Password is incorrect!",
+                    req.login(user, (err) => {
+                        if (err) {
+                            console.log(err);
+                            res.render("Login/login", { log: "Sign In", wrongPassword: "" });
+                        } else {
+                            passport.authenticate("local")(req, res, () => {
+                                res.redirect("/");
+                            });
+                        } else {
+                            res.render("Login/login", { log: "Sign In", wrongPassword: "Username or password is incorrect!" });
+                        }
                     });
                 }
-            }
-        });
+            });
     });
 
 app
@@ -167,23 +176,27 @@ app
 app
     .route("/register")
     .get((req, res) => {
-        if (req.isAuthenticated()) {
-            res.render("Login/register", { log: "Account", wrongPassword: "" });
-        } else {
-            res.render("Login/register", { log: "Sign In", wrongPassword: "" });
-        }
+        res.render("Login/register", { log: "Sign In", wrongPassword: "" });
     })
     .post((req, res) => {
-        User.register({ email: req.body.email, username: req.body.username }, req.body.password, (err, user) => {
-            if (err) {
-                console.log(err);
-                res.redirect("/register");
-            } else {
-                passport.authenticate("local")(req, res, () => {
-                    res.redirect("/");
-                });
-            }
-        });
+        const email = req.body.email;
+        const username = req.body.username;
+        const password = req.body.password;
+        const confirmpassword = req.body.confirmpassword;
+        if (password == confirmpassword) {
+            User.register({ email: email, username: username }, password, (err, user) => {
+                if (err) {
+                    console.log(err);
+                    res.render("Login/register", { log: "Sign In", wrongPassword: "E-mail or Password is incorrect!" });
+                } else {
+                    passport.authenticate("local")(req, res, () => {
+                        res.redirect("/");
+                    });
+                }
+            });
+        } else {
+            res.render("Login/register", { log: "Sign In", wrongPassword: "E-mail or Password is incorrect!" });
+        }
     });
 
 app.listen(process.env.PORT || 3000, () => {

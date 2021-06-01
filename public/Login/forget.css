@@ -285,6 +285,8 @@ section .color {
   font-size: large;
   font-weight: bold;
   cursor: pointer;
+  border: none;
+  transition: all 0.2s ease-in-out;
 }
 
 .buttonOTP:hover {
@@ -309,6 +311,8 @@ section .color {
   font-size: large;
   font-weight: bold;
   cursor: pointer;
+  border: none;
+  transition: all 0.2s ease-in-out;
 }
 
 .buttonnext:hover {
@@ -407,6 +411,8 @@ input::placeholder {
   font-size: large;
   font-weight: bold;
   cursor: pointer;
+  border: none;
+  transition: all 0.2s ease-in-out;
 }
 
 .button:hover {

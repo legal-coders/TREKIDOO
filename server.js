@@ -14,7 +14,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
 app.set("view engine", "ejs");
 app.use(session({
-    secret: 'keyboard cat',
+    secret: process.env.SECRET,
     resave: false,
     saveUninitialized: false
 }));
@@ -45,6 +45,13 @@ let options = {
     integer: true
 };
 let OTP = rn(options);
+let transporter = nodemailer.createTransport({
+    service: 'gmail',
+    auth: {
+        user: process.env.EMAIL,
+        pass: process.env.PASS
+    }
+});
 app.get("/", (req, res) => {
     if (req.isAuthenticated()) {
         res.render("Home/home", { log: "Account" });
@@ -143,58 +150,25 @@ app
         });
     });
 
-app
-    .route("/forget")
-    .get((req, res) => {
+app.get("/forget" , (req, res) => {
         if (req.isAuthenticated()) {
             res.render("Login/forget", { log: "Account", wrongPassword: "" });
         } else {
             res.render("Login/forget", { log: "Sign In", wrongPassword: "" });
         }
-    })
-    .post((req, res) => {
-        User.findOne({ email: req.body.email }, (err, foundUser) => {
-            if (err) {
-                console.log(err);
-            } else {
-                if (foundUser) {
-                    if (req.body.newpassword === req.body.confirmpassword) {
-                        User.updateOne(
-                            { email: req.body.email },
-                            { $set: { password: req.body.newpassword } },
-                            (err) => {
-                                if (err) {
-                                    console.log(err);
-                                }
-                            }
-                        );
-                        res.redirect("/login");
-                    } else {
-                        res.render("Login/forget", {
-                            wrongPassword: "E-mail or Password is incorrect!",
-                        });
-                    }
+    });
 
-                } else {
-                    res.render("Login/forget", {
-                        wrongPassword: "E-mail or Password is incorrect!",
-                    });
-                }
-            }
-        });
-        let transporter = nodemailer.createTransport({
-            service: 'gmail',
-            auth: {
-                user: 'trekidoolegalpirates@gmail.com',
-                pass: 'Trekidoopirates45'
-            }
-        });
+// app.get("/forget" , (req,res) => {
+//     res.redirect("/otp");
+// });
+app.post("/forget" , (req, res) => {
         let mailOptions = {
             from: 'trekidoolegalpirates@gmail.com',
-            to: 'aravindhabii27@gmail.com',
+            to: req.body.email,
             subject: 'Password reset for your account',
             html: '<h1>Welcome to Trekidoo</h1><p> Here is your OTP to change password</p>' + OTP + '<p>Dont share this with anyone</p>'
         };
+        
         transporter.sendMail(mailOptions, function (error, info) {
             if (error) {
                 console.log(error);
@@ -202,6 +176,41 @@ app
                 console.log('Email sent: ' + info.response);
             }
         });
+        if (OTP == req.body.otp) {
+            res.redirect("/");
+        }
+        console.log(OTP);
+        console.log(req.body.otp);
+        
+        // User.findOne({ email: req.body.email }, (err, foundUser) => {
+            //     if (err) {
+        //         console.log(err);
+        //     } else {
+        //         if (foundUser) {
+        //             if (req.body.newpassword === req.body.confirmpassword) {
+        //                 User.updateOne(
+        //                     { email: req.body.email },
+        //                     { $set: { password: req.body.newpassword } },
+        //                     (err) => {
+        //                         if (err) {
+        //                             console.log(err);
+        //                         }
+        //                     }
+        //                 );
+        //                 res.redirect("/login");
+        //             } else {
+        //                 res.render("Login/forget", {
+        //                     wrongPassword: "E-mail or Password is incorrect!",
+        //                 });
+        //             }
+
+        //         } else {
+        //             res.render("Login/forget", {
+        //                 wrongPassword: "E-mail or Password is incorrect!",
+        //             });
+        //         }
+        //     }
+        // });
     });
 
 app

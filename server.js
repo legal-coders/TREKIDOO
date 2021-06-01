@@ -124,12 +124,14 @@ app
                             passport.authenticate("local")(req, res, () => {
                                 res.redirect("/");
                             });
-                        } else {
-                            res.render("Login/login", { log: "Sign In", wrongPassword: "Username or password is incorrect!" });
-                        }
+                        };
+                        //     } if() {
+                        //     res.render("Login/login", { log: "Sign In", wrongPassword: "Username or password is incorrect!" });
+                        // }
                     });
-                }
-            });
+                };
+            };
+        });    
     });
 
 app

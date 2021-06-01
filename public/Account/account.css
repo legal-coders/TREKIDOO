@@ -78,12 +78,19 @@
   border-bottom: 3px solid white;
   border-radius: 0px;
 }
-.list-item a.home {
-  color: black;
+.list-item a.signin {
+  color: rgb(2,122,154);
   background: white;
   border-radius: 50px;
   padding: 4px 10px 5px 10px;
   text-shadow: 1px 1px 3px;
+}
+.list-item a.signin:hover
+{
+  color: white;
+  background: rgb(2,122,154);
+  border: none;
+  box-shadow: 1px 1px 3px #fff;
 }
 
 .firstsec {

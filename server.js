@@ -116,22 +116,24 @@ app
                 console.log(err);
             } else {
                 if (foundUser) {
-                    req.login(user, (err) => {
-                        if (err) {
-                            console.log(err);
-                            res.render("Login/login", { log: "Sign In", wrongPassword: "" });
+                    console.log(foundUser.password);
+                    if (foundUser.password == req.body.password) {
+                        
+                        req.login(user, (err) => {
+                            if (err) {
+                                console.log(err);
                         } else {
                             passport.authenticate("local")(req, res, () => {
                                 res.redirect("/");
                             });
-                        };
-                        //     } if() {
-                        //     res.render("Login/login", { log: "Sign In", wrongPassword: "Username or password is incorrect!" });
-                        // }
-                    });
-                };
-            };
-        });    
+                        };                
+                        });
+                    } else {
+                        res.render("Login/login", { log: "Sign In", wrongPassword: "Username or password is incorrect!" });
+                    }
+                }
+            }
+        });
     });
 
 app

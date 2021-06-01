@@ -101,7 +101,7 @@ app
     .route("/login")
     .get((req, res) => {
         if (req.isAuthenticated()) {
-            res.render("Account/account", { log: "Account", });
+            res.render("Account/account", { log: "Account", username: req.body.username, email: req.body.email });
         } else {
             res.render("Login/login", { log: "Sign In", wrongPassword: "" });
         }
@@ -111,27 +111,24 @@ app
             username: req.body.username,
             password: req.body.password
         });
-        User.findOne({ username: req.body.username }, (err, foundUser) => {
+        req.login(user, (err) => {
             if (err) {
                 console.log(err);
             } else {
-                if (foundUser) {
-                    console.log(foundUser.password);
-                    if (foundUser.password == req.body.password) {
-                        
-                        req.login(user, (err) => {
-                            if (err) {
-                                console.log(err);
-                        } else {
+                User.findOne({ username: req.body.username }, (err, foundUser) => {
+                    if (err) {
+                        console.log(err);
+                    } else {
+                        if (foundUser) {
                             passport.authenticate("local")(req, res, () => {
                                 res.redirect("/");
                             });
-                        };                
-                        });
-                    } else {
-                        res.render("Login/login", { log: "Sign In", wrongPassword: "Username or password is incorrect!" });
+                        } else {
+                            res.render("Login/login", { log: "Sign In", wrongPassword: "Incorrect Username or Password!" });
+                        }
+
                     }
-                }
+                });
             }
         });
     });
@@ -187,20 +184,28 @@ app
         const username = req.body.username;
         const password = req.body.password;
         const confirmpassword = req.body.confirmpassword;
-        if (password == confirmpassword) {
-            User.register({ email: email, username: username }, password, (err, user) => {
-                if (err) {
-                    console.log(err);
-                    res.render("Login/register", { log: "Sign In", wrongPassword: "E-mail or Password is incorrect!" });
+
+        User.findOne({ email: email }, (err, foundUser) => {
+            if (err) {
+                console.log(err);
+            } else {
+                if (foundUser) {
+                    res.render("Login/register", { log: "Sign In", wrongPassword: "Email or Username already exist!" });
                 } else {
-                    passport.authenticate("local")(req, res, () => {
-                        res.redirect("/");
-                    });
+                    if (password == confirmpassword) {
+                        User.register({ email: email, username: username }, password, (err, user) => {
+                            if (err) {
+                                console.log(err);
+                            } else {
+                                passport.authenticate("local")(req, res, () => {
+                                    res.redirect("/");
+                                });
+                            }
+                        });
+                    }
                 }
-            });
-        } else {
-            res.render("Login/register", { log: "Sign In", wrongPassword: "E-mail or Password is incorrect!" });
-        }
+            }
+        });
     });
 
 app.listen(process.env.PORT || 3000, () => {

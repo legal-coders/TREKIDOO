@@ -187,8 +187,8 @@
   gap: 1.7rem 0px;
   grid-template-areas:
     "A b c"
-    "d e f"
-    "g h i";
+    "d e f";
+    /* "g h i"; */
 }
 
 .A {
@@ -209,7 +209,7 @@
 .f {
   grid-area: f;
 }
-.g {
+/* .g {
   grid-area: g;
 }
 .h {
@@ -217,7 +217,7 @@
 }
 .i {
   grid-area: i;
-}
+} */
 
 .b,
 .e,

@@ -195,11 +195,15 @@ section .color {
   border: 1px solid rgba(255, 255, 255, 0.5);
   border-radius: 0.5px solid rgba(255, 255, 255, 0.2);
 }
+
+/*  form  */
+
 .form {
   position: relative;
   width: 100%;
   height: 100%;
   padding: 40px;
+  display: block;
 }
 .form h2 {
   position: relative;
@@ -214,7 +218,7 @@ section .color {
   content: "";
   position: absolute;
   bottom: -10px;
-  width: 90%;
+  width: 70%;
   height: 4px;
   background: #fff;
 }
@@ -223,8 +227,132 @@ section .color {
   margin-top: 20px;
   display: flex;
   position: relative;
+  display: flex;
+  flex-direction: column;
 }
 .form .inputbox input {
+  display: flex;
+  flex-direction: column;
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  outline: none;
+  padding: 10px 20px;
+  border-radius: 35px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 1px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  font-size: 16px;
+  letter-spacing: 1px;
+  color: #fff;
+  box-shadow: 0 5px 15px rgba(255, 255, 255, 0.05);
+  text-align: center;
+}
+.email
+{
+  width: 72.5%;
+}
+.form .inputbox input::placeholder {
+  color: rgb(255, 255, 255);
+}
+.form .inputbox input[type="submit"] {
+  background: #fff;
+  color: #666;
+  max-width: 100px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.form .inputbox input:focus::placeholder {
+  color: transparent ;
+}
+
+.buttonOTP {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  background: rgb(255, 255, 255);
+  /* padding: 11px 40px; */
+  border-radius: 50px;
+  text-decoration: none;
+  /* width: 50%; */
+  width: 26%;
+  height: 100%;
+  right: 0;
+  /* margin: 20px auto 1px; */
+  color: #191e32;
+  font-size: large;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.buttonOTP:hover {
+  background-color: #191e32;
+  color: white;
+  box-shadow: 1px 1px 3px #fff;
+}
+
+
+.buttonnext {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background: rgb(255, 255, 255);
+  padding: 11px 40px;
+  border-radius: 50px;
+  text-decoration: none;
+  width: 50%;
+  margin: 20px auto 1px;
+  color: #191e32;
+  font-size: large;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.buttonnext:hover {
+  background-color: #191e32;
+  color: white;
+  box-shadow: 1px 1px 3px #fff;
+}
+
+
+/*  form close   */
+
+/*  form1   */
+
+.form1 {
+  position: absolute;
+  width: 100%;
+  height: 85%;
+  padding: 40px;
+  display: none;
+}
+.form1 h2 {
+  position: relative;
+  color: white;
+  font-size: 24px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-bottom: 40px;
+}
+
+.form1 h2::before {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  width: 75%;
+  height: 4px;
+  background: #fff;
+}
+.form1 .inputbox {
+  width: 100%;
+  margin-top: 20px;
+  display: flex;
+  position: relative;
+}
+.form1 .inputbox input {
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -242,6 +370,23 @@ section .color {
   box-shadow: 0 5px 15px rgba(255, 255, 255, 0.05);
   text-align: center;
 }
+.form1 .inputbox input::placeholder {
+  color: rgb(255, 255, 255);
+}
+.form1 .inputbox input[type="submit"] {
+  background: #fff;
+  color: #666;
+  max-width: 100px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.form1 .inputbox input:focus::placeholder {
+  color: transparent ;
+}
+/*  form1 close  */
+
 
 input::placeholder {
   text-align: center;
@@ -261,29 +406,16 @@ input::placeholder {
   color: #191e32;
   font-size: large;
   font-weight: bold;
+  cursor: pointer;
 }
 
 .button:hover {
   background-color: #191e32;
   color: white;
-  box-shadow: 3px 3px 8px rgba(255, 255, 255, 0.6);
+  box-shadow: 1px 1px 3px #fff;
 }
 
-.form .inputbox input::placeholder {
-  color: rgb(255, 255, 255);
-}
-.form .inputbox input[type="submit"] {
-  background: #fff;
-  color: #666;
-  max-width: 100px;
-  cursor: pointer;
-  margin-bottom: 20px;
-  font-weight: 600;
-}
 
-.form .inputbox input:focus::placeholder {
-  color: transparent ;
-}
 
 .forget {
   margin-top: 5px;

@@ -172,10 +172,11 @@ nav_container.addEventListener('click', () => {
     iffalse();
 })
 
+const box = document.querySelector(".box");
 const signin = document.querySelector(".signedin");
 const signedin = signin.innerText;
 const signedIn = "signedin";
 const blur = document.querySelector(".blur");
 if (signedin == signedIn) {
-    blur.style.zIndex = "-10";
+    blur.style.zIndex = "10";
 }

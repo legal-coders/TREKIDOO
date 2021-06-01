@@ -6,6 +6,8 @@ const mongoose = require("mongoose");
 const passport = require("passport");
 const passportLocalMongoose = require("passport-local-mongoose");
 const session = require("express-session");
+const rn = require('random-number');
+const nodemailer = require('nodemailer');
 
 const app = express();
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -37,6 +39,12 @@ passport.use(User.createStrategy());
 passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
 
+let options = {
+    min: 100000,
+    max: 999999,
+    integer: true
+};
+let OTP = rn(options);
 app.get("/", (req, res) => {
     if (req.isAuthenticated()) {
         res.render("Home/home", { log: "Account" });
@@ -69,9 +77,9 @@ app.get("/404", (req, res) => {
 
 app.get("/PlanATrip", (req, res) => {
     if (req.isAuthenticated()) {
-        res.render("PlanATrip/PlanATrip", { log: "Account" });
+        res.render("PlanATrip/PlanATrip", { log: "Account", signedin: "" });
     } else {
-        res.render("PlanATrip/PlanATrip", { log: "Sign In" });
+        res.render("PlanATrip/PlanATrip", { log: "Sign In", signedin: "signedin" });
     }
 });
 
@@ -98,10 +106,12 @@ app.get("/logout", (req, res) => {
 });
 
 app
+
+app
     .route("/login")
     .get((req, res) => {
         if (req.isAuthenticated()) {
-            res.render("Account/account", { log: "Account", username: req.body.username, email: req.body.email });
+            res.redirect("/account");
         } else {
             res.render("Login/login", { log: "Sign In", wrongPassword: "" });
         }
@@ -170,6 +180,26 @@ app
                         wrongPassword: "E-mail or Password is incorrect!",
                     });
                 }
+            }
+        });
+        let transporter = nodemailer.createTransport({
+            service: 'gmail',
+            auth: {
+                user: 'trekidoolegalpirates@gmail.com',
+                pass: 'Trekidoopirates45'
+            }
+        });
+        let mailOptions = {
+            from: 'trekidoolegalpirates@gmail.com',
+            to: 'aravindhabii27@gmail.com',
+            subject: 'Password reset for your account',
+            html: '<h1>Welcome to Trekidoo</h1><p> Here is your OTP to change password</p>' + OTP + '<p>Dont share this with anyone</p>'
+        };
+        transporter.sendMail(mailOptions, function (error, info) {
+            if (error) {
+                console.log(error);
+            } else {
+                console.log('Email sent: ' + info.response);
             }
         });
     });

@@ -264,9 +264,10 @@ input::placeholder {
   margin: 0 auto;
   border: none;
   display: table;
-  margin: 18px auto 8px;
+  margin: 4px auto 4px;
   font-size: large;
   font-weight: bold;
+  width: 75%;
 }
 
 .button:hover {
@@ -325,6 +326,35 @@ input::placeholder {
   width: 20px;
   cursor: pointer;
 }
+
+/* google icon  */
+
+.icon
+{
+  display: flex;
+  flex-direction: row;
+  width: 92%;
+  justify-content: center;
+  position: relative;
+  margin: 0 auto;
+}
+
+.googlebtn
+{
+  background-color: transparent;
+  border: none;
+  width: 2.8rem;
+  margin: 4px auto 4px;
+  border-radius: 100%;
+}
+
+.google
+{
+  width: 100%;
+  border-radius: 10px;
+  position: relative;
+}
+
 
 @media (max-width: 800px) {
   /* Navigation Section */

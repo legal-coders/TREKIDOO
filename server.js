@@ -30,7 +30,8 @@ mongoose.set("useCreateIndex", true);
 const userSchema = new mongoose.Schema({
     email: String,
     userName: String,
-    password: String
+    password: String,
+    googleId: String
 });
 
 userSchema.plugin(passportLocalMongoose);
@@ -39,20 +40,29 @@ userSchema.plugin(findOrCreate);
 const User = mongoose.model("User", userSchema);
 
 passport.use(User.createStrategy());
-passport.serializeUser(User.serializeUser());
-passport.deserializeUser(User.deserializeUser());
+
+passport.serializeUser(function(user, done) {
+    done(null, user.id);
+  });
+  
+  passport.deserializeUser(function(id, done) {
+    User.findById(id, function(err, user) {
+      done(err, user);
+    });
+  });
 
 passport.use(new GoogleStrategy({
     clientID: process.env.CLIENT_ID,
     clientSecret: process.env.CLIENT_SECRET,
     callbackURL: "http://localhost:3000/auth/google/trekidoo",
     userProfileURL: 'https://www.googleapis.com/oauth2/v3/userinfo'
-  },
-  function(accessToken, refreshToken, profile, cb) {
-    User.findOrCreate({ googleId: profile.id }, function (err, user) {
-      return cb(err, user);
-    });
-  }
+},
+    function (accessToken, refreshToken, profile, cb) {
+
+        User.findOrCreate({ googleId: profile.id }, function (err, user) {
+            return cb(err, user);
+        });
+    }
 ));
 let options = {
     min: 100000,
@@ -75,6 +85,16 @@ app.get("/", (req, res) => {
     }
 });
 
+app.get('/auth/google',
+    passport.authenticate('google', { scope: ["profile"] }));
+
+app.get("/auth/google/trekidoo",
+    passport.authenticate('google', { failureRedirect: '/login' }),
+    function (req, res) {
+        res.redirect('/');
+    });
+
+
 app.get("/places", (req, res) => {
     if (req.isAuthenticated()) {
         res.render("Places/places", { log: "Account" });
@@ -87,11 +107,11 @@ app.get("/places/:state/:place", (req, res) => {
     const place = req.params.place;
     const state = req.params.state;
     if (req.isAuthenticated()) {
-        res.render(`Places/${state}`, { place: place , log: "Account"});
+        res.render(`Places/${state}`, { place: place, log: "Account" });
     } else {
-        res.render(`Places/${state}`, { place: place , log: "Sign In" });
+        res.render(`Places/${state}`, { place: place, log: "Sign In" });
     }
-    
+
 });
 
 app.get("/404", (req, res) => {
@@ -138,7 +158,7 @@ app
     .route("/login")
     .get((req, res) => {
         if (req.isAuthenticated()) {
-            res.render("Account/account", { log: "Account"});
+            res.render("Account/account", { log: "Account" });
         } else {
             res.render("Login/login", { log: "Sign In", wrongPassword: "" });
         }
@@ -170,68 +190,68 @@ app
         });
     });
 
-app.get("/forget" , (req, res) => {
-        if (req.isAuthenticated()) {
-            res.render("Login/forget", { log: "Account", wrongPassword: "" });
-        } else {
-            res.render("Login/forget", { log: "Sign In", wrongPassword: "" });
-        }
-    });
+app.get("/forget", (req, res) => {
+    if (req.isAuthenticated()) {
+        res.render("Login/forget", { log: "Account", wrongPassword: "" });
+    } else {
+        res.render("Login/forget", { log: "Sign In", wrongPassword: "" });
+    }
+});
 
 // app.get("/forget" , (req,res) => {
 //     res.redirect("/otp");
 // });
-app.post("/forget" , (req, res) => {
-        let mailOptions = {
-            from: 'trekidoolegalpirates@gmail.com',
-            to: req.body.email,
-            subject: 'Password reset for your account',
-            html: '<h1>Welcome to Trekidoo</h1><p> Here is your OTP to change password</p>' + OTP + '<p>Dont share this with anyone</p>'
-        };
-        
-        transporter.sendMail(mailOptions, function (error, info) {
-            if (error) {
-                console.log(error);
-            } else {
-                console.log('Email sent: ' + info.response);
-            }
-        });
-        if (OTP == req.body.otp) {
-            res.redirect("/");
-        }
-        console.log(OTP);
-        console.log(req.body.otp);
-        
-        // User.findOne({ email: req.body.email }, (err, foundUser) => {
-            //     if (err) {
-        //         console.log(err);
-        //     } else {
-        //         if (foundUser) {
-        //             if (req.body.newpassword === req.body.confirmpassword) {
-        //                 User.updateOne(
-        //                     { email: req.body.email },
-        //                     { $set: { password: req.body.newpassword } },
-        //                     (err) => {
-        //                         if (err) {
-        //                             console.log(err);
-        //                         }
-        //                     }
-        //                 );
-        //                 res.redirect("/login");
-        //             } else {
-        //                 res.render("Login/forget", {
-        //                     wrongPassword: "E-mail or Password is incorrect!",
-        //                 });
-        //             }
+app.post("/forget", (req, res) => {
+    let mailOptions = {
+        from: 'trekidoolegalpirates@gmail.com',
+        to: req.body.email,
+        subject: 'Password reset for your account',
+        html: '<h1>Welcome to Trekidoo</h1><p> Here is your OTP to change password</p>' + OTP + '<p>Dont share this with anyone</p>'
+    };
 
-        //         } else {
-        //             res.render("Login/forget", {
-        //                 wrongPassword: "E-mail or Password is incorrect!",
-        //             });
-        //         }
-        //     }
-        // });
+    transporter.sendMail(mailOptions, function (error, info) {
+        if (error) {
+            console.log(error);
+        } else {
+            console.log('Email sent: ' + info.response);
+        }
     });
+    if (OTP == req.body.otp) {
+        res.redirect("/");
+    }
+    console.log(OTP);
+    console.log(req.body.otp);
+
+    // User.findOne({ email: req.body.email }, (err, foundUser) => {
+    //     if (err) {
+    //         console.log(err);
+    //     } else {
+    //         if (foundUser) {
+    //             if (req.body.newpassword === req.body.confirmpassword) {
+    //                 User.updateOne(
+    //                     { email: req.body.email },
+    //                     { $set: { password: req.body.newpassword } },
+    //                     (err) => {
+    //                         if (err) {
+    //                             console.log(err);
+    //                         }
+    //                     }
+    //                 );
+    //                 res.redirect("/login");
+    //             } else {
+    //                 res.render("Login/forget", {
+    //                     wrongPassword: "E-mail or Password is incorrect!",
+    //                 });
+    //             }
+
+    //         } else {
+    //             res.render("Login/forget", {
+    //                 wrongPassword: "E-mail or Password is incorrect!",
+    //             });
+    //         }
+    //     }
+    // });
+});
 
 app
     .route("/register")

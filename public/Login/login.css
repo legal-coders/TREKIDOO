@@ -283,7 +283,7 @@ input::placeholder {
   text-align: center;
   text-decoration: none;
   border-radius: 25px;
-  width: 60%;
+  width: 80%;
   height: 45px;
   color: #1bace5;
   background-color: white;
@@ -361,19 +361,18 @@ input::placeholder {
 
 .googlebtn
 {
-  background-color: #fff;
+  background-color: transparent;
   border: none;
-  width: 28%;
+  width: 2.8rem;
   margin: 4px auto 4px;
   border-radius: 100%;
 }
 
 .google
 {
-  width: 60%;
+  width: 100%;
   border-radius: 10px;
   position: relative;
-  top: 2.5px;
 }
 
 

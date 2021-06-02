@@ -71,7 +71,12 @@ app.get("/places", (req, res) => {
 app.get("/places/:state/:place", (req, res) => {
     const place = req.params.place;
     const state = req.params.state;
-    res.render(`Places/${state}`, { place: place });
+    if (req.isAuthenticated()) {
+        res.render(`Places/${state}`, { place: place , log: "Account"});
+    } else {
+        res.render(`Places/${state}`, { place: place , log: "Sign In" });
+    }
+    
 });
 
 app.get("/404", (req, res) => {

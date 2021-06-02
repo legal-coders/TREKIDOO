@@ -99,10 +99,20 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background: url("https://im.whatshot.in/img/2020/Aug/istock-1222846278-cropped-1597661395.jpg");
+  background: url("https://stemcell.keck.usc.edu/wp-content/uploads/2017/11/150324_flights-hero-image_1330x742.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+.firstsec::after
+{
+  content: "";
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  position: absolute;
+  z-index: 10;
+  top: 0%;
+  height: 100%;
 }
 
 /* Rectangle 1 */
@@ -115,6 +125,7 @@
   backdrop-filter: blur(3px);
   border-radius: 30px;
   display: flex;
+  z-index: 11;
 }
 
 .leftside {
@@ -177,7 +188,27 @@
   text-decoration: underline;
 }
 
-.grid-content {
+.quotes
+{
+  font-size: 1.4rem;
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0px;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  line-height: 2.2rem;
+}
+.quotes p
+{
+  margin: 1.8%;
+}
+
+
+
+/* .grid-content {
   color: #ffffff;
   display: grid;
   padding-top: 12%;
@@ -188,7 +219,7 @@
   grid-template-areas:
     "A b c"
     "d e f";
-    /* "g h i"; */
+     "g h i"; 
 }
 
 .A {
@@ -209,7 +240,7 @@
 .f {
   grid-area: f;
 }
-/* .g {
+.g {
   grid-area: g;
 }
 .h {
@@ -217,14 +248,14 @@
 }
 .i {
   grid-area: i;
-} */
+}
 
 .b,
 .e,
 .h {
   left: 0%;
   margin-left: 50%;
-}
+} */
 
 .button {
   position: absolute;
@@ -267,12 +298,12 @@
   .account {
     font-size: 63px;
   }
-  .grid-content {
+  /* .grid-content {
     padding-top: 7%;
     font-size: 31px;
     gap: 1.5rem 7px;
     letter-spacing: 1px;
-  }
+  } */
   .button {
     bottom: 11%;
     padding: 8px 83px;
@@ -365,21 +396,21 @@
   }
 
   .account {
-    font-size: 60px;
+    font-size: 50px;
   }
-  .grid-content {
+  /* .grid-content {
     padding-top: 6%;
     font-size: 29px;
     gap: 2rem 35px;
     margin-left: 18%;
     grid-template-columns: 0.5fr 0.3fr 0.5fr;
     letter-spacing: 1px;
-  }
+  } */
   .button {
-    bottom: 16%;
-    padding: 8px 80px;
+    bottom: 13%;
+    padding: 8px 50px;
     border-radius: 50px;
-    font-size: 30px;
+    font-size: 25px;
   }
 }
 
@@ -387,7 +418,7 @@
   .account {
     font-size: 40px;
   }
-  .grid-content {
+  /* .grid-content {
     padding-top: 6%;
     font-size: 16px;
     gap: 1rem 18px;
@@ -408,7 +439,7 @@
   .e,
   .h {
     display: none;
-  }
+  } */
 
   .button {
     bottom: 11%;
@@ -416,4 +447,10 @@
     border-radius: 50px;
     font-size: 21px;
   }
+  .quotes p:nth-child(2)
+  {
+    display: none;
+  }
+
 }
+

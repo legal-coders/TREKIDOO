@@ -270,6 +270,21 @@ body {
 
 /*content*/
 
+input::placeholder
+{
+  color: rgb(211, 202, 202);
+  
+}
+input:focus::placeholder
+{
+  color: transparent;
+  
+}
+/* input:focus 
+{
+  display: none;
+} */
+
 .content {
   display: flex;
   flex-direction: column;

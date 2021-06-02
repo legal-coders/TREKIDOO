@@ -10,6 +10,9 @@ const rn = require('random-number');
 const nodemailer = require('nodemailer');
 const GoogleStrategy = require('passport-google-oauth20').Strategy;
 const findOrCreate = require('mongoose-findorcreate');
+const EventEmmiter = require('events');
+const EventEmitter = require('events');
+const eventEmitter = new EventEmitter("click");
 
 const app = express();
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -30,10 +33,10 @@ mongoose.connect(process.env.DB_CONNECT, { useNewUrlParser: true });
 mongoose.set('useCreateIndex', true);
 
 const userSchema = new mongoose.Schema({
-    email: String,
-    userName: String,
-    password: String,
-    googleId: String
+	email: String,
+	userName: String,
+	password: String,
+	googleId: String
 });
 
 userSchema.plugin(passportLocalMongoose);
@@ -44,28 +47,30 @@ const User = mongoose.model('User', userSchema);
 passport.use(User.createStrategy());
 
 passport.serializeUser(function(user, done) {
-    done(null, user.id);
-  });
-  
-  passport.deserializeUser(function(id, done) {
-    User.findById(id, function(err, user) {
-      done(err, user);
-    });
-  });
+	done(null, user.id);
+});
 
-passport.use(new GoogleStrategy({
-    clientID: process.env.CLIENT_ID,
-    clientSecret: process.env.CLIENT_SECRET,
-    callbackURL: "http://localhost:3000/auth/google/trekidoo",
-    userProfileURL: 'https://www.googleapis.com/oauth2/v3/userinfo'
-},
-    function (accessToken, refreshToken, profile, cb) {
+passport.deserializeUser(function(id, done) {
+	User.findById(id, function(err, user) {
+		done(err, user);
+	});
+});
 
-        User.findOrCreate({ googleId: profile.id }, function (err, user) {
-            return cb(err, user);
-        });
-    }
-));
+passport.use(
+	new GoogleStrategy(
+		{
+			clientID: process.env.CLIENT_ID,
+			clientSecret: process.env.CLIENT_SECRET,
+			callbackURL: 'http://localhost:3000/auth/google/trekidoo',
+			userProfileURL: 'https://www.googleapis.com/oauth2/v3/userinfo'
+		},
+		function(accessToken, refreshToken, profile, cb) {
+			User.findOrCreate({ googleId: profile.id }, function(err, user) {
+				return cb(err, user);
+			});
+		}
+	)
+);
 let options = {
 	min: 100000,
 	max: 999999,
@@ -79,6 +84,27 @@ let transporter = nodemailer.createTransport({
 		pass: process.env.PASS
 	}
 });
+
+eventEmitter.on('click', (email) => {
+    console.log("hi");
+	let mailOptions = {
+		from: 'trekidoolegalpirates@gmail.com',
+		to: "srklohith05@gmail.com",
+		subject: 'Password reset for your account',
+		html:
+			'<h1>Welcome to Trekidoo</h1><p> Here is your OTP to change password</p>' +
+			OTP +e
+			'<p>Dont share this with anyone</p>'
+	};
+	transporter.sendMail(mailOptions, function(error, info) {
+		if (error) {
+			console.log(error);
+		} else {
+			console.log('Email sent: ' + info.response);
+		}
+	});
+});
+
 app.get('/', (req, res) => {
 	if (req.isAuthenticated()) {
 		res.render('Home/home', { log: 'Account' });
@@ -87,33 +113,28 @@ app.get('/', (req, res) => {
 	}
 });
 
-app.get('/auth/google',
-    passport.authenticate('google', { scope: ["profile"] }));
+app.get('/auth/google', passport.authenticate('google', { scope: [ 'profile' ] }));
 
-app.get("/auth/google/trekidoo",
-    passport.authenticate('google', { failureRedirect: '/login' }),
-    function (req, res) {
-        res.redirect('/');
-    });
-
-
-app.get("/places", (req, res) => {
-    if (req.isAuthenticated()) {
-        res.render("Places/places", { log: "Account" });
-    } else {
-        res.render("Places/places", { log: "Sign In" });
-    }
+app.get('/auth/google/trekidoo', passport.authenticate('google', { failureRedirect: '/login' }), function(req, res) {
+	res.redirect('/');
 });
 
-app.get("/places/:state/:place", (req, res) => {
-    const place = req.params.place;
-    const state = req.params.state;
-    if (req.isAuthenticated()) {
-        res.render(`Places/${state}`, { place: place, log: "Account" });
-    } else {
-        res.render(`Places/${state}`, { place: place, log: "Sign In" });
-    }
+app.get('/places', (req, res) => {
+	if (req.isAuthenticated()) {
+		res.render('Places/places', { log: 'Account' });
+	} else {
+		res.render('Places/places', { log: 'Sign In' });
+	}
+});
 
+app.get('/places/:state/:place', (req, res) => {
+	const place = req.params.place;
+	const state = req.params.state;
+	if (req.isAuthenticated()) {
+		res.render(`Places/${state}`, { place: place, log: 'Account' });
+	} else {
+		res.render(`Places/${state}`, { place: place, log: 'Sign In' });
+	}
 });
 
 app.get('/404', (req, res) => {
@@ -154,91 +175,77 @@ app.get('/logout', (req, res) => {
 	res.redirect('/');
 });
 
-app;
+app
+	.route('/login')
+	.get((req, res) => {
+		if (req.isAuthenticated()) {
+			res.render('Account/account', { log: 'Account' });
+		} else {
+			res.render('Login/login', { log: 'Sign In', wrongPassword: '' });
+		}
+	})
+	.post((req, res) => {
+		const user = new User({
+			username: req.body.username,
+			password: req.body.password
+		});
+		req.login(user, (err) => {
+			if (err) {
+				console.log(err);
+			} else {
+				User.findOne({ username: req.body.username }, (err, foundUser) => {
+					if (err) {
+						console.log(err);
+					} else {
+						if (foundUser) {
+							passport.authenticate('local')(req, res, () => {
+								res.redirect('/');
+							});
+						} else {
+							res.render('Login/login', {
+								log: 'Sign In',
+								wrongPassword: 'Incorrect Username or Password!'
+							});
+						}
+					}
+				});
+			}
+		});
+	});
+
+app.get('/forget', (req, res) => {
+	if (req.isAuthenticated()) {
+		res.render('Login/forget', { log: 'Account', wrongPassword: '' });
+	} else {
+		res.render('Login/forget', { log: 'Sign In', wrongPassword: '' });
+	}
+});
+app.post('/forget', (req, res) => {
+	if (OTP == req.body.otp) {
+		res.redirect('/');
+	}
+	console.log(OTP);
+	console.log(req.body.otp);
+});
+app
+	.route('/otp')
+	.get((req, res) => {
+    })
+	.post((req, res) => {
+        res.redirect('/forget');
+        eventEmmiter.emit("click", req.body.email);
+	});
 
 app
-    .route("/login")
-    .get((req, res) => {
-        if (req.isAuthenticated()) {
-            res.render("Account/account", { log: "Account" });
-        } else {
-            res.render("Login/login", { log: "Sign In", wrongPassword: "" });
-        }
-    })
-    .post((req, res) => {
-        const user = new User({
-            username: req.body.username,
-            password: req.body.password
-        });
-        req.login(user, (err) => {
-            if (err) {
-                console.log(err);
-            } else {
-                User.findOne({ username: req.body.username }, (err, foundUser) => {
-                    if (err) {
-                        console.log(err);
-                    } else {
-                        if (foundUser) {
-                            passport.authenticate("local")(req, res, () => {
-                                res.redirect("/");
-                            });
-                        } else {
-                            res.render("Login/login", { log: "Sign In", wrongPassword: "Incorrect Username or Password!" });
-                        }
-
-                    }
-                });
-            }
-        });
-    });
-
-app.get("/forget", (req, res) => {
-    if (req.isAuthenticated()) {
-        res.render("Login/forget", { log: "Account", wrongPassword: "" });
-    } else {
-        res.render("Login/forget", { log: "Sign In", wrongPassword: "" });
-    }
-});
-app.post("/forget", (req, res) => {    
-    if (OTP == req.body.otp) {
-        res.redirect("/");
-    }
-    console.log(OTP);
-    console.log(req.body.otp);
-    
-});
-app.post("/otp" , (req,res) =>{
-    let mailOptions = {
-        from: 'trekidoolegalpirates@gmail.com',
-        to: req.body.email,
-        subject: 'Password reset for your account',
-        html: '<h1>Welcome to Trekidoo</h1><p> Here is your OTP to change password</p>' + OTP + '<p>Dont share this with anyone</p>'
-    };
-    transporter.sendMail(mailOptions, function (error, info) {
-        if (error) {
-            console.log(error);
-        } else {
-            console.log('Email sent: ' + info.response);
-        }
-    });
-    res.redirect("/forget")
-});
-app.get("/otp" , (req,res) =>{
-    if (OTP == req.body.otp) {
-        res.redirect("/");
-    };
-});
-
-app
-.route("/register")
-.get((req, res) => {
-    res.render("Login/register", { log: "Sign In", wrongPassword: "" });
-    })
-    .post((req, res) => {
-        const email = req.body.email;
-        const username = req.body.username;
-        const password = req.body.password;
-        const confirmpassword = req.body.confirmpassword;
+	.route('/register')
+	.get((req, res) => {
+		res.render('Login/register', { log: 'Sign In', wrongPassword: '' });
+	})
+	.post((req, res) => {
+		const email = req.body.email;
+		const username = req.body.username;
+		const password = req.body.password;
+		const confirmpassword = req.body.confirmpassword;
 
 		User.findOne({ email: email }, (err, foundUser) => {
 			if (err) {

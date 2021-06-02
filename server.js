@@ -197,18 +197,21 @@ app.get("/forget", (req, res) => {
         res.render("Login/forget", { log: "Sign In", wrongPassword: "" });
     }
 });
-
-// app.get("/forget" , (req,res) => {
-//     res.redirect("/otp");
-// });
-app.post("/forget", (req, res) => {
+app.post("/forget", (req, res) => {    
+    if (OTP == req.body.otp) {
+        res.redirect("/");
+    }
+    console.log(OTP);
+    console.log(req.body.otp);
+    
+});
+app.post("/otp" , (req,res) =>{
     let mailOptions = {
         from: 'trekidoolegalpirates@gmail.com',
         to: req.body.email,
         subject: 'Password reset for your account',
         html: '<h1>Welcome to Trekidoo</h1><p> Here is your OTP to change password</p>' + OTP + '<p>Dont share this with anyone</p>'
     };
-
     transporter.sendMail(mailOptions, function (error, info) {
         if (error) {
             console.log(error);
@@ -216,47 +219,18 @@ app.post("/forget", (req, res) => {
             console.log('Email sent: ' + info.response);
         }
     });
+    res.redirect("/forget")
+});
+app.get("/otp" , (req,res) =>{
     if (OTP == req.body.otp) {
         res.redirect("/");
-    }
-    console.log(OTP);
-    console.log(req.body.otp);
-
-    // User.findOne({ email: req.body.email }, (err, foundUser) => {
-    //     if (err) {
-    //         console.log(err);
-    //     } else {
-    //         if (foundUser) {
-    //             if (req.body.newpassword === req.body.confirmpassword) {
-    //                 User.updateOne(
-    //                     { email: req.body.email },
-    //                     { $set: { password: req.body.newpassword } },
-    //                     (err) => {
-    //                         if (err) {
-    //                             console.log(err);
-    //                         }
-    //                     }
-    //                 );
-    //                 res.redirect("/login");
-    //             } else {
-    //                 res.render("Login/forget", {
-    //                     wrongPassword: "E-mail or Password is incorrect!",
-    //                 });
-    //             }
-
-    //         } else {
-    //             res.render("Login/forget", {
-    //                 wrongPassword: "E-mail or Password is incorrect!",
-    //             });
-    //         }
-    //     }
-    // });
+    };
 });
 
 app
-    .route("/register")
-    .get((req, res) => {
-        res.render("Login/register", { log: "Sign In", wrongPassword: "" });
+.route("/register")
+.get((req, res) => {
+    res.render("Login/register", { log: "Sign In", wrongPassword: "" });
     })
     .post((req, res) => {
         const email = req.body.email;

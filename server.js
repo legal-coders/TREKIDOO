@@ -1,11 +1,11 @@
-require("dotenv").config();
-const express = require("express");
-const bodyParser = require("body-parser");
-const ejs = require("ejs");
-const mongoose = require("mongoose");
-const passport = require("passport");
-const passportLocalMongoose = require("passport-local-mongoose");
-const session = require("express-session");
+require('dotenv').config();
+const express = require('express');
+const bodyParser = require('body-parser');
+const ejs = require('ejs');
+const mongoose = require('mongoose');
+const passport = require('passport');
+const passportLocalMongoose = require('passport-local-mongoose');
+const session = require('express-session');
 const rn = require('random-number');
 const nodemailer = require('nodemailer');
 const GoogleStrategy = require('passport-google-oauth20').Strategy;
@@ -13,19 +13,21 @@ const findOrCreate = require('mongoose-findorcreate');
 
 const app = express();
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use(express.static("public"));
-app.set("view engine", "ejs");
-app.use(session({
-    secret: process.env.SECRET,
-    resave: false,
-    saveUninitialized: false
-}));
+app.use(express.static('public'));
+app.set('view engine', 'ejs');
+app.use(
+	session({
+		secret: process.env.SECRET,
+		resave: false,
+		saveUninitialized: false
+	})
+);
 app.use(passport.initialize());
 app.use(passport.session());
 
 mongoose.connect(process.env.DB_CONNECT, { useNewUrlParser: true });
 
-mongoose.set("useCreateIndex", true);
+mongoose.set('useCreateIndex', true);
 
 const userSchema = new mongoose.Schema({
     email: String,
@@ -37,7 +39,7 @@ const userSchema = new mongoose.Schema({
 userSchema.plugin(passportLocalMongoose);
 userSchema.plugin(findOrCreate);
 
-const User = mongoose.model("User", userSchema);
+const User = mongoose.model('User', userSchema);
 
 passport.use(User.createStrategy());
 
@@ -65,24 +67,24 @@ passport.use(new GoogleStrategy({
     }
 ));
 let options = {
-    min: 100000,
-    max: 999999,
-    integer: true
+	min: 100000,
+	max: 999999,
+	integer: true
 };
 let OTP = rn(options);
 let transporter = nodemailer.createTransport({
-    service: 'gmail',
-    auth: {
-        user: process.env.EMAIL,
-        pass: process.env.PASS
-    }
+	service: 'gmail',
+	auth: {
+		user: process.env.EMAIL,
+		pass: process.env.PASS
+	}
 });
-app.get("/", (req, res) => {
-    if (req.isAuthenticated()) {
-        res.render("Home/home", { log: "Account" });
-    } else {
-        res.render("Home/home", { log: "Sign In" });
-    }
+app.get('/', (req, res) => {
+	if (req.isAuthenticated()) {
+		res.render('Home/home', { log: 'Account' });
+	} else {
+		res.render('Home/home', { log: 'Sign In' });
+	}
 });
 
 app.get('/auth/google',
@@ -114,45 +116,45 @@ app.get("/places/:state/:place", (req, res) => {
 
 });
 
-app.get("/404", (req, res) => {
-    if (req.isAuthenticated()) {
-        res.render("404/404", { log: "Account" });
-    } else {
-        res.render("404/404", { log: "Sign In" });
-    }
+app.get('/404', (req, res) => {
+	if (req.isAuthenticated()) {
+		res.render('404/404', { log: 'Account' });
+	} else {
+		res.render('404/404', { log: 'Sign In' });
+	}
 });
 
-app.get("/PlanATrip", (req, res) => {
-    if (req.isAuthenticated()) {
-        res.render("PlanATrip/PlanATrip", { log: "Account", signedin: "" });
-    } else {
-        res.render("PlanATrip/PlanATrip", { log: "Sign In", signedin: "signedin" });
-    }
+app.get('/PlanATrip', (req, res) => {
+	if (req.isAuthenticated()) {
+		res.render('PlanATrip/PlanATrip', { log: 'Account', signedin: '' });
+	} else {
+		res.render('PlanATrip/PlanATrip', { log: 'Sign In', signedin: 'signedin' });
+	}
 });
 
-app.get("/PlanATrip/:place", (req, res) => {
-    const place = req.params.place;
-    if (req.isAuthenticated()) {
-        res.render(`PlanATrip/${place}`, { log: "Account" });
-    } else {
-        res.render(`PlanATrip/${place}`, { log: "Sign In" });
-    }
+app.get('/PlanATrip/:place', (req, res) => {
+	const place = req.params.place;
+	if (req.isAuthenticated()) {
+		res.render(`PlanATrip/${place}`, { log: 'Account' });
+	} else {
+		res.render(`PlanATrip/${place}`, { log: 'Sign In' });
+	}
 });
 
-app.get("/about", (req, res) => {
-    if (req.isAuthenticated()) {
-        res.render("About/about", { log: "Account" });
-    } else {
-        res.render("About/about", { log: "Sign In" });
-    }
+app.get('/about', (req, res) => {
+	if (req.isAuthenticated()) {
+		res.render('About/about', { log: 'Account' });
+	} else {
+		res.render('About/about', { log: 'Sign In' });
+	}
 });
 
-app.get("/logout", (req, res) => {
-    req.logout();
-    res.redirect("/");
+app.get('/logout', (req, res) => {
+	req.logout();
+	res.redirect('/');
 });
 
-app
+app;
 
 app
     .route("/login")
@@ -238,29 +240,29 @@ app
         const password = req.body.password;
         const confirmpassword = req.body.confirmpassword;
 
-        User.findOne({ email: email }, (err, foundUser) => {
-            if (err) {
-                console.log(err);
-            } else {
-                if (foundUser) {
-                    res.render("Login/register", { log: "Sign In", wrongPassword: "Email or Username already exist!" });
-                } else {
-                    if (password == confirmpassword) {
-                        User.register({ email: email, username: username }, password, (err, user) => {
-                            if (err) {
-                                console.log(err);
-                            } else {
-                                passport.authenticate("local")(req, res, () => {
-                                    res.redirect("/");
-                                });
-                            }
-                        });
-                    }
-                }
-            }
-        });
-    });
+		User.findOne({ email: email }, (err, foundUser) => {
+			if (err) {
+				console.log(err);
+			} else {
+				if (foundUser) {
+					res.render('Login/register', { log: 'Sign In', wrongPassword: 'Email or Username already exist!' });
+				} else {
+					if (password == confirmpassword) {
+						User.register({ email: email, username: username }, password, (err, user) => {
+							if (err) {
+								console.log(err);
+							} else {
+								passport.authenticate('local')(req, res, () => {
+									res.redirect('/');
+								});
+							}
+						});
+					}
+				}
+			}
+		});
+	});
 
 app.listen(process.env.PORT || 3000, () => {
-    console.log("Server is up and running on port 3000...");
+	console.log('Server is up and running on port 3000...');
 });

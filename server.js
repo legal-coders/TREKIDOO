@@ -12,7 +12,7 @@ const GoogleStrategy = require('passport-google-oauth20').Strategy;
 const findOrCreate = require('mongoose-findorcreate');
 const EventEmmiter = require('events');
 const EventEmitter = require('events');
-const eventEmitter = new EventEmitter("click");
+const eventEmitter = new EventEmitter('click');
 
 const app = express();
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -85,25 +85,25 @@ let transporter = nodemailer.createTransport({
 	}
 });
 
-eventEmitter.on('click', (email) => {
-    console.log("hi");
-	let mailOptions = {
-		from: 'trekidoolegalpirates@gmail.com',
-		to: "srklohith05@gmail.com",
-		subject: 'Password reset for your account',
-		html:
-			'<h1>Welcome to Trekidoo</h1><p> Here is your OTP to change password</p>' +
-			OTP +e
-			'<p>Dont share this with anyone</p>'
-	};
-	transporter.sendMail(mailOptions, function(error, info) {
-		if (error) {
-			console.log(error);
-		} else {
-			console.log('Email sent: ' + info.response);
-		}
-	});
-});
+// eventEmitter.on('click', (email) => {
+//     console.log("hi");
+// 	let mailOptions = {
+// 		from: 'trekidoolegalpirates@gmail.com',
+// 		to: "srklohith05@gmail.com",
+// 		subject: 'Password reset for your account',
+// 		html:
+// 			'<h1>Welcome to Trekidoo</h1><p> Here is your OTP to change password</p>' +
+// 			OTP +e
+// 			'<p>Dont share this with anyone</p>'
+// 	};
+// 	transporter.sendMail(mailOptions, function(error, info) {
+// 		if (error) {
+// 			console.log(error);
+// 		} else {
+// 			console.log('Email sent: ' + info.response);
+// 		}
+// 	});
+// });
 
 app.get('/', (req, res) => {
 	if (req.isAuthenticated()) {
@@ -227,14 +227,10 @@ app.post('/forget', (req, res) => {
 	console.log(OTP);
 	console.log(req.body.otp);
 });
-app
-	.route('/otp')
-	.get((req, res) => {
-    })
-	.post((req, res) => {
-        res.redirect('/forget');
-        eventEmmiter.emit("click", req.body.email);
-	});
+app.route('/otp').get((req, res) => {}).post((req, res) => {
+	res.redirect('/forget');
+	eventEmmiter.emit('click', req.body.email);
+});
 
 app
 	.route('/register')

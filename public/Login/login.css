@@ -283,12 +283,12 @@ input::placeholder {
   text-align: center;
   text-decoration: none;
   border-radius: 25px;
-  width: 50%;
+  width: 60%;
   height: 45px;
   color: #1bace5;
   background-color: white;
   border: none;
-  margin: 19px auto 19px;
+  margin: 4px auto 4px;
   font-size: large;
   font-weight: bold;
   letter-spacing: 1px;
@@ -347,6 +347,36 @@ input::placeholder {
   width: 20px;
   cursor: pointer;
 }
+/* google icon  */
+
+.icon
+{
+  display: flex;
+  flex-direction: row;
+  width: 92%;
+  justify-content: center;
+  position: relative;
+  margin: 0 auto;
+}
+
+.googlebtn
+{
+  background-color: #fff;
+  border: none;
+  width: 28%;
+  margin: 4px auto 4px;
+  border-radius: 100%;
+}
+
+.google
+{
+  width: 60%;
+  border-radius: 10px;
+  position: relative;
+  top: 2.5px;
+}
+
+
 
 @media (max-width: 800px) {
   /* Navigation Section */

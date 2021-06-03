@@ -110,7 +110,8 @@ section {
   align-items: center;
   min-height: 100vh;
   /* background: linear-gradient(to bottom, #008e9b, #008f7a); */
-  background: url("https://image.scoopwhoop.com/q30/s4.scoopwhoop.com/raj/dec3/11a.jpg") no-repeat center;
+  background: url("https://image.scoopwhoop.com/q30/s4.scoopwhoop.com/raj/dec3/11a.jpg")
+    no-repeat center;
   background-size: cover;
   overflow: hidden;
 }
@@ -260,7 +261,7 @@ input::placeholder {
 }
 
 .form .inputbox input:focus::placeholder {
-  color: transparent ;
+  color: transparent;
 }
 
 .inputbox {
@@ -349,8 +350,7 @@ input::placeholder {
 }
 /* google icon  */
 
-.icon
-{
+.icon {
   display: flex;
   flex-direction: row;
   width: 92%;
@@ -359,8 +359,7 @@ input::placeholder {
   margin: 0 auto;
 }
 
-.googlebtn
-{
+.googlebtn {
   background-color: transparent;
   border: none;
   width: 2.8rem;
@@ -368,14 +367,12 @@ input::placeholder {
   border-radius: 100%;
 }
 
-.google
-{
+.google {
   width: 100%;
   border-radius: 10px;
   position: relative;
+  margin: 0 15px;
 }
-
-
 
 @media (max-width: 800px) {
   /* Navigation Section */
@@ -488,5 +485,28 @@ input::placeholder {
 @media (max-width: 550px) {
   .box {
     width: 70%;
+  }
+}
+@media (max-width: 800px) {
+  .button {
+    margin: 0;
+  }
+
+  .google {
+    margin: -4px 15px;
+  }
+}
+@media (max-width: 350px) {
+  .google {
+    margin: 0 20%;
+  }
+
+  .box {
+    width: 100%;
+    height: 100%;
+  }
+
+  .container {
+    height: 100%;
   }
 }

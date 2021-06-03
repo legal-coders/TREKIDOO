@@ -97,8 +97,7 @@ body {
   padding: 5px 15px 8px 15px;
   text-shadow: 1px 1px 3px;
 }
-.list-item a.signin:hover
-{
+.list-item a.signin:hover {
   color: white;
   background: #28363d;
   border: none;
@@ -166,7 +165,7 @@ section .color {
   z-index: 0;
 }
 .square:nth-child(4) {
-  bottom: -10% ;
+  bottom: -10%;
   left: 30%;
   width: 50px;
   height: 50px;
@@ -280,7 +279,7 @@ input::placeholder {
 }
 
 .form .inputbox input:focus::placeholder {
-  color: transparent ;
+  color: transparent;
 }
 
 .form .inputbox input[type="submit"] {
@@ -329,8 +328,7 @@ input::placeholder {
 
 /* google icon  */
 
-.icon
-{
+.icon {
   display: flex;
   flex-direction: row;
   width: 92%;
@@ -339,8 +337,7 @@ input::placeholder {
   margin: 0 auto;
 }
 
-.googlebtn
-{
+.googlebtn {
   background-color: transparent;
   border: none;
   width: 2.8rem;
@@ -348,13 +345,11 @@ input::placeholder {
   border-radius: 100%;
 }
 
-.google
-{
+.google {
   width: 100%;
   border-radius: 10px;
   position: relative;
 }
-
 
 @media (max-width: 800px) {
   /* Navigation Section */

@@ -3,39 +3,49 @@ const nav_container = document.querySelector(".nav-container");
 let menuopen = false;
 
 function iftrue() {
-    menu.classList.add("open");
-    nav_container.style.top = "0";
-    menuopen = true;
+  menu.classList.add("open");
+  nav_container.style.top = "0";
+  menuopen = true;
 }
 function iffalse() {
-    menu.classList.remove("open");
-    nav_container.style.top = "-150vh";
-    menuopen = false;
+  menu.classList.remove("open");
+  nav_container.style.top = "-150vh";
+  menuopen = false;
 }
 menu.addEventListener("click", () => {
-    if (!menuopen) {
-        iftrue();
-    } else {
-        iffalse();
-    }
+  if (!menuopen) {
+    iftrue();
+  } else {
+    iffalse();
+  }
 });
 nav_container.addEventListener("click", () => {
-    iffalse();
+  iffalse();
 });
 
 const eyes = document.querySelector(".eyesContainer");
 const eye = document.querySelector("#eye");
 const slashedEye = document.querySelector("#slashedEye");
 eyes.addEventListener("click", () => {
-    var input = document.querySelectorAll(".inputPassword");
-    input.forEach((e) => {
-        if(e.type === "password") {
-            e.type = "text";
-            slashedEye.style.opacity = "0";
-        } else {
-            e.type = "password";
-            slashedEye.style.opacity = "1";
-        }
-    });
+  var input = document.querySelectorAll(".inputPassword");
+  input.forEach(e => {
+    if (e.type === "password") {
+      e.type = "text";
+      slashedEye.style.opacity = "0";
+    } else {
+      e.type = "password";
+      slashedEye.style.opacity = "1";
+    }
+  });
 });
 
+const form = document.querySelector(".form");
+const form1 = document.querySelector(".form1");
+const otp = document.querySelector(".otp");
+const otpInnerText = otp.innerText;
+const otped = "otped";
+
+if (otpInnerText == otped) {
+  form.style.display = "none";
+  form1.style.display = "block";
+}

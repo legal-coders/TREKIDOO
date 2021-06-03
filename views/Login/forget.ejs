@@ -17,24 +17,29 @@
                     <div class="square" style="--i: 3"></div>
                     <div class="square" style="--i: 4"></div>
                     <div class="containerForget">
+                        
                         <div class="form">
                             <h2>Forgot Password</h2>
-                            <form action="/otp" method="POST">
+                            
+                            <form action="/otp" method="post">
                                 <div class="inputbox">
                                     <input type="text" class="email" name="email" placeholder="Enter E-mail" />
-                                    <a href="/otp" class="buttonOTP">Get OTP</a>
+                                    <button type="submit" class="buttonOTP">Get OTP</button>                              
                                 </div>
-                            </form>
-
-                            <div class="inputbox">
-                                <input type="text" name="otp" placeholder="Enter OTP" />
-                                <button type="button" class="buttonnext">Next</button>
-                            </div>
-                            </form>
+                                </form>
+                                <form action="/next" method="post">
+                                <div class="inputbox">
+                                    <input type="text" name="otp" placeholder="Enter OTP" />
+                                    <button type="submit" class="buttonnext">Next</button>
+                                </div>
+                                </form>
                         </div>
                         <div class="form1">
                             <form action="/forgetpassword" method="POST">
                                 <h2>Change Password</h2>
+                                <div class="inputbox">
+                                    <input type="text" class="email" name="email" placeholder="Enter E-mail" />                              
+                                </div>
                                 <div class="inputbox">
                                     <input class="inputPassword" type="password" name="newpassword"
                                         placeholder="Enter new password" required />
@@ -57,6 +62,7 @@
                         </div>
                     </div>
                 </div>
+                <p class="otp"><%= otp %></p>
             </section>
             <script src="../Login/app.js"></script>
     </body>

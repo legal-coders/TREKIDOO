@@ -10,9 +10,6 @@ const rn = require("random-number");
 const nodemailer = require("nodemailer");
 const GoogleStrategy = require("passport-google-oauth20").Strategy;
 const findOrCreate = require("mongoose-findorcreate");
-const EventEmmiter = require("events");
-const EventEmitter = require("events");
-const eventEmitter = new EventEmitter("click");
 
 const app = express();
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -22,7 +19,7 @@ app.use(
   session({
     secret: process.env.SECRET,
     resave: false,
-    saveUninitialized: false,
+    saveUninitialized: false
   })
 );
 app.use(passport.initialize());
@@ -36,7 +33,7 @@ const userSchema = new mongoose.Schema({
   email: String,
   userName: String,
   password: String,
-  googleId: String,
+  googleId: String
 });
 
 userSchema.plugin(passportLocalMongoose);
@@ -50,8 +47,8 @@ passport.serializeUser(function (user, done) {
   done(null, user.id);
 });
 
-passport.deserializeUser(function (id, done) {
-  User.findById(id, function (err, user) {
+passport.deserializeUser((id, done) => {
+  User.findById(id, (err, user) => {
     done(err, user);
   });
 });
@@ -76,7 +73,7 @@ passport.use(
 let options = {
   min: 100000,
   max: 999999,
-  integer: true,
+  integer: true
 };
 
 let OTP = rn(options);
@@ -218,8 +215,7 @@ app.post("/forget", (req, res) => {
   console.log(OTP);
   console.log(req.body.otp);
 });
-app
-  .route("/otp")
+app.route("/otp")
   .get((req, res) => {
     res.redirect("/forget");
   })
@@ -253,8 +249,7 @@ app
       }
     });
   });
-app
-  .route("/next")
+app.route("/next")
   .get((req, res) => {})
   .post((req, res) => {
     const otpo = req.body.otp;
@@ -275,19 +270,22 @@ app
     const password1 = req.body.newpassword;
     const password2 = req.body.confirmpassword;
     const email = req.body.email;
-    console.log(email);
-    if (password1 === password2) {
-      User.updateOne({email: email}, {$set: {password: password1}});
-      res.redirect("/");
-    }
-      // User.findOne({ email: email }, (err, foundUser) => {
-      //   if (err) {
-      //     console.log(err);
-      //   } else {
-      //     if (foundUser) {
-      //     }
-      //   }
-      // });
+    if (req.isUnauthenticated()) {
+    User.findOne({ email: email }, (err, foundUser) => {
+      if (err) {
+        console.log(err);
+      } else {
+        if (foundUser) {
+          console.log(foundUser);
+          if (password1 === password2) {
+            // User.updateOne({email: email}, {$set: {password: password1}});
+            console.log(foundUser.password);
+            res.redirect("/");
+          }
+        }
+      }
+    });
+  }
   });
 
 app
@@ -322,13 +320,8 @@ app
                   passport.authenticate("local")(req, res, () => {
                     res.redirect("/");
                   });
-                }
-              }
-            );
-          }
-        }
-      }
-    });
+                }});
+          }}}});
   });
 
 app.listen(process.env.PORT || 3000, () => {

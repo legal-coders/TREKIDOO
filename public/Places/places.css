@@ -535,35 +535,6 @@ body::before {
       transition: 0.4s linear;
       border-radius: 10px;
     }
-
-    /* .scroll-box {
-   
-       /* width: 200px; */
-    /*
-       font-size: 16px;
-        /* width: 300%; */ /*
-       border: none;
-        /* border-radius: 15px;  */ /*
-       overflow-x: auto;  
-       display: flex;
-       align-items: center;
-       min-height: 9rem;
-        margin-left: 10px;
-       margin-right: 10px; 
-       
-       margin-bottom: 1rem; 
-       /* margin-bottom: 0;
-        
-   
-        
-       
-   } */ /*
-   .scroll-box .scroll-content {
-    min-width: 10rem; 
-
-    min-height: 4.625rem;
-    }  */
-  }
   @media (max-width: 800px) {
     /* Navigation Section */
 
@@ -672,18 +643,12 @@ body::before {
     }
     .card {
       position: relative;
-      /* align-items: center;
-        justify-content: center; */
-      /* width: 360px;    */
       width: 73%;
-      /* height: 220px;  */
       display: block;
       margin-right: 10px;
       margin-bottom: 4.375rem;
-
       box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.1);
       background: rgba(48, 101, 199, 0.1);
-      /* border: 1px solid black; */
       transition: 0.4s linear;
       border-radius: 10px;
     }
@@ -701,21 +666,12 @@ body::before {
     .card-content-all::-webkit-scrollbar-thumb:hover {
       background: linear-gradient(45deg, #00bf7a, #00b1cf, #008e9b);
     }
-    /* .scroll-box .scroll-content {
-        min-width: 10rem; 
-    
-        min-height: 4.625rem;
-    }  */
     .scroll-box {
-      /* width: 200px; */
       font-size: 16px;
-      /* width: 300%; */
       border: none;
-      /* border-radius: 15px;  */
       overflow-x: auto;
       display: flex;
       align-items: flex-end;
-      /* height: 9rem; */
       min-height: 90%;
       margin-left: 10px;
       margin-right: 10px;
@@ -728,12 +684,8 @@ body::before {
       justify-content: center;
       align-items: center;
       min-width: 10rem;
-
       min-height: 4.625rem;
       height: 60%;
-
-      /* transform: skew(-16deg); */
-      /* line-height: 80px;  0 */
       text-align: center;
       color: rgba(255, 255, 255, 0.6);
       border-radius: 15px;
@@ -763,8 +715,6 @@ body::before {
         "card6"
         "card7"
         "card8";
-      /* grid-row-gap: 10%; */
-      /* background-color: black;    */
       height: 100%;
       width: 100%;
       margin-bottom: 1.875rem;
@@ -772,32 +722,21 @@ body::before {
       padding-left: 18%;
       padding-right: 3%;
       padding-bottom: 1%;
-      /* margin-left: auto;
-        margin-right: auto; */
-      /* bottom: %;   */
       animation-name: cardanimation;
       animation-duration: 700ms;
     }
     .card {
       position: relative;
-      /* width: 360px;    */
       width: 83%;
-      /* height: 220px;  */
       height: 12.5rem;
       display: block;
       margin-right: 10px;
       margin-bottom: 3.75rem;
       box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.1);
       background: rgba(48, 101, 199, 0.1);
-      /* border: 1px solid black; */
       transition: 0.4s linear;
       border-radius: 10px;
     }
-    /* .scroll-box .scroll-content {
-        min-width: 10rem; 
-    
-        min-height: 4.625rem;
-    }  */
   }
   @media (max-width: 500px) {
     .card-content-all {
@@ -813,8 +752,6 @@ body::before {
         "card6"
         "card7"
         "card8";
-      /* grid-row-gap: 10%; */
-      /* background-color: black;    */
       height: 100%;
 
       width: 100%;
@@ -823,17 +760,12 @@ body::before {
       padding-left: 10%;
       padding-right: 3%;
       padding-bottom: 1%;
-      /* margin-left: auto;
-        margin-right: auto; */
-      /* bottom: 5%;  */
       animation-name: cardanimation;
       animation-duration: 700ms;
     }
     .card {
       position: relative;
-      /* width: 360px;    */
       width: 93%;
-      /* height: 220px;  */
       height: 12.5rem;
       min-height: 200px;
       display: block;
@@ -841,15 +773,9 @@ body::before {
       margin-bottom: 3.75rem;
       box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.1);
       background: rgba(48, 101, 199, 0.1);
-      /* border: 1px solid black; */
       transition: 0.4s linear;
       border-radius: 10px;
     }
-    /* .scroll-box .scroll-content {
-        min-width: 10rem; 
-    
-        min-height: 4.625rem;
-    }  */
   }
   @media (max-width: 400px) {
     .card-content-all {
@@ -865,27 +791,19 @@ body::before {
         "card6"
         "card7"
         "card8";
-      /* grid-row-gap: 10%; */
-      /* background-color: black;    */
       height: 100%;
-
       width: 100%;
       margin-bottom: 1.875rem;
       padding-top: 30%;
       padding-left: 6%;
       padding-right: 3%;
       padding-bottom: 1%;
-      /* margin-left: auto;
-        margin-right: auto; */
-      /* bottom: 5%;  */
       animation-name: cardanimation;
       animation-duration: 700ms;
     }
     .card {
       position: relative;
-      /* width: 360px;    */
       width: 98%;
-      /* height: 220px;  */
       height: 51.3%;
       min-height: 11.25rem;
       display: block;
@@ -893,7 +811,6 @@ body::before {
       margin-bottom: 2.5rem;
       box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.1);
       background: rgba(48, 101, 199, 0.1);
-      /* border: 1px solid black; */
       transition: 0.4s linear;
       border-radius: 10px;
     }
@@ -912,27 +829,19 @@ body::before {
         "card6"
         "card7"
         "card8";
-      /* grid-row-gap: 10%; */
-      /* background-color: black;    */
       height: 100%;
-
       width: 100%;
       margin-bottom: 1.875rem;
       padding-top: 40%;
       padding-left: 6%;
       padding-right: 3%;
       padding-bottom: 1%;
-      /* margin-left: auto;
-        margin-right: auto; */
-      /* bottom: 5%;  */
       animation-name: cardanimation;
       animation-duration: 700ms;
     }
     .card {
       position: relative;
-      /* width: 360px;    */
       width: 98%;
-      /* height: 220px;  */
       height: 51.3%;
       min-height: 10rem;
       display: block;
@@ -940,14 +849,9 @@ body::before {
       margin-bottom: 2.5rem;
       box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.1);
       background: rgba(48, 101, 199, 0.1);
-      /* border: 1px solid black; */
       transition: 0.4s linear;
       border-radius: 10px;
     }
-    /* .scroll-box .scroll-content {
-        min-width: 10rem; 
-    
-        min-height: 4.625rem;
-    }  */
   }
+}
 }

@@ -201,92 +201,92 @@ app
     });
   });
 
-app.get("/forget", (req, res) => {
-  if (req.isAuthenticated()) {
-    res.render("Login/forget", { log: "Account", wrongPassword: "", otp: "" });
-  } else {
-    res.render("Login/forget", { log: "Sign In", wrongPassword: "", otp: "" });
-  }
-});
-app.post("/forget", (req, res) => {
-  if (OTP == req.body.otp) {
-    res.redirect("/");
-  }
-  console.log(OTP);
-  console.log(req.body.otp);
-});
-app.route("/otp")
-  .get((req, res) => {
-    res.redirect("/forget");
-  })
-  .post((req, res) => {
-    const email = req.body.email;
-    User.findOne({ email: email }, (err, foundUser) => {
-      if (err) {
-        console.log(err);
-      } else {
-        if (foundUser) {
-          let mailOptions = {
-            from: "trekidoolegalpirates@gmail.com",
-            to: email,
-            subject: "Password reset for your account",
-            html:
-              "<h1>Welcome to Trekidoo</h1><p> Here is your OTP to change password</p>" +
-              OTP +
-              "<p>Dont share this with anyone</p>",
-          };
-          transporter.sendMail(mailOptions, function (error, info) {
-            if (error) {
-              console.log(error);
-            } else {
-              console.log("Email sent: " + info.response);
-              res.write("your password is wrong");
-            }
-          });
-        } else {
-          res.send("hi");
-        }
-      }
-    });
-  });
-app.route("/next")
-  .get((req, res) => {})
-  .post((req, res) => {
-    const otpo = req.body.otp;
-    if (OTP == otpo) {
-      res.render("Login/forget", {
-        log: "Sign In",
-        wrongPassword: "",
-        otp: "otped",
-      });
-    } else {
-      res.redirect("/forget");
-    }
-  });
-app
-  .route("/forgetpassword")
-  .get((req, res) => {})
-  .post((req, res) => {
-    const password1 = req.body.newpassword;
-    const password2 = req.body.confirmpassword;
-    const email = req.body.email;
-    if (req.isUnauthenticated()) {
-    User.findOne({ email: email }, (err, foundUser) => {
-      if (err) {
-        console.log(err);
-      } else {
-        if (foundUser) {
-          console.log(foundUser);
-          if (password1 === password2) {
-            // User.updateOne({email: email}, {$set: {password: password1}});
-            console.log(foundUser.password);
-            res.redirect("/");
-          }
-        }
-      }
-    });
-  }
-  });
+// app.get("/forget", (req, res) => {
+//   if (req.isAuthenticated()) {
+//     res.render("Login/forget", { log: "Account", wrongPassword: "", otp: "" });
+//   } else {
+//     res.render("Login/forget", { log: "Sign In", wrongPassword: "", otp: "" });
+//   }
+// });
+// app.post("/forget", (req, res) => {
+//   if (OTP == req.body.otp) {
+//     res.redirect("/");
+//   }
+//   console.log(OTP);
+//   console.log(req.body.otp);
+// });
+// app.route("/otp")
+//   .get((req, res) => {
+//     res.redirect("/forget");
+//   })
+//   .post((req, res) => {
+//     const email = req.body.email;
+//     User.findOne({ email: email }, (err, foundUser) => {
+//       if (err) {
+//         console.log(err);
+//       } else {
+//         if (foundUser) {
+//           let mailOptions = {
+//             from: "trekidoolegalpirates@gmail.com",
+//             to: email,
+//             subject: "Password reset for your account",
+//             html:
+//               "<h1>Welcome to Trekidoo</h1><p> Here is your OTP to change password</p>" +
+//               OTP +
+//               "<p>Dont share this with anyone</p>",
+//           };
+//           transporter.sendMail(mailOptions, function (error, info) {
+//             if (error) {
+//               console.log(error);
+//             } else {
+//               console.log("Email sent: " + info.response);
+//               res.write("your password is wrong");
+//             }
+//           });
+//         } else {
+//           res.send("hi");
+//         }
+//       }
+//     });
+//   });
+// app.route("/next")
+//   .get((req, res) => {})
+//   .post((req, res) => {
+//     const otpo = req.body.otp;
+//     if (OTP == otpo) {
+//       res.render("Login/forget", {
+//         log: "Sign In",
+//         wrongPassword: "",
+//         otp: "otped",
+//       });
+//     } else {
+//       res.redirect("/forget");
+//     }
+//   });
+// app
+//   .route("/forgetpassword")
+//   .get((req, res) => {})
+//   .post((req, res) => {
+//     const password1 = req.body.newpassword;
+//     const password2 = req.body.confirmpassword;
+//     const email = req.body.email;
+//     if (req.isUnauthenticated()) {
+//     User.findOne({ email: email }, (err, foundUser) => {
+//       if (err) {
+//         console.log(err);
+//       } else {
+//         if (foundUser) {
+//           console.log(foundUser);
+//           if (password1 === password2) {
+//             // User.updateOne({email: email}, {$set: {password: password1}});
+//             console.log(foundUser.password);
+//             res.redirect("/");
+//           }
+//         }
+//       }
+//     });
+//   }
+//   });
 
 app
   .route("/register")

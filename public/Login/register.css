@@ -346,6 +346,8 @@ input::placeholder {
   width: 2.8rem;
   margin: 4px auto 4px;
   border-radius: 100%;
+  position: relative;
+  top: 3px;
 }
 
 .google {
@@ -480,5 +482,15 @@ input::placeholder {
     display: flex;
     align-items: center;
     justify-content: center;
+  }
+}
+
+@media (max-width: 350px) {
+  .box {
+    margin: 0;
+    width: 100%;
+  }
+  .form>form {
+    width: 80%;
   }
 }

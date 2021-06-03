@@ -209,7 +209,7 @@ header {
   mix-blend-mode: multiply;
   position: absolute;
   transform: rotate(180deg);
-  top: 0;
+  top: -1px;
   height: 20%;
   z-index: 99;
 }
@@ -424,7 +424,7 @@ header {
   /* Navigation Section */
 
   .title {
-    width: 65%;
+    width: 45%;
   }
 
   .navbar {

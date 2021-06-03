@@ -509,7 +509,7 @@ body {
 @media screen and (max-width: 500px) {
   .innercontainer {
     height: 61vh;
-    width: 79vw;
+    width: 97vw;
     border-radius: 30px;
   }
   .innercontainer .container h1 {

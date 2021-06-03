@@ -361,6 +361,10 @@ input:focus::placeholder
 .contact {
   margin: 0 auto;
   width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .content1 {
@@ -686,5 +690,13 @@ footer {
 
   .container1 {
     background: transparent;
+  }
+  .contact input
+  {
+    width: 150%;
+  }
+  .contact input:nth-child(3)
+  {
+    width: 100%;
   }
 }

@@ -562,4 +562,8 @@ input::placeholder {
 	.box {
 		width: 60%;
 	}
+	.contact:nth-child(3)
+	{
+		width: 10px;
+	}
 }

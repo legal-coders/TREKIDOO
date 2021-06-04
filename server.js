@@ -70,14 +70,14 @@ passport.use(
   )
 );
 
-let options = {
-  min: 100000,
-  max: 999999,
-  integer: true
-};
+// let options = {
+//   min: 100000,
+//   max: 999999,
+//   integer: true
+// };
 
-let OTP = rn(options);
-console.log(OTP)
+// let OTP = rn(options);
+// console.log(OTP)
 
 let transporter = nodemailer.createTransport({
   service: "gmail",
@@ -200,6 +200,32 @@ app
       }
     });
   });
+
+app.route("/contact")
+    .get((req, res) => {})
+    .post((req,res) =>{
+      const email = req.body.mail;
+      const comment = req.body.comment;
+      console.log(email);
+      console.log(comment);
+      
+      let mailOptions = {
+          from: "trekidoolegalpirates@gmail.com",
+          to: "legalpirates2020@gmail.com",
+          subject: "Password reset for your account",
+          html: email + comment
+      };
+        transporter.sendMail(mailOptions, function (error, info) {
+          if (error) {
+            console.log(error);
+          } else {
+            console.log("Email sent: " + info.response);
+          }
+        });
+        res.redirect("/about");
+    });
+
+
 
 // app.get("/forget", (req, res) => {
 //   if (req.isAuthenticated()) {

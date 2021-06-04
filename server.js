@@ -320,8 +320,12 @@ app
                   passport.authenticate("local")(req, res, () => {
                     res.redirect("/");
                   });
-                }});
-          }}}});
+                }
+              });
+          }
+        }
+      }
+    });
   });
 
 app.listen(process.env.PORT || 3000, () => {

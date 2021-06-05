@@ -417,11 +417,26 @@ input:focus::placeholder
   color: #fff;
   box-shadow: 0 5px 0.938rem rgba(255, 255, 255, 0.05);
   text-align: center;
-
 }
 
+.content1 textarea{
+  display: flex;
+  /* flex-direction: column-reverse; */
+  /* justify-content: center;
+  align-items: center; */
+}
+
+
 .content1 textarea::placeholder{
-  color: rgba(255, 255, 255, 0.5); 
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  color: rgba(255, 255, 255, 0.5);
+  /* justify-self: center; */
+}
+
+.content1 textarea:focus::placeholder{
+  color: transparent;
 }
 
 .content1 input::placeholder {

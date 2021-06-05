@@ -212,8 +212,8 @@ app.route("/contact")
       let mailOptions = {
           from: "trekidoolegalpirates@gmail.com",
           to: "legalpirates2020@gmail.com",
-          subject: "Password reset for your account",
-          html: email + comment
+          subject: "Comments from user",
+          html: `<h2> ${email} </h2>` +`<p>${comment}</p>`
       };
         transporter.sendMail(mailOptions, function (error, info) {
           if (error) {
@@ -223,7 +223,7 @@ app.route("/contact")
           }
         });
         res.redirect("/about");
-    });
+});
 
 
 

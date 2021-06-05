@@ -8,7 +8,7 @@ Download and open the project in any of your favourite editor.
 # Requirements
 
 1. Node
-2. Mongodb should be installed on your machine 
+2. Mongodb should be installed in your machine 
  
 
 # Installing pakages

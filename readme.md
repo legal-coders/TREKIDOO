@@ -24,3 +24,8 @@ After installing all the packages run nodemon server in the terminal to start th
 Type http://localhost:3000/ in your search bar to run the website. 
 
 https://morning-bastion-77873.herokuapp.com/ You can use this link to view our website.
+
+# Credit
+
+1. Wikipedia
+2. Google

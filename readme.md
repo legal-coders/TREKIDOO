@@ -29,3 +29,5 @@ https://morning-bastion-77873.herokuapp.com/ You can use this link to view our w
 
 1. Wikipedia
 2. Google
+3. Pixabay
+4. Pixel
